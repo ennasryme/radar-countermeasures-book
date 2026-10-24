@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Read Radar Countermeasures for Unmanned Aerial Vehicles with searchable chapters, original figures, and saved reading progress.">
+<meta name="color-scheme" content="light dark">
+<title>10 Radar recognition of multiple UAVs · Reading room</title>
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/reader.css">
+<script src="../../assets/reader.js" defer></script>
+</head>
+<body data-root="../../" data-page="xhtml/Chapter10.html" data-title="10 Radar recognition of multiple UAVs">
+<a class="skip-link" href="#main">Skip to reading</a>
+<header class="topbar">
+<a class="brand" href="../../index.html"><span class="brand-mark" aria-hidden="true">r.</span><span>Reading room</span></a>
+<span class="topbar-label">RADAR &amp; SENSING / 01</span>
+<div class="toolbar">
+<button class="search-trigger" type="button" data-search>Search book <kbd>⌘ K</kbd></button>
+<button class="theme-toggle" type="button" aria-label="Use dark theme" title="Switch theme">◐</button>
+<button class="menu-toggle" type="button" aria-controls="sidebar" aria-expanded="false">Contents</button>
+</div></header>
+<aside id="sidebar" class="sidebar" aria-label="Book navigation">
+<div class="sidebar-heading"><span class="eyebrow">THE BOOK</span><h2>Radar Countermeasures<br><span>for Unmanned Aerial Vehicles</span></h2></div>
+<a class="overview-link" href="../../index.html">Overview <span aria-hidden="true">↗</span></a>
+<p class="nav-label">CONTENTS</p><nav aria-label="Chapters"><ul class="chapter-list"><li><a class="chapter-link"  href="../../content/xhtml/preface.html#ST2"><span class="chapter-number">·</span><span>About the editors</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/preface_1.html#ST3"><span class="chapter-number">·</span><span>List of reviewers</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter.html#c00"><span class="chapter-number">·</span><span>Introduction</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter1.html#c01"><span class="chapter-number">01</span><span>Counter UAS systems overview</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter2.html#c02"><span class="chapter-number">02</span><span>Systems design considerations</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter3.html#c03"><span class="chapter-number">03</span><span>Applications of millimetre wave radar for UAV detection and classification</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter4.html#c04"><span class="chapter-number">04</span><span>Detection and tracking of UAVs using an interferometric radar</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter5.html#c05"><span class="chapter-number">05</span><span>Passive radar detection of drones with staring illuminators of opportunity</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter6.html#c06"><span class="chapter-number">06</span><span>DVB-T-based passive radar for silent surveillance of drones</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter7.html#c07"><span class="chapter-number">07</span><span>Multiband passive radar for drones detection and localization</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter8.html#c08"><span class="chapter-number">08</span><span>GNSS-based UAV detection</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter9.html#c09"><span class="chapter-number">09</span><span>Radar UAV and bird signature comparisons with micro-Doppler</span></a></li><li><a class="chapter-link current" aria-current="page" href="../../content/xhtml/Chapter10.html#c10"><span class="chapter-number">10</span><span>Radar recognition of multiple UAVs</span></a><ul class="subnav"><li><a href="../../content/xhtml/Chapter10.html#ST150">10.1 Introduction</a></li><li><a href="../../content/xhtml/Chapter10.html#ST151">10.2 Recognition of multiple UAVs based on CFS</a></li><li><a href="../../content/xhtml/Chapter10.html#ST154">10.3 Recognition of multiple UAVs via dictionary learning</a></li><li><a href="../../content/xhtml/Chapter10.html#ST166">10.4 Conclusion</a></li><li><a href="../../content/xhtml/Chapter10.html#ST167">References</a></li></ul></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter11.html#c11"><span class="chapter-number">11</span><span>Advanced classification techniques for drone payloads</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter12.html#c12"><span class="chapter-number">12</span><span>Good practices and approaches for counter UAV system developments – an industrial perspective</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Conclusion.html"><span class="chapter-number">·</span><span>Conclusion</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/index.html#ST192"><span class="chapter-number">·</span><span>Index</span></a></li></ul></nav>
+<div class="sidebar-footer"><a href="../../downloads/radar-countermeasures.epub" download>Download EPUB <span aria-hidden="true">↓</span></a><span>Original edition · 2021</span></div>
+</aside>
+<main id="main" class="main reading" tabindex="-1">
+<div class="reading-progress" aria-hidden="true"><span></span></div><div class="reading-meta"><a href="../../index.html">The book</a><span>/</span><span>44 min read</span><div class="font-controls" aria-label="Text size"><button type="button" data-font="-1" aria-label="Decrease text size">A−</button><button type="button" data-font="1" aria-label="Increase text size">A+</button></div></div><article class="book-text"><h1 class="h2a" id="c10"><em>Chapter 10</em><br><strong>Radar recognition of multiple UAVs</strong></h1>
+<p class="authorc">Gang Li<sup><a href="#c10_aff1"><sup>1</sup></a></sup> and Wenyu Zhang<sup><a href="#c10_aff1"><sup>1</sup></a></sup></p>
+<p class="aff" id="c10_aff1"><sup>1</sup>Department of Electronic Engineering, Tsinghua University, Beijing, China</p>
+<div id="c10_sec1">
+<h3 class="h3" id="ST150">10.1 Introduction</h3>
+<p class="noindent">Radar detection and recognition of small unmanned aerial vehicle (UAV) have attracted significant attention, as a misuse of UAVs has led to a series of illegal events such as filming of restricted areas, disruption of public events and even transport of illicit materials [<a href="#c10_bib1">1</a>]. It has been demonstrated that radar micro-Doppler signatures (MDSs) are helpful for the detection and recognition of small UAVs [<a href="#c10_bib2">2</a>–<a href="#c10_bib8">8</a>]. Especially when the radar bandwidth is limited, it is difficult to find the small UAVs from the radar images with poor resolutions. In this case, the micro-Doppler analysis provides a reliable solution for small UAV recognition. In [<a href="#c10_bib2">2</a>], the feasibility of distinguishing between loaded and unloaded small UAVs based on MDS observed by the multistatic radar system is investigated. In [<a href="#c10_bib3">3</a>,<a href="#c10_bib4">4</a>], three kinds of small UAVs are classified by using a dual-band radar system and exploiting the multipath components, respectively. In [<a href="#c10_bib5">5</a>], empirical mode decomposition is applied to extract features for small UAV classification. The problem of small UAV detection is investigated in [<a href="#c10_bib6">6</a>] from the perspective of their extremely low radar cross section (RCS). More studies on detection and classification based on micro-Doppler analysis are summarised in [<a href="#c10_bib7">7</a>]. Most of existing studies on the radar classification of small UAVs assume that the radar signal is reflected from a single UAV. However, in recent years, the civilian and military applications for UAV swarms keep growing [<a href="#c10_bib9">9</a>,<a href="#c10_bib10">10</a>]. When there are multiple UAVs in the observed scene, the recognition of multiple UAVs becomes more complicated because of the superimposition of a number of micro-Doppler components. In particular, it is challenging to determine if a specific kind of target exists when there are multiple targets in the observed scene. The spatial separation of multiple targets is partially solved if the radar range resolution is high enough, but this requires large bandwidths that also increases the hardware cost. For radar systems with lower range resolution and azimuth resolution, there may exist multiple UAVs in a single range-azimuth resolution cell. Under this situation, it is necessary to investigate how to detect and classify multiple UAVs from their MDSs.</p>
+<p class="indent">In this chapter, we present two algorithms for radar recognition of multiple UAVs. In the first algorithm, the cadence frequency spectrum (CFS) is presented as a kind of low-dimensional feature of small UAVs [<a href="#c10_bib11">11</a>]. The CFS of each class of small UAVs is obtained by accumulating cadence-velocity diagram (CVD) over the Doppler frequency axis. Experimental results on measured data have demonstrated that the combination of CFS and the <i>K</i>-means classifier is capable of providing a satisfactory accuracy of recognition of multiple UAVs. The second algorithm is based on dictionary learning [<a href="#c10_bib12">12</a>]. The dictionary is learnt by performing the <i>K</i>-SVD algorithm on the CVDs of training samples from each class of small UAVs. Then, the learnt dictionaries of all the classes are combined together to generate a recognition dictionary. In this way, the problem of recognition of multiple UAVs is converted to a problem of signal decomposition. Subsequently, the sparse representation of the CVD from multiple UAVs is solved by the orthogonal matching pursuit (OMP) with the learnt recognition dictionary and recognition result is obtained by evaluating the magnitudes of the sparse representation coefficients. Experimental results on measured radar data have demonstrated the effectiveness of the dictionary learning-based algorithm for the recognition of multiple UAVs and the superiority of the dictionary learnt from CVD over that learnt from a time–frequency spectrogram. It is worth emphasizing that the training data sets used in these two algorithms only consist of radar echoes reflected from every single class of small UAVs.</p>
+</div>
+<div id="c10_sec2">
+<h3 class="h3" id="ST151">10.2 Recognition of multiple UAVs based on CFS</h3>
+<p class="noindent">In this section, an algorithm of the recognition of multiple small UAVs based on the CFS features is presented.</p>
+<div id="c10_sec2-1">
+<h4 class="h4" id="ST152">10.2.1 Signal model</h4>
+<p class="noindent">Assume that there are <i>C</i> different classes in total and <img alt="image" class="mid" src="../images/CH010-Eqn-in-1.gif" loading="lazy" decoding="async" width="70" height="17"> is the <i>l</i>th training signal collected from the <i>i</i>th target class and <img alt="image" class="mid" src="../images/CH010-Eqn-in-2.gif" loading="lazy" decoding="async" width="14" height="10"> is the number of samples in <img alt="image" class="mid" src="../images/CH010-Eqn-in-3.gif" loading="lazy" decoding="async" width="16" height="10">, for <i>i</i> = 1, 2, …, <i>C</i>, <i>l</i> = 1, 2, …, <img alt="image" class="mid" src="../images/CH010-Eqn-in-4.gif" loading="lazy" decoding="async" width="16" height="13">, and <img alt="image" class="mid" src="../images/CH010-Eqn-in-5.gif" loading="lazy" decoding="async" width="17" height="13"> is the number of training signals in the <img alt="image" class="mid" src="../images/CH010-Eqn-in-6.gif" loading="lazy" decoding="async" width="19" height="13"> target class. The time–frequency spectrogram, denoted by <img alt="image" class="mid" src="../images/CH010-Eqn-in-7.gif" loading="lazy" decoding="async" width="16" height="13">, is obtained by performing STFT on the radar echo:</p>
+<p class="imagec" id="c10_eqn1"><img alt="image" src="../images/CH010-c10_eqn1.gif" loading="lazy" decoding="async" width="584" height="39"></p>
+<p class="noindent">where <i>t</i> is the sample instant, <img alt="image" class="mid" src="../images/CH010-Eqn-in-8.gif" loading="lazy" decoding="async" width="13" height="16"> is the Doppler frequency, and <img alt="image" class="mid" src="../images/CH010-Eqn-in-9.gif" loading="lazy" decoding="async" width="26" height="17"> is the window function. The repetition frequency of the time–frequency spectrogram describes the periodic characteristics of the micro-motions of the small UAVs, which can be visualised via CVD. The CVD, denoted by <img alt="image" class="mid" src="../images/CH010-Eqn-in-10.gif" loading="lazy" decoding="async" width="19" height="13">, can be obtained by performing the Fourier transform along the time axis on the time–frequency spectrogram <img alt="image" class="mid" src="../images/CH010-Eqn-in-11.gif" loading="lazy" decoding="async" width="20" height="13">, i.e.,</p>
+<p class="imagec" id="c10_eqn2"><img alt="image" src="../images/CH010-c10_eqn2.gif" loading="lazy" decoding="async" width="584" height="39"></p>
+<p class="noindent">where <img alt="image" class="mid" src="../images/CH010-Eqn-in-12.gif" loading="lazy" decoding="async" width="10" height="9"> is the cadence frequency.</p>
+<p class="indent">In what follows, a visualised example on the time–frequency spectrogram and CVD is provided. The small UAVs to be recognised, including a helicopter, a quadcopter and a hexacopter with almost the same size, are shown in <a href="#c10_fig1">Figure 10.1</a>. A single-channel continuous wave radar system is used for collecting the data reflected from the flying UAVs. The carrier frequency of the radar is 25 GHz and the sampling frequency is 8 kHz. The details about the radar system and experimental settings are shown in <a href="#c10_tbl1">Table 10.1</a>. The spectrograms of the radar data reflected from these three small UAVs are shown in <a href="#c10_fig2">Figure 10.2</a>, which are obtained by performing STFT on the received signals as expressed in (10.1). As suggested in [<a href="#c10_bib13">13</a>], the translational motions of the UAVs have been compensated, which turns the central Doppler frequency in <a href="#c10_fig2">Figure 10.2</a> to zero. Further, the CVDs of these three small UAVs are presented in <a href="#c10_fig3">Figure 10.3</a>, which are obtained according to (10.2). From the comparison between Figures <a href="#c10_fig2">10.2</a> and <a href="#c10_fig3">10.3</a>, one can see that the CVD gives a measure on how often each Doppler frequency component repeats. Moreover, it is evident that the CVD is independent of the time shift of the radar echo, which may make the recognition of small UAVs more robust.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-10-f01.jpg" loading="lazy" decoding="async" width="377" height="828"></p>
+<p class="fcaption" id="c10_fig1">Figure 10.1 Appearance of the UAVs: (a) quadcopter, (b) helicopter and (c) hexacopter</p>
+<p class="tcaption" id="c10_tbl1">Table 10.1 Experimental settings</p><div class="table-scroll" tabindex="0" role="region" aria-label="Data table"><table>
+<thead>
+<tr><th>Experimental settings</th><th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radar</td>
+<td>Ancortek SDR-KIT 2500B</td>
+</tr>
+<tr>
+<td>Waveforms</td>
+<td>Continuous wave</td>
+</tr>
+<tr>
+<td>Carrier frequency</td>
+<td>25 GHz</td>
+</tr>
+<tr>
+<td>Sweep time</td>
+<td>0.5 ms</td>
+</tr>
+<tr>
+<td>Number of samplers per sweep</td>
+<td>512</td>
+</tr>
+<tr>
+<td>Sampling frequency</td>
+<td>8 kHz</td>
+</tr>
+<tr>
+<td>Range</td>
+<td>8 m</td>
+</tr>
+<tr>
+<td>Room size</td>
+<td><img alt="image" class="mid" src="../images/CH010-Eqn-in-13.gif" loading="lazy" decoding="async" width="80" height="12"></td>
+</tr>
+</tbody>
+</table></div>
+<p class="image"><img alt="image" src="../images/SBRA5430-10-f02.jpg" loading="lazy" decoding="async" width="349" height="831"></p>
+<p class="fcaption" id="c10_fig2">Figure 10.2 The time–frequency spectrograms of the small UAVs: (a) quadcopter, (b) helicopter and (c) hexacopter</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-10-f03.jpg" loading="lazy" decoding="async" width="371" height="876"></p>
+<p class="fcaption" id="c10_fig3">Figure 10.3 The CVDs of the small UAVs: (a) quadcopter, (b) helicopter and (c) hexacopter</p>
+<p class="indent">The CFS, which is defined as the sum of all the rows of the two-dimensional CVD, can be regarded as a compressed expression of the CVD. The CFSs of the three kinds of UAVs are shown in <a href="#c10_fig4">Figure 10.4</a>, in which the positions of the first peaks in nonzero cadence-frequency areas represent the repetition frequencies of the corresponding time–frequency spectrograms. One can see that the peak amplitudes and peak positions of these CFSs are significantly different due to the diverse numbers of blades and RCSs of the three kinds of UAVs. In comparison with CVD, the CFS decreases the dimension of the features and therefore makes the computation easier.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-10-f04.jpg" loading="lazy" decoding="async" width="352" height="496"></p>
+<p class="fcaption" id="c10_fig4">Figure 10.4 The CFSs of the small UAVs: (a) quadcopter, (b) helicopter and (c) hexacopter</p>
+</div>
+<div id="c10_sec2-2">
+<h4 class="h4" id="ST153">10.2.2 Classification method and experimental results</h4>
+<p class="noindent">The measured data are collected by using the radar and the UAVs introduced in <a href="#c10_sec2-1">Section 10.2.1</a>. The time duration for each data recording is 6 s, and each measurement data is divided into 20 segments of 0.3 s. Such a segment is long enough to contain several periods of the radar signals reflected from the UAVs. To ensure the stability of data, the first and the last segments are abandoned, so there are 18 segments available per data record. The same data collection process is repeated ten times. Thus, the total number of the segments corresponding to each class of UAVs is (18 segments)×(10 repeats) = 180 (Figure <a href="#c10_fig5">10.5</a>).</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-10-f05.jpg" loading="lazy" decoding="async" width="683" height="497"></p>
+<p class="fcaption" id="c10_fig5">Figure 10.5 The scheme of the CFS-based method, where C is the number of classes of UAVs</p>
+<p class="indent">In the training phase, the CFSs of those training data corresponding to each single class of UAV are extracted as described in <a href="#c10_sec2-1">Section 10.2.1</a> and fed into the <i>K</i>-means classifier [<a href="#c10_bib11">11</a>] to obtain the clustered centroid in the feature space. Since three kinds of UAVs are used in the experiments, there are seven possible scenarios totally, as shown in <a href="#c10_tbl2">Table 10.2</a>. The feature centroids of the scenarios which contain more than one UAV are obtained by adding the fusion of the corresponding feature centroids of the single UAV scenarios.</p>
+<p class="tcaption" id="c10_tbl2">Table 10.2 Possible scenarios</p><div class="table-scroll" tabindex="0" role="region" aria-label="Data table"><table>
+<thead>
+<tr><th>Case</th><th>Target in scene</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenario A</td>
+<td>A helicopter</td>
+</tr>
+<tr>
+<td>Scenario B</td>
+<td>A hexacopter</td>
+</tr>
+<tr>
+<td>Scenario C</td>
+<td>A quadcopter</td>
+</tr>
+<tr>
+<td>Scenario D</td>
+<td>A helicopter and a quadcopter</td>
+</tr>
+<tr>
+<td>Scenario E</td>
+<td>A hexacopter and a quadcopter</td>
+</tr>
+<tr>
+<td>Scenario F</td>
+<td>A helicopter and a hexacopter</td>
+</tr>
+<tr>
+<td>Scenario G</td>
+<td>A helicopter, a hexacopter and a quadcopter</td>
+</tr>
+</tbody>
+</table></div>
+<p class="indent1">In the testing phase, the CFS of the testing signal is extracted and compared with all the feature centroids to determine the classes of the UAVs existing in the observed scene. Here, 50% of the single-target data sets are used for training and the remaining data are used for testing. The recognition process is repeated 500 times with a random selection of the training/testing data and the average over all the trials is calculated to assess the recognition accuracy. The confusion matrix is given in <a href="#c10_tbl3">Table 10.3</a>.</p>
+<p class="tcaption" id="c10_tbl3">Table 10.3 Confusion matrix</p>
+<p class="imagec"><img alt="image" src="../images/SBRA5430-10-u01.jpg" loading="lazy" decoding="async" width="525" height="291"></p>
+<p class="indent">It is clear from <a href="#c10_tbl3">Table 10.3</a> that (1) the average recognition accuracy for single UAVs (i.e., Scenarios A–C) is 92.77%, (2) the average recognition accuracy for two-UAV scenarios (i.e., Scenarios D–F) is 89.10%, (3) the recognition accuracy for three-UAV scenario (i.e., Scenario G) is 100% and (4) the average classification accuracy of all the scenarios is 92.23%.</p>
+<p class="indent">From <a href="#c10_tbl3">Table 10.3</a>, one can observe a block diagonal pattern in the confusion matrix, while the obvious misclassification results are marked in red. The block pattern is caused by the difficulty in distinguishing UAVs within the same pattern (i.e., single- and dual-UAV scenarios). Both the quadcopter and the hexacopter have at least four rotors, which are the main components that produce MDSs. The superimposition and interaction of the various micro-Doppler scattering from the multiple rotors of multiple UAVs increase the difficulty of classification.</p>
+<p class="indent">To further investigate the performance of the presented method, experiments under different proportions of training data, i.e., 10%, 20%, 30% and 50%, are carried out. <a href="#c10_tbl4">Table 10.4</a> shows the minimum, maximum and average accuracy over 500 trials with randomly selected training data. It is observed that the classification accuracy of the presented method is high enough with even 20% training data, which indicates that the presented method is suitable for classification in the case of small data sets.</p>
+<p class="tcaption" id="c10_tbl4">Table 10.4 UAV recognition accuracy (%)</p><div class="table-scroll" tabindex="0" role="region" aria-label="Data table"><table>
+<thead>
+<tr><th>Training ratios</th><th>20% training</th><th>30% training</th><th>40% training</th><th>50% training</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Min</td>
+<td>88.89</td>
+<td>89.34</td>
+<td>89.29</td>
+<td>88.73</td>
+</tr>
+<tr>
+<td>Max</td>
+<td>94.25</td>
+<td>94.21</td>
+<td>94.71</td>
+<td>95.24</td>
+</tr>
+<tr>
+<td><b>Average</b></td>
+<td><b>91.85</b></td>
+<td><b>91.92</b></td>
+<td><b>92.00</b></td>
+<td><b>92.23</b></td>
+</tr>
+</tbody>
+</table></div>
+<p class="indent1">It is worth mentioning that the CFS-based method has low computational complexity. The average running time of the method, including training and testing, is only 0.128 s. The hardware platform is a laptop with an Intel<sup>®</sup> Core™ i5-3230M CPU inside, and the CPU clock frequency and the memory size are 2.6 GHz and 7.89 GB, respectively. The software platform is MATLAB<sup>®</sup> 2017a and the operation system is Windows 7. Thus, it is promising to achieve real-time processing of the CFS-based method on embedded computing platforms in practical applications.</p>
+</div>
+</div>
+<div id="c10_sec3">
+<h3 class="h3" id="ST154">10.3 Recognition of multiple UAVs via dictionary learning</h3>
+<p class="noindent">In this section, an algorithm of the recognition of multiple small UAVs based on dictionary learning is presented. Being different from the CFS-based method, the aim of the dictionary learning-based method is to determine whether a specific kind of small UAV exists when there are multiple small UAVs in the observed air space.</p>
+<div id="c10_sec3-1">
+<h4 class="h4" id="ST155">10.3.1 Recognition method</h4>
+<p class="noindent">The scheme of the method based on dictionary learning is illustrated in <a href="#c10_fig6">Figure 10.6</a>. The presented method contains two sub-processes: (1) training and (2) testing. The training process is composed of two steps. First, the CVD of each training signal is computed for each UAV as formulated in (10.2). Second, the <i>K</i>-SVD algorithm [<a href="#c10_bib14">14</a>] is applied to the CVDs to learn the dictionary of each class of small UAVs. Next, the learnt dictionaries of all classes are concatenated to form the overall recognition dictionary. In the testing process, the sparse representation of the CVD of the test signal is computed by using the OMP algorithm [<a href="#c10_bib15">15</a>] with the learnt recognition dictionary. Subsequently, the <img alt="image" class="mid" src="../images/CH010-Eqn-in-14.gif" loading="lazy" decoding="async" width="12" height="14">-norm of several segments of the sparse solution is compared with a threshold to determine the presence or absence of each class of UAVs.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-10-f06.jpg" loading="lazy" decoding="async" width="679" height="617"></p>
+<p class="fcaption" id="c10_fig6">Figure 10.6 The scheme of the dictionary learning-based method, where C is the number of classes of UAVs</p>
+<p class="indent">The data set is divided into three parts: training, testing and validating. The validating set is used for determining the threshold in the testing process. It is worth emphasizing that the training set only consists of radar echoes reflected from every single class of small UAVs.</p>
+<div id="c10_sec3-1-1">
+<h5 class="h5" id="ST156">10.3.1.1 Training phase</h5>
+<p class="noindent">In the training phase, the CVDs of the training data are extracted as described in <a href="#">Section 10.2.1</a>. Then, the two-dimensional CVD matrices <img alt="image" class="mid" src="../images/CH010-Eqn-in-15.gif" loading="lazy" decoding="async" width="19" height="13"> are reshaped into one-dimensional vectors <img alt="image" class="mid" src="../images/CH010-Eqn-in-16.gif" loading="lazy" decoding="async" width="17" height="12"> by stacking the columns of <img alt="image" class="mid" src="../images/CH010-Eqn-in-17.gif" loading="lazy" decoding="async" width="19" height="13"> one underneath the other in sequence, i.e.,</p>
+<p class="imagec" id="c10_eqn3"><img alt="image" src="../images/CH010-c10_eqn3.gif" loading="lazy" decoding="async" width="584" height="88"></p>
+<p class="noindent">where <img alt="image" class="mid" src="../images/CH010-Eqn-in-18.gif" loading="lazy" decoding="async" width="18" height="10"> is the <i>i</i>th column vector of the <img alt="image" class="mid" src="../images/CH010-Eqn-in-19.gif" loading="lazy" decoding="async" width="19" height="13">. Assume that <img alt="image" class="mid" src="../images/CH010-Eqn-in-20.gif" loading="lazy" decoding="async" width="19" height="13"> is an <img alt="image" class="mid" src="../images/CH010-Eqn-in-21.gif" loading="lazy" decoding="async" width="53" height="13"> matrix. As a result, <img alt="image" class="mid" src="../images/CH010-Eqn-in-22.gif" loading="lazy" decoding="async" width="17" height="12"> is an <img alt="image" class="mid" src="../images/CH010-Eqn-in-23.gif" loading="lazy" decoding="async" width="82" height="17"> vector.</p>
+<p class="indent">Next, the features are extracted from the CVDs via dictionary learning. Compared with classical feature extraction methods such as empirical feature selection and principle component analysis, sparse representations are more representative and more discriminative with lower dimensionality [<a href="#c10_bib16">16</a>]. Moreover, existing studies [<a href="#c10_bib17">17</a>–<a href="#c10_bib19">19</a>] have shown that compared with traditional sparsity coding methods with predesigned dictionaries, dictionary learning can dramatically improve the performance of sparse representation thanks to its capability of adaptively adjusting the dictionary based on the training data set. Dictionary learning aims to learn a set of atoms so that a given signal can be accurately approximated by a sparse linear combination of atoms and has produced promising results in the field of image processing [<a href="#c10_bib20">20</a>–<a href="#c10_bib22">22</a>]. In what follows, a typical algorithm of dictionary learning, <i>K</i>-SVD, [<a href="#c10_bib14">14</a>] is applied to CVDs for feature extraction.</p>
+<p class="indent">The linear decomposition of CVD of the <i>i</i>th target class <img alt="image" class="mid" src="../images/CH010-Eqn-in-24.gif" loading="lazy" decoding="async" width="13" height="12"> can be expressed as</p>
+<p class="imagec" id="c10_eqn4"><img alt="image" src="../images/CH010-c10_eqn4.gif" loading="lazy" decoding="async" width="584" height="16"></p>
+<p class="noindent">where <img alt="image" class="mid" src="../images/CH010-Eqn-in-25.gif" loading="lazy" decoding="async" width="17" height="12"> is an <img alt="image" class="mid" src="../images/CH010-Eqn-in-26.gif" loading="lazy" decoding="async" width="81" height="17"> measurement vector, <img alt="image" class="mid" src="../images/CH010-Eqn-in-27.gif" loading="lazy" decoding="async" width="102" height="18"> is the dictionary matrix with normalised columns, and <img alt="image" class="mid" src="../images/CH010-Eqn-in-28.gif" loading="lazy" decoding="async" width="73" height="17"> is a sparse vector. Assume the sparsity of <img alt="image" class="mid" src="../images/CH010-Eqn-in-29.gif" loading="lazy" decoding="async" width="17" height="10"> is <i>K</i>, i.e., the number of the nonzero coefficients in <img alt="image" class="mid" src="../images/CH010-Eqn-in-30.gif" loading="lazy" decoding="async" width="17" height="10"> is not larger than <i>K</i>. The dictionary <img alt="image" class="mid" src="../images/CH010-Eqn-in-31.gif" loading="lazy" decoding="async" width="17" height="13"> is expected to be capable of representing <img alt="image" class="mid" src="../images/CH010-Eqn-in-32.gif" loading="lazy" decoding="async" width="17" height="12"> as the sum of its <i>K</i> columns. Here we have concatenated all the samples <img alt="image" class="mid" src="../images/CH010-Eqn-in-33.gif" loading="lazy" decoding="async" width="17" height="12"> as columns of the matrix <img alt="image" class="mid" src="../images/CH010-Eqn-in-34.gif" loading="lazy" decoding="async" width="101" height="18"> and similarly stacked the representations coefficient vector <img alt="image" class="mid" src="../images/CH010-Eqn-in-35.gif" loading="lazy" decoding="async" width="17" height="10"> to build the matrix <img alt="image" class="mid" src="../images/CH010-Eqn-in-36.gif" loading="lazy" decoding="async" width="78" height="17"> where <img alt="image" class="mid" src="../images/CH010-Eqn-in-37.gif" loading="lazy" decoding="async" width="17" height="13"> is the number of training signals in the <i>i</i>th target class. The sparse representation of <img alt="image" class="mid" src="../images/CH010-Eqn-in-38.gif" loading="lazy" decoding="async" width="16" height="13"> can be achieved by solving the following problem:</p>
+<p class="imagec" id="c10_eqn5"><img alt="image" src="../images/CH010-c10_eqn5.gif" loading="lazy" decoding="async" width="583" height="21"></p>
+<p class="noindent">where <img alt="image" class="mid" src="../images/CH010-Eqn-in-39.gif" loading="lazy" decoding="async" width="34" height="18"> and <img alt="image" class="mid" src="../images/CH010-Eqn-in-40.gif" loading="lazy" decoding="async" width="33" height="17"> denote <img alt="image" class="mid" src="../images/CH010-Eqn-in-41.gif" loading="lazy" decoding="async" width="13" height="15">-norm and <img alt="image" class="mid" src="../images/CH010-Eqn-in-42.gif" loading="lazy" decoding="async" width="12" height="14">-norm, respectively. The <i>K</i>-SVD algorithm [<a href="#c10_bib14">14</a>] introduces an iterative approach to efficiently solve the optimisation problem of (10.5). The <i>K</i>-SVD algorithm divides the numerical treatment of the optimisation problem into two stages, i.e., a sparse-coding stage that optimises <img alt="image" class="mid" src="../images/CH010-Eqn-in-43.gif" loading="lazy" decoding="async" width="18" height="18"> assuming knowledge of <img alt="image" class="mid" src="../images/CH010-Eqn-in-44.gif" loading="lazy" decoding="async" width="17" height="18"> and a dictionary update stage that updates <img alt="image" class="mid" src="../images/CH010-Eqn-in-45.gif" loading="lazy" decoding="async" width="18" height="18"> using the known representation <img alt="image" class="mid" src="../images/CH010-Eqn-in-46.gif" loading="lazy" decoding="async" width="17" height="18">. In the sparse-coding stage, the optimal sparse representation <img alt="image" class="mid" src="../images/CH010-Eqn-in-47.gif" loading="lazy" decoding="async" width="18" height="18"> can be solved by the OMP algorithm [<a href="#c10_bib15">15</a>]. In the dictionary update stage, the dictionary <img alt="image" class="mid" src="../images/CH010-Eqn-in-48.gif" loading="lazy" decoding="async" width="17" height="18"> is updated by computing the SVD decomposition of the representation residual. Readers are referred to [<a href="#c10_bib14">14</a>] for a more detailed description of the <i>K</i>-SVD algorithm.</p>
+<p class="indent">After all the dictionaries are learnt via the <i>K</i>-SVD algorithm from the samples of each target class, the dictionaries from all the classes are combined together to form the recognition dictionary <img alt="image" class="mid" src="../images/CH010-Eqn-in-49.gif" loading="lazy" decoding="async" width="136" height="21">:</p>
+<p class="imagec" id="c10_eqn6"><img alt="image" src="../images/CH010-c10_eqn6.gif" loading="lazy" decoding="async" width="584" height="21"></p>
+<p class="indent">The recognition dictionary <img alt="image" class="mid" src="../images/CH010-Eqn-in-50.gif" loading="lazy" decoding="async" width="31" height="16"> is utilized to realize signal decomposition in the testing process.</p>
+</div>
+<div id="c10_sec3-1-2">
+<h5 class="h5" id="ST157">10.3.1.2 Testing phase</h5>
+<p class="noindent">Assume that <img alt="image" class="mid" src="../images/CH010-Eqn-in-51.gif" loading="lazy" decoding="async" width="106" height="20"> is the CVD vector of the testing data, generated from the two-dimensional CVD matrix after stacking the columns one underneath the other in sequence.</p>
+<p class="indent">Since the CVD is a linear transform of the radar echo, the CVD vector <img alt="image" class="mid" src="../images/CH010-Eqn-in-52.gif" loading="lazy" decoding="async" width="26" height="12"> can be viewed as the sum of the CVD vectors corresponding to all the small UAV. In this way, the problem of recognition of multiple small UAVs is converted into the problem of signal decomposition. Assume that each target signal lies in its own subspace class and all the subspace classes are non-overlapping. As a result, the dictionaries learnt from different classes are discriminative. Since <img alt="image" class="mid" src="../images/CH010-Eqn-in-53.gif" loading="lazy" decoding="async" width="17" height="13"> is the dictionary trained from the <i>i</i>th target class, the signal from <i>i</i>th target class may have higher correlation with the columns of <img alt="image" class="mid" src="../images/CH010-Eqn-in-54.gif" loading="lazy" decoding="async" width="16" height="13"> (also called atoms) than with the atoms of other dictionaries. In other words, <img alt="image" class="mid" src="../images/CH010-Eqn-in-55.gif" loading="lazy" decoding="async" width="82" height="21"> reaches the minimum value when <img alt="image" class="mid" src="../images/CH010-Eqn-in-56.gif" loading="lazy" decoding="async" width="36" height="15">. The sparse representation of the aggregation signal can be obtained by</p>
+<p class="imagec" id="c10_eqn7"><img alt="image" src="../images/CH010-c10_eqn7.gif" loading="lazy" decoding="async" width="584" height="21"></p>
+<p class="indent">In this chapter, the OMP algorithm [<a href="#c10_bib15">15</a>] is used to solve (10.7).</p>
+<p class="indent">As the recognition dictionary <img alt="image" class="mid" src="../images/CH010-Eqn-in-57.gif" loading="lazy" decoding="async" width="31" height="16"> is composed of <i>C</i> dictionaries learnt from different target classes, the sparse solution <img alt="image" class="mid" src="../images/CH010-Eqn-in-58.gif" loading="lazy" decoding="async" width="103" height="18"> can be separated into <i>C</i> parts, i.e., <img alt="image" class="mid" src="../images/CH010-Eqn-in-59.gif" loading="lazy" decoding="async" width="16" height="15">, <img alt="image" class="mid" src="../images/CH010-Eqn-in-60.gif" loading="lazy" decoding="async" width="21" height="17">…<img alt="image" class="mid" src="../images/CH010-Eqn-in-61.gif" loading="lazy" decoding="async" width="25" height="17">, corresponding to the different target classes:</p>
+<p class="imagec" id="c10_eqn8"><img alt="image" src="../images/CH010-c10_eqn8.gif" loading="lazy" decoding="async" width="584" height="24"></p>
+<p class="indent">Next, thresholding is applied to the sparse solution <img alt="image" class="mid" src="../images/CH010-Eqn-in-62.gif" loading="lazy" decoding="async" width="27" height="15">. That is, the target from the <i>i</i>th class is declared as present, if the strength <img alt="image" class="mid" src="../images/CH010-Eqn-in-63.gif" loading="lazy" decoding="async" width="35" height="17"> exceeds the learnt threshold (<img alt="image" class="mid" src="../images/CH010-Eqn-in-64.gif" loading="lazy" decoding="async" width="12" height="10">). The threshold is designed as follows.</p>
+<p class="indent">The testing data set can be divided into two parts, i.e., data set I that contains the <i>i</i>th type of UAV and data set II in which the <i>i</i>th type of UAV does not exist. We first define the rate of correct recognition for the <img alt="image" class="mid" src="../images/CH010-Eqn-in-65.gif" loading="lazy" decoding="async" width="7" height="12">th target class <img alt="image" class="mid" src="../images/CH010-Eqn-in-66.gif" loading="lazy" decoding="async" width="52" height="17"> on data set I and the rate of incorrect recognition with respect to the <img alt="image" class="mid" src="../images/CH010-Eqn-in-67.gif" loading="lazy" decoding="async" width="7" height="12">th target class <img alt="image" class="mid" src="../images/CH010-Eqn-in-68.gif" loading="lazy" decoding="async" width="53" height="17"> on data set II as</p>
+<p class="imagec" id="c10_eqn9"><img alt="image" src="../images/CH010-c10_eqn9.gif" loading="lazy" decoding="async" width="583" height="63"></p>
+<p class="imagec" id="c10_eqn10"><img alt="image" src="../images/CH010-c10_eqn10.gif" loading="lazy" decoding="async" width="585" height="63"></p>
+<p class="noindent">where</p>
+<p class="imagec" id="c10_eqn11"><img alt="image" src="../images/CH010-c10_eqn11.gif" loading="lazy" decoding="async" width="584" height="40"></p>
+<p class="noindent"><img alt="image" class="mid" src="../images/CH010-Eqn-in-69.gif" loading="lazy" decoding="async" width="61" height="14"> and <img alt="image" class="mid" src="../images/CH010-Eqn-in-70.gif" loading="lazy" decoding="async" width="21" height="13"> are the number of samples in data set I and data set II, respectively, <img alt="image" class="mid" src="../images/CH010-Eqn-in-71.gif" loading="lazy" decoding="async" width="18" height="18"> is the <img alt="image" class="mid" src="../images/CH010-Eqn-in-72.gif" loading="lazy" decoding="async" width="7" height="12">th signal part in the <img alt="image" class="mid" src="../images/CH010-Eqn-in-73.gif" loading="lazy" decoding="async" width="10" height="15">th testing signal segments, <i>i</i> = 1, 2, 3, …, <i>C</i> and <i>j</i> = 1, 2, 3, …, <img alt="image" class="mid" src="../images/CH010-Eqn-in-74.gif" loading="lazy" decoding="async" width="58" height="13">.</p>
+<p class="indent">The threshold is determined by solving the following problem with the validating data set:</p>
+<p class="imagec" id="c10_eqn12"><img alt="image" src="../images/CH010-c10_eqn12.gif" loading="lazy" decoding="async" width="584" height="28"></p>
+<p class="indent">The problem in (10.12) can be solved by searching algorithms [<a href="#c10_bib23">23</a>,<a href="#c10_bib24">24</a>].</p>
+</div>
+</div>
+<div id="c10_sec3-2">
+<h4 class="h4" id="ST158">10.3.2 Experimental results</h4>
+<p class="noindent">The measured data are collected by using the radar and the UAVs introduced in <a href="#">Section 10.2.1</a>. The measurement for each target class is repeated ten times with a duration of 6 s. Each measurement data is divided into 20 segments with the length of 0.3 s, which is long enough to contain several periods of oscillation of the reflected echo. Therefore, the number of signal segments of each scenario for training and testing is 10×6 s/0.3 s = 200.</p>
+<p class="indent">In order to formulate the best sparse representation that is suitable for CVDs of small UAVs, the <i>K</i>-SVD algorithm is utilised to obtain the recognition dictionary during the experiment. Regarding the initialization of dictionary, there are three kinds of approaches [<a href="#c10_bib25">25</a>], i.e., assigning the dictionary randomly, setting it to some randomly chosen training data points or running an initial clustering on the training data (such as discrete cosine transformation (DCT) and discrete wavelet transformation). In practice, a large quantity of training data are required for the first two kinds of methods, which is difficult to be satisfied in radar data sets of UAVs. The DCT dictionary has less limitation on the data set size and has produced satisfactory results in many existing studies [<a href="#c10_bib14">14</a>,<a href="#c10_bib26">26</a>]. Therefore, here we adopt the DCT dictionary for initializing the dictionary.</p>
+<div id="c10_sec3-2-1">
+<h5 class="h5" id="ST159">10.3.2.1 Recognition performance against multiple small UAVs</h5>
+<p class="noindent">The objective of the dictionary learning-based method is to determine if there is a specific kind of target exists in the test scenario. Reference [<a href="#c10_bib27">27</a>] proposes an approach for the recognition of different human behaviour types, in which the training data set is single-target data and testing data set contains multiple-target data. Here, we adopt a similar data set structure in this chapter.</p>
+<p class="indent">In the experiments, the training data are composed of half of the measured data for each of the single-target case and 5% of the data are used as the validation data set, which is used for the determination of the threshold by solving (10.12). All the remaining single-target data and multi-target data are used for testing. The sparsity <i>K</i> is set to be 10, while the window size of STFT is set to be 4 ms. The recognition accuracy is obtained by averaging over 50 trials with randomly selected training data and validation data. The recognition accuracies for the scenarios of single, two and three small UAVs are presented in <a href="#c10_tbl5">Table 10.5</a>.</p>
+<p class="tcaption" id="c10_tbl5">Table 10.5 Recognition result yielded by the presented method</p>
+<p class="imagec"><img alt="image" src="../images/SBRA5430-10-u02.jpg" loading="lazy" decoding="async" width="625" height="902"></p>
+<p class="indent">Here, we take Scenario D in <a href="#c10_tbl5">Table 10.5</a> (i.e., the fourth row in <a href="#c10_tbl5">Table 10.5</a>) as an example, where the testing scene contains a helicopter and a quadcopter. The value in the fourth row and the first column (91.24%) is calculated according to (10.9), which represents the correct recognition rate of the helicopter. It means that the accuracy of the presented method in determining whether a helicopter exists in Scenario D is 91.24%. Similarly, the value in the fourth row and the third column (99.64%), which is also calculated according to (10.9), represents the accuracy of the presented method in determining whether a quadcopter exists. On the contrast, the value in the fourth row and the second column (7.20%), which is calculated by following (10.10), stands for the false alarm rate of hexacopter in Scenario D. This indicates that a small part of the sparse coefficients corresponding to the hexacopter also exceeds the decision threshold.</p>
+<p class="indent">It is clear from <a href="#c10_tbl5">Table 10.5</a> that (1) the rate of correct recognition on average for single-UAV scenarios (i.e., Scenarios A–C) achieves 98.19%, (2) the rate of correct recognition on average for two-UAV scenarios (i.e., Scenarios D–F) is 90.20%, (3) the rate of correct recognition on average for three-UAV scenario (i.e., Scenario G) is 88.35%, and (4) the average rate of correct recognition for all the scenarios is 93.38%.</p>
+<p class="indent">The recognition performance of the method proposed in [<a href="#c10_bib27">27</a>] is also provided for comparison. The method proposed in [<a href="#c10_bib27">27</a>], called the spectrogram-based method, recognises target classes by distinguishing the components of the testing signal using the dictionaries learnt directly from the time–frequency spectrogram. The proportions of training data are also set to be half the measured data for each single small UAV. The resulting recognition accuracies are shown in <a href="#c10_tbl6">Table 10.6</a>. The rate of correct recognition of the spectrogram-based method is 86.25% on average with the rate of incorrect recognition of 5.32%. It is clear from Tables <a href="#c10_tbl5">10.5</a> and <a href="#c10_tbl6">10.6</a> that the presented method obtains higher recognition accuracy.</p>
+<p class="tcaption" id="c10_tbl6">Table 10.6 Recognition result yielded by the method in [<a href="#c10_bib27">27</a>]</p>
+<p class="imagec"><img alt="image" src="../images/SBRA5430-10-u03.jpg" loading="lazy" decoding="async" width="623" height="892"></p>
+</div>
+<div id="c10_sec3-2-2">
+<h5 class="h5" id="ST160">10.3.2.2 Recognition performance with different sizes of the training data sets</h5>
+<p class="noindent">In this experiment, the performance of the dictionary learning-based method is analysed with different sizes of the training data sets. The presented method is compared with the spectrogram-based method in terms of the recognition performance. The proportions of training data vary from 10% to 70% with a step size of 20%, and 5% of the data set is used for the determination of threshold. The sparsity is set to be 10 for each dictionary. The recognition performances are obtained by averaging over 50 trials with randomly selected training data. The boxplot and averaged value of resulting rates of correct and incorrect recognition are shown in <a href="#c10_fig7">Figure 10.7</a>.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-10-f07.jpg" loading="lazy" decoding="async" width="598" height="711"></p>
+<p class="fcaption" id="c10_fig7">Figure 10.7 Recognition performance yielded by the presented method and the spectrogram-based method under different sizes of training sets: (a) rate of correct recognition and (b) rate of incorrect recognition</p>
+<p class="indent">The presented method and the spectrogram-based method have comparable incorrect recognition rates as shown in <a href="#c10_fig7">Figure 10.7</a>(b). Moreover, it is clear from <a href="#c10_fig7">Figure 10.7</a>(a) that the presented method consistently outperforms the spectrogram-based method in terms of the correct recognition for different sizes of training data sets with higher mean, median, first quartile and third quartile values. In addition, the dispersion levels provided by the presented method are lower than that of the spectrogram-based method, which means the presented method is more stable for different data sets. When the proportion of the training data is 10%, the presented method still achieves satisfactory recognition performance with a correct recognition rate of 85%. When the proportion of training data reaches 70%, the rate of correct recognition of the presented method achieves 94% on average.</p>
+</div>
+<div id="c10_sec3-2-3">
+<h5 class="h5" id="ST161">10.3.2.3 Recognition performance with different dictionary scales</h5>
+<p class="noindent">In this subsection, we evaluate the performance of the presented method with different dictionary scales. The scale of the dictionary varies from 500 to 2,000 with a step size of 500. The sparsity is set to be 10, while the window size of STFT is set to be 4 ms. The proportion of the training set is 50%. The recognition performances are averaged over 50 trials with randomly selected training data. The experimental results are demonstrated in <a href="#c10_tbl7">Table 10.7</a>.</p>
+<p class="tcaption" id="c10_tbl7">Table 10.7 Rate of correct recognition yielded by the presented method under different scales of the dictionary</p><div class="table-scroll" tabindex="0" role="region" aria-label="Data table"><table>
+<tbody>
+<tr>
+<td>Dictionary scale</td>
+<td>500</td>
+<td>1,000</td>
+<td>1,500</td>
+<td>2,000</td>
+</tr>
+<tr>
+<td>Rate of correct recognition (%)</td>
+<td>92.15</td>
+<td>93.50</td>
+<td>93.38</td>
+<td>93.85</td>
+</tr>
+</tbody>
+</table></div>
+<p class="indent1">It can be seen from <a href="#c10_tbl7">Table 10.7</a> that the recognition performance of the presented method changes slightly when the scale of the dictionary is larger than 1,000. This means the presented method is not sensitive to the dictionary scale when it is large enough. Based on the trade-off between the recognition accuracy and the computation complexity, the scales of the dictionary can be selected in the range from 1,000 to 1,500.</p>
+</div>
+<div id="c10_sec3-2-4">
+<h5 class="h5" id="ST162">10.3.2.4 Recognition performance with different sizes of sparsity</h5>
+<p class="noindent">In this experiment, we evaluate the presented method with different values of sparsity <i>K</i>. The performance of the presented method is compared with that of the spectrogram-based method. The sparsity <i>K</i> varies from 1 to 19. The scale of the dictionary is set to 1,500, while the window size of STFT is set to be 4 ms. The proportion of the training set is 50%. The recognition performances are averaged over 50 trials with randomly selected training data. The resulting rates of correct recognition are shown in <a href="#c10_fig8">Figure 10.8</a>.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-10-f08.jpg" loading="lazy" decoding="async" width="514" height="837"></p>
+<p class="fcaption" id="c10_fig8">Figure 10.8 Rate of correct recognition yielded by the dictionary learning-based method and the method in [<a href="#c10_bib27">27</a>] versus different values of sparsity K (a) on average and (b) on boxplot</p>
+<p class="indent"><a href="#c10_fig8">Figure 10.8</a>(a) shows the recognition performance of the presented method and the spectrogram-based method with different sparsity values while <a href="#c10_fig8">Figure 10.8</a>(b) is the boxplot of the results. It is clear from <a href="#c10_fig8">Figure 10.8</a>(a) that the rate of correct recognition of the presented method increases as the sparsity <i>K</i> increases when <i>K</i>&lt;10. The reason is that more features are extracted as the sparsity <i>K</i> increases. The rate of correct recognition tends to be stable when <img alt="image" class="mid" src="../images/CH010-Eqn-in-75.gif" loading="lazy" decoding="async" width="53" height="14">. This means that no more useful features can be extracted by setting larger value of <i>K</i>. Meanwhile, a larger value of the sparsity <i>K</i> will lead to more computational burden. Considering the trade-off between the computation complexity and the recognition accuracy, the sparsity <i>K</i> can be selected in the range from 10 to 13. In order to more exactly determine the value of sparsity <i>K</i>, the training scheme method proposed in [<a href="#c10_bib28">28</a>] can be used. That is, the proposed method with all the possible sparsity candidates is evaluated and the proper sparsity corresponding to the best performance is selected.</p>
+<p class="indent">In addition, it is obvious from <a href="#c10_fig8">Figure 10.8</a>(b) that the presented method consistently outperforms the spectrogram-based method for different sparsity values with higher mean, median, first quartile and third quartile values. Furthermore, the box sizes of the presented method are smaller than that of the spectrogram-based method, which means the dispersion levels of the presented method are lower than those of the spectrogram-based method.</p>
+</div>
+<div id="c10_sec3-2-5">
+<h5 class="h5" id="ST163">10.3.2.5 Recognition performance with different window sizes</h5>
+<p class="noindent">In this subsection, the performance of the presented method versus the window size of the STFT is investigated. The window size varies from 2 to 8 ms with a step size of 2 ms. The sparsity <i>K</i> is set to 10. The recognition accuracies obtained by the presented method are illustrated in <a href="#c10_fig9">Figure 10.9</a>, where 50% and 5% of the data set are used for training and validating, respectively.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-10-f09.jpg" loading="lazy" decoding="async" width="592" height="453"></p>
+<p class="fcaption" id="c10_fig9">Figure 10.9 Rate of correct recognition yielded by the presented method and the spectrogram-based method in [<a href="#c10_bib27">27</a>] versus different window sizes</p>
+<p class="indent">It can be seen from <a href="#c10_fig9">Figure 10.9</a> that the presented method achieves better accuracy when the window size is in the interval of 4 and 6 ms. The performance of the presented method declines when the window size is less than 4 ms or larger than 6 ms, this is because the frequency resolution or the time resolution of the time–frequency spectrogram are poor when the window size is too small or too large, respectively [<a href="#c10_bib21">21</a>]. In addition, it is clear that the presented method consistently outperforms the spectrogram-based method for different window sizes with lower dispersion levels.</p>
+</div>
+<div id="c10_sec3-2-6">
+<h5 class="h5" id="ST164">10.3.2.6 Recognition performance with different noise levels</h5>
+<p class="noindent">In this subsection, the presented method is evaluated under different levels of additive white Gaussian noise (AWGN). The signals received by the radar are mixed with simulated AWGN according to the following expression:</p>
+<p class="imagec" id="c10_eqn13"><img alt="image" src="../images/CH010-c10_eqn13.gif" loading="lazy" decoding="async" width="584" height="35"></p>
+<p class="noindent">where <img alt="image" class="mid" src="../images/CH010-Eqn-in-76.gif" loading="lazy" decoding="async" width="10" height="12"> represents the received signal, <img alt="image" class="mid" src="../images/CH010-Eqn-in-77.gif" loading="lazy" decoding="async" width="30" height="17"> represents the <img alt="image" class="mid" src="../images/CH010-Eqn-in-78.gif" loading="lazy" decoding="async" width="12" height="14">-norm of <img alt="image" class="mid" src="../images/CH010-Eqn-in-79.gif" loading="lazy" decoding="async" width="10" height="12">, SNR is the approximate signal-to-noise ratio of the AWGN and the received signal, and <img alt="image" class="mid" src="../images/CH010-Eqn-in-80.gif" loading="lazy" decoding="async" width="9" height="9"> is the AWGN with zero mean and unit variance. It is worth emphasizing that there may be a small gap between SNR and the real SNR value of the mixed signal <img alt="image" class="mid" src="../images/CH010-Eqn-in-81.gif" loading="lazy" decoding="async" width="8" height="9">, because the received signal <b>y</b> also contains noise components.</p>
+<p class="indent">In the experiments, the value of SNR varies from 0 to 20 dB with a step of 5 dB. Under each value of SNR, the recognition accuracies obtained by each method are measured by averaging over 50 trials. Here, the sparsity <i>K</i> is set to be 10, and the length of the window is set to be 4 ms. The proportion of the training set is 50%. It can be seen that the recognition accuracy obtained by the presented method is higher than 80% when the value of SNR is greater than 0 dB, as shown in <a href="#c10_fig10">Figure 10.10</a>. Moreover, the presented method outperforms the spectrogram-based method under moderate noise with higher mean, median, first quartile and third quartile values.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-10-f10.jpg" loading="lazy" decoding="async" width="619" height="469"></p>
+<p class="fcaption" id="c10_fig10">Figure 10.10 Rate of correct recognition yielded by the presented method and the spectrogram-based method in [<a href="#c10_bib27">27</a>] under different levels of AWGN</p>
+</div>
+<div id="c10_sec3-2-7">
+<h5 class="h5" id="ST165">10.3.2.7 Analysis about the time consumption</h5>
+<p class="noindent">In this subsection, the computational time of the dictionary learning-based method is evaluated.</p>
+<p class="indent">The hardware platform is a server with an Intel Xeon<sup>®</sup> E5-2640 CPU inside, and the CPU clock frequency and the memory size are 2.40 GHz and 128 GB, respectively. The software platform is MATLAB 2018b and the operation system is Windows Server 2016 Standard. In realistic applications, the recognition of UAVs needs to be real-time processing. Considering that the training process can be accomplished offline, the bottleneck of real-time processing is the time consumption for testing. For each method, the running time for testing is measured by averaging over 100 trials. The results of running time are presented in <a href="#c10_fig11">Figure 10.11</a>, where the presented method has lower time consumption under different sparsity levels. It is obvious that the time consumption increases linearly as the sparsity rises. The reason is that the number of inner iterations of OMP algorithm performs linearly with the sparsity level. Since the running time for recognizing one sample by the presented method with MATLAB is only 0.28 s when the sparsity is set to be 10, it is promising to achieve real-time processing with optimised code on embedded computing platforms in practical applications.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-10-f11.jpg" loading="lazy" decoding="async" width="615" height="464"></p>
+<p class="fcaption" id="c10_fig11">Figure 10.11 The time consumption of the presented method and the spectrogram-based method as a function of different sizes of sparsity</p>
+</div>
+</div>
+</div>
+<div id="c10_sec4">
+<h3 class="h3" id="ST166">10.4 Conclusion</h3>
+<p class="noindent">In this chapter, the problem of recognition of multiple UAVs with a radar sensor is studied. To some extent, this problem can be solved by spatial separation with high range resolution, which requires a large radar bandwidth and accordingly high hardware cost.</p>
+<p class="indent">In order to recognise multiple UAVs with lower hardware cost, two algorithms for radar recognition of multiple UAVs with CW radar system are presented. In the first algorithm, the CFS is presented as a kind of low-dimensional features to realise the detection of multiple UAVs. CFS gives a general characteristic about the shape, size and variation tendency of CVD, which is independent of the time shift of radar echo and makes the recognition of small UAVs more robust. The experimental results on measured data demonstrate that the presented method is capable of dealing with multiple UAVs with high classification accuracy and low computational complexity. The second algorithm is based on dictionary learning, which aims to determine the presence of a specific type of small UAV. The dictionaries learnt by the <i>K</i>-SVD algorithm are combined together to determine the existence of the specific type of UAVs and accordingly the problem of recognition of multiple small UAVs is converted into the problem of signal decomposition. Experiments on real radar data have demonstrated the effectiveness of the dictionary learning-based algorithm.</p>
+<p class="indent">The contents reported in this chapter are heuristic with several kinds of small UAVs. It is worth performing more experiments with more types of UAVs and a larger number of UAVs and evaluating the presented methods. When the data set is large enough, the features suggested in this chapter may be combined with artificial intelligence algorithms to further improve the recognition accuracy. Furthermore, the information of the UAVs in the time-range-Doppler domain could be exploited to improve the performance of recognition of UAV swarms.</p>
+</div>
+<div>
+<h3 class="h3" id="ST167">References</h3>
+<p class="ref" id="c10_bib1">[1] Ritchie, M., Fioranelli, F., and Borrion, H.: ‘Micro UAV crime prevention: can we help Princess Leia?’, Crime Prevention in the 21st Century: Insightful Approaches for Crime Prevention Initiatives, B. LeClerc and E.U. Savona<i>,</i> Eds. New York, NY, USA: Springer; 2017, pp. 359–376.</p>
+<p class="ref" id="c10_bib2">[2] Ritchie, M., Fioranelli, F., and Borrion, H.: ‘Multistatic micro-Doppler radar feature extraction for classification of unloaded/loaded micro-drones’, IET Radar Sonar Navig, 2017, <b>11</b>, (1), pp. 116–124.</p>
+<p class="ref" id="c10_bib3">[3] Zhang, P., Yang, L., Chen, G., <i>et al.</i>: ‘Classification of drones based on micro-Doppler signatures with dual-band radar sensors’, 2017 Progress in Electromagnetics Research Symp., Singapore, Singapore, November 2017.</p>
+<p class="ref" id="c10_bib4">[4] Zhang, P., Li, G., Huo, C., and Yin, H.: ‘Exploitation of multipath micro-Doppler signatures for drone classification’, IET Radar Sonar Navigation, 2020, <b>14</b>, (4), pp. 586–592.</p>
+<p class="ref" id="c10_bib5">[5] Oh, B.-S., Guo, X., Wan, F., <i>et al.</i>: ‘Micro-Doppler Mini-UAV classification using empirical-mode decomposition features’, IEEE Geosci Remote Sens Lett, 2018, <b>15</b>, (2), pp. 227–231.</p>
+<p class="ref" id="c10_bib6">[6] Ritchie, M., Fioranelli, F., Griffiths, H., <i>et al.</i>: ‘Micro-drone RCS analysis’, IEEE Radar Conf., Johannesburg, South Africa, October 2015.</p>
+<p class="ref" id="c10_bib7">[7] Clemente, C., Balleri, A., Woodbridge, K., <i>et al.</i>: ‘Developments in target micro-Doppler signatures analysis: radar imaging, ultrasound and through-the-wall-radar’, EURASIP J Adv Signal Process, 2013, <b>47</b>, (1), pp. 1–18.</p>
+<p class="ref" id="c10_bib8">[8] Fioranelli, F., Ritchie, M., and Griffiths, H.: ‘Classification of unarmed/armed personnel using the NetRAD multistatic radar for micro-Doppler and singular value decomposition features’, IEEE Geosci Remote Sens Lett, 2016, <b>13</b>, (1), pp. 8–12.</p>
+<p class="ref" id="c10_bib9">[9] Zhou, Z., Zhang, C., Xu, C., <i>et al.</i>: ‘Energy-efficient industrial internet of UAVs for power line inspection in smart grid’, IEEE Trans Ind Inf, 2018, <b>14</b>, (6), pp. 2705–2714.</p>
+<p class="ref1" id="c10_bib10">[10] Shi, X., Yang, C., Xie, W., <i>et al.</i>: ‘Anti-drone system with multiple surveillance technologies: architecture, implementation, and challenges’, IEEE Commun Mag, 2018, <b>56</b>, (4), pp. 68–74.</p>
+<p class="ref1" id="c10_bib11">[11] Zhang, W. and Li, G.: ‘Detection of multiple micro-drones via cadence velocity diagram analysis’, Electron Lett, 2018, <b>54</b>, (7), pp. 441–443.</p>
+<p class="ref1" id="c10_bib12">[12] Zhang, W., Li, G., and Baker, C.: ‘Radar recognition of multiple micro-drones based on their micro-Doppler signatures via dictionary learning’, IET Radar Sonar Navig, 2020, <b>14</b>, (9), pp. 1310–1318.</p>
+<p class="ref1" id="c10_bib13">[13] Wang, Y., Feng, C., and Xu, D.: ‘Micro-Doppler separation for target with rotating parts based on wavelet decomposition,’ CIE International Conference on Radar, October 2016.</p>
+<p class="ref1" id="c10_bib14">[14] Aharon, M., Elad, M., and Bruckstein, A.: ‘K-SVD: an algorithm for designing overcomplete dictionaries for sparse representation’, IEEE Trans Signal Process, 2006, <b>54</b>, (11), pp. 4311–4322.</p>
+<p class="ref1" id="c10_bib15">[15] Tropp, J.A. and Gilbert, A.C.: ‘Signal recovery from random measurements via orthogonal matching pursuit’, IEEE Trans Inf Theory, 2007, <b>53</b>, (12), pp. 4655–4666.</p>
+<p class="ref1" id="c10_bib16">[16] Wu, L., Wang, Y., and Pan, S.: ‘Exploiting attribute correlations: a novel trace lasso-based weakly supervised dictionary learning method’, IEEE Trans Cybern, 2017, <b>47</b>, (12), pp. 4497–4508.</p>
+<p class="ref1" id="c10_bib17">[17] Liu, L., Shao, L., Li, X., and Lu, K.: ‘Learning spatio-temporal representations for action recognition: a genetic programming approach’, IEEE Trans Cybern, 2016, <b>46</b>, (1), pp. 158–170.</p>
+<p class="ref1" id="c10_bib18">[18] Liu, L., Yu, M., and Shao, L.: ‘Unsupervised local feature hashing for image similarity search’, IEEE Trans Cybern, 2016, <b>46</b>, (11), pp. 2548–2558.</p>
+<p class="ref1" id="c10_bib19">[19] Patel, V.M., Qiu, Q., and Chellappa, R.: ‘Dictionaries for image-based recognition’, Information Theory and Applications Workshop, San Diego, CA, USA, February 2013.</p>
+<p class="ref1" id="c10_bib20">[20] Wang, J., Yang, J., Yu, K., <i>et al.</i>: ‘Locality-constrained linear coding for image classification’, IEEE Computer Society Conference on Computer Vision and Pattern Recognition, San Francisco, CA, USA, June 2010.</p>
+<p class="ref1" id="c10_bib21">[21] Li, G., Zhang, R., Ritchie, M., and Griffiths, H.: ‘Sparsity-driven micro-Doppler feature extraction for dynamic hand gesture recognition’, IEEE Trans Aerosp Electron Syst, 2018, <b>54</b>, (2), pp. 655–665.</p>
+<p class="ref1" id="c10_bib22">[22] Yang, M., Zhang, L., Feng, X., and Zhang, D.: ‘Fisher discrimination dictionary learning for sparse representation’, International Conference on Computer Vision, Barcelona, Spain, November 2011.</p>
+<p class="ref1" id="c10_bib23">[23] LaValle, S.M., Branicky, M.S., and Lindemann, S.R.: ‘On the relationship between classical grid search and probabilistic roadmaps’, Int J Rob Res, 2004, <b>23</b>, (7–8), pp. 673–692.</p>
+<p class="ref1" id="c10_bib24">[24] Wu, S. and Manber, U.: ‘A fast algorithm for multi-pattern searching’, Technical Report TR-94-17, Department of Computer Science, University of Arizona, 1994.</p>
+<p class="ref1" id="c10_bib25">[25] Zhang, Q. and Li, B.: Dictionary Learning in Visual Computing, San Rafael, CA, USA: Morgan &amp; Claypool, 2015.</p>
+<p class="ref1" id="c10_bib26">[26] Song, L. and Peng, J.: ‘Dictionary learning research based on sparse representation’, IEEE Conference on Computer Science and Service System, Nanjing, China, August 2012.</p>
+<p class="ref1" id="c10_bib27">[27] Vishwakarma, S. and Ram, S.S.: ‘Detection of multiple movers based on single channel source separation of their micro-Dopplers’, IEEE Trans Aerosp Electron Syst, 2018, <b>54</b>, (1), pp. 159–169.</p>
+<p class="ref1" id="c10_bib28">[28] Molchanov, P.: Radar Target Classification by Micro-Doppler Contributions, Tampere, Finland: Tampere University of Technology, 2014.</p>
+</div>
+</article><nav class="pager" aria-label="Reading order"><a class="pager-previous" href="Chapter9.html"><small>Previous ←</small><span>9 Radar UAV and bird signature comparisons with micro-Doppler</span></a><a class="pager-next" href="Chapter11.html"><small>Next →</small><span>11 Advanced classification techniques for drone payloads</span></a></nav>
+<footer class="page-footer"><span>Radar &amp; sensing</span><a href="../../content/xhtml/copyright.html">Publication details</a><a href="#main">Back to top ↑</a></footer>
+</main>
+<aside class="on-this-page" aria-label="On this page"><span class="eyebrow">ON THIS PAGE</span><a href="#ST150">10.1 Introduction</a><a href="#ST151">10.2 Recognition of multiple UAVs based on CFS</a><a href="#ST154">10.3 Recognition of multiple UAVs via dictionary learning</a><a href="#ST166">10.4 Conclusion</a><a href="#ST167">References</a></aside>
+<dialog class="search-dialog" aria-labelledby="search-title">
+<div class="search-heading"><h2 id="search-title">Search the book</h2><button type="button" class="close-search" aria-label="Close search">×</button></div>
+<label for="book-query" class="sr-only">Search terms</label><input id="book-query" type="search" placeholder="A topic, phrase, or equation reference…" autocomplete="off">
+<p class="search-status" role="status">Search across all chapters and sections.</p><div class="search-results"></div>
+</dialog>
+</body></html>

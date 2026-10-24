@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Read Radar Countermeasures for Unmanned Aerial Vehicles with searchable chapters, original figures, and saved reading progress.">
+<meta name="color-scheme" content="light dark">
+<title>2 Systems design considerations · Reading room</title>
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/reader.css">
+<script src="../../assets/reader.js" defer></script>
+</head>
+<body data-root="../../" data-page="xhtml/Chapter2.html" data-title="2 Systems design considerations">
+<a class="skip-link" href="#main">Skip to reading</a>
+<header class="topbar">
+<a class="brand" href="../../index.html"><span class="brand-mark" aria-hidden="true">r.</span><span>Reading room</span></a>
+<span class="topbar-label">RADAR &amp; SENSING / 01</span>
+<div class="toolbar">
+<button class="search-trigger" type="button" data-search>Search book <kbd>⌘ K</kbd></button>
+<button class="theme-toggle" type="button" aria-label="Use dark theme" title="Switch theme">◐</button>
+<button class="menu-toggle" type="button" aria-controls="sidebar" aria-expanded="false">Contents</button>
+</div></header>
+<aside id="sidebar" class="sidebar" aria-label="Book navigation">
+<div class="sidebar-heading"><span class="eyebrow">THE BOOK</span><h2>Radar Countermeasures<br><span>for Unmanned Aerial Vehicles</span></h2></div>
+<a class="overview-link" href="../../index.html">Overview <span aria-hidden="true">↗</span></a>
+<p class="nav-label">CONTENTS</p><nav aria-label="Chapters"><ul class="chapter-list"><li><a class="chapter-link"  href="../../content/xhtml/preface.html#ST2"><span class="chapter-number">·</span><span>About the editors</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/preface_1.html#ST3"><span class="chapter-number">·</span><span>List of reviewers</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter.html#c00"><span class="chapter-number">·</span><span>Introduction</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter1.html#c01"><span class="chapter-number">01</span><span>Counter UAS systems overview</span></a></li><li><a class="chapter-link current" aria-current="page" href="../../content/xhtml/Chapter2.html#c02"><span class="chapter-number">02</span><span>Systems design considerations</span></a><ul class="subnav"><li><a href="../../content/xhtml/Chapter2.html#ST20">2.1 Introduction</a></li><li><a href="../../content/xhtml/Chapter2.html#ST21">2.2 The systems design challenge</a></li><li><a href="../../content/xhtml/Chapter2.html#ST22">2.3 The role of radar</a></li><li><a href="../../content/xhtml/Chapter2.html#ST23">2.4 System design examples</a></li><li><a href="../../content/xhtml/Chapter2.html#ST26">References</a></li></ul></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter3.html#c03"><span class="chapter-number">03</span><span>Applications of millimetre wave radar for UAV detection and classification</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter4.html#c04"><span class="chapter-number">04</span><span>Detection and tracking of UAVs using an interferometric radar</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter5.html#c05"><span class="chapter-number">05</span><span>Passive radar detection of drones with staring illuminators of opportunity</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter6.html#c06"><span class="chapter-number">06</span><span>DVB-T-based passive radar for silent surveillance of drones</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter7.html#c07"><span class="chapter-number">07</span><span>Multiband passive radar for drones detection and localization</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter8.html#c08"><span class="chapter-number">08</span><span>GNSS-based UAV detection</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter9.html#c09"><span class="chapter-number">09</span><span>Radar UAV and bird signature comparisons with micro-Doppler</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter10.html#c10"><span class="chapter-number">10</span><span>Radar recognition of multiple UAVs</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter11.html#c11"><span class="chapter-number">11</span><span>Advanced classification techniques for drone payloads</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter12.html#c12"><span class="chapter-number">12</span><span>Good practices and approaches for counter UAV system developments – an industrial perspective</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Conclusion.html"><span class="chapter-number">·</span><span>Conclusion</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/index.html#ST192"><span class="chapter-number">·</span><span>Index</span></a></li></ul></nav>
+<div class="sidebar-footer"><a href="../../downloads/radar-countermeasures.epub" download>Download EPUB <span aria-hidden="true">↓</span></a><span>Original edition · 2021</span></div>
+</aside>
+<main id="main" class="main reading" tabindex="-1">
+<div class="reading-progress" aria-hidden="true"><span></span></div><div class="reading-meta"><a href="../../index.html">The book</a><span>/</span><span>55 min read</span><div class="font-controls" aria-label="Text size"><button type="button" data-font="-1" aria-label="Decrease text size">A−</button><button type="button" data-font="1" aria-label="Increase text size">A+</button></div></div><article class="book-text"><h1 class="h2a" id="c02"><em>Chapter 2</em><br><strong>Systems design considerations</strong></h1>
+<p class="authorc">David Greig<sup><a href="#c02_aff1"><sup>1</sup></a></sup>, Stephen Harman<sup><a href="#c02_aff2"><sup>2</sup></a></sup> and George Matich<sup><a href="#c02_aff1"><sup>1</sup></a></sup></p>
+<div id="c02_sec1">
+<h3 class="h3" id="ST20">2.1 Introduction</h3>
+<p class="noindent">To design a system which can counter a particular threat you must, first understand what the threat is, what measures can be taken to counter it and who will operate the system to do this. In this chapter, we will consider these points first of all and then discuss how the various possibilities can be translated into requirements for a radar system.</p>
+<p class="indent">Small drones (or Unmanned Air Systems – UAS – to be more formal) have become widely used and easily obtained in recent years. Many of these are bought essentially as toys or by hobbyists, others are used commercially, mainly for aerial photography and surveying. As with any human invention, it is not long before a nefarious purpose was found for new technology.</p>
+<p class="indent">Probably the most widely covered incident involving a misuse of drones occurred over Gatwick Airport, south of London in December 2018, when drones flown in the approaches to the airport saw flights cancelled for over 20 h causing a lot of disruption and with a huge financial impact. At the time, the immediate speculation was of this being a terrorist attack or deliberate disruption by climate change protestors. When no groups came forward, speculation moved onto the disruption being due to ‘state actors’ but months later the police investigating still had no idea who had carried out the flights or why [<a href="#c02_bib1">1</a>]. While large companies such as Amazon have trialled drones to be used as delivery vehicles in congested cities and their use to deliver food and medicine in remote areas suffering natural disasters is also being looked at, the most widespread use of drones for delivery so far has been dropping contraband over prison walls [<a href="#c02_bib2">2</a>].</p>
+<p class="indent">In war zones, commercially available drones have been used for military purposes. A small drone equipped with a camera and a downlink to a tablet can be carried by ground troops and used to see what is over the next hill. Combined with larger, high flying military drones, it is possible for information across a battlefield to be immediately available to commanders on the ground. In the recent conflict in Ukraine, drones of many types were deployed making it very difficult for troops and vehicles to be deployed without being spotted well in advance of the position they were intending to take up. Commercially available drones can also be adapted to carry small but potentially lethal quantities of explosives (like a hand grenade) effectively turning them into guided weapons. Use in this way has been widespread by various parties in Syria and Iraq.</p>
+<p class="indent">This latter threat has led to widespread concern of the use of drones for terrorist attacks on civilians and even political assassinations. While the former has not yet happened, in 2018 an assassination attempt was made on Venezuelan president Nicolás Maduro [<a href="#c02_bib3">3</a>]. Targeting an individual in a crowd is not very easy; rather landing an explosive device randomly in that crowd is considerably easier. The possibility of an attack on a political rally, music festival or sporting event is one of the many concerns which modern police and security services have to think about.</p>
+<p class="indent">The first attempt to limit the threat from drones has been a legislative and technological strategy to present misuse. In the United Kingdom, anyone responsible for a drone between 250 g and 20 kg has to register with the Civil Aviation Authority (CAA) as a user [<a href="#c02_bib4">4</a>]. Drones which fly by GPS also now have pre-programmed software which prevents the craft from going above a certain height or flying over airports or sensitive buildings like nuclear power stations. These measures may prevent accidental misuse or casual attempts at causing a nuisance, and they will not stop more organised miscreants who can bring in drones from abroad which do not have the limiting software or reprogram the drones to remove its inhibitions (and certainly will not send a form off to the CAA). More to the point, as is clear from the previous text, drones currently pose most threat in regions where legislative control has effectively broken down.</p>
+<p class="indent">The drone has flown out of Pandora’s Box and it is not going to be easily piloted back in.</p>
+</div>
+<div id="c02_sec2">
+<h3 class="h3" id="ST21">2.2 The systems design challenge</h3>
+<p class="noindent">There is therefore a growing need for detecting and countering threats from small drones. Counter-UASs (C-UASs) can take many forms and are very much still emerging as a technology. At the core of any C-UAS is a sensor which can at least detect, most likely track drones and if possible, identify its type and purpose. To understand what a sensor must do to help counter a drone, we must first think about the system that it will be part of. The initial ‘systems thinking’ involves three questions:</p>
+<ol>
+<li>Who is the customer/end user?</li>
+<li>What are they trying to achieve?</li>
+<li>How much can they afford?</li>
+</ol>
+<p class="indent">The answer to question 3 will depend on question 1 and will likely influence question 2. It is possible to adapt high-grade military sensors for use in countering drones but this would likely be beyond the budgets of civilian agencies and the weaponry where such systems are designed to support would be overkill, possibly literally. If police forces, prison services and security contractors require a C-UAS, then they need to be affordable, reliable, easy to deploy and easy to use. The engineering challenge in producing a low-cost system which can be used with minimal training is greater than that for a specialised system used by experienced operators. This is why innovative research is still very much needed in determining how the drone threat can be reduced and eliminated.</p>
+<p class="indent">The system design really needs to start at the endpoint and work backwards. To do this, we need to know exactly what will be done to counter the drone once it has been detected. There is no single answer to this and what countermeasures can be deployed will depend very much on the environment a C-UAS will operate in. In a war zone, the risk of collateral damage and death or injury has a level deemed acceptable under rules of engagement. In a crowded civilian environment, the potential harm the drone could inflict must be weighed up against the possibility of the countermeasure doing more harm than the drone would have. Various methods of countering drones have been tried or proposed. These will be summarised later, with discussion on their viability and what the sensor requirements to support the countermeasure would be.</p>
+<p class="indent"><b>Avoidance</b> – this is the simplest case where once a drone is detected in an area where it poses a risk that area is avoided by anyone or anything at risk. For instance, this could be closing down airspace around an airport or evacuating a crowd of people for an area they are gathered in. While this approach minimises the risk of harm, it still allows the malicious operation of drones to be disruptive which may be the desired effect, and the publicity gained could encourage others. There is also the likelihood of legitimate drone use being wrongly reported as a threat and creating a panic out of nothing.</p>
+<p class="indent"><b>Tracking back to launch point</b> – finding out where the drone came from and where it returned to allows the drone users to be found and questioned. This can minimise disruption by preventing repeats of the incursion and also determine whether the usage was malicious or ignorance. To do this, the sensor needs to be able to detect and track the drone and work out the trajectory to estimate the location of the launch point.</p>
+<p class="indent"><b>Jamming the UAS guidance</b> – for drones with a remote ‘pilot’ the link from the operator console to the drone is either jammed or in a more sophisticated approach spoofed so that guidance of the drone can be taken over. For this countermeasure, the presence of the drone in an area where it poses a risk needs to be detected and the frequency of the link between operator and drone found to get up the jamming. The jamming signal can fill a large volume of airspace so does not need to be highly directional. If the drone can be directed away from the area at risk or if it crashing poses minimal risk then this approach is effective. If, however, the drone is carrying explosives, then allowing to lose control still risks death, injury or damage – just not where the terrorists intended. Moreover, many drones can have pre-programmed flightpaths that are followed by GPS. Jamming their guidance would require jamming GPS which would have wider consequences in the area of operation which may be unacceptable and still does not get round the problem of a weaponised drone going astray.</p>
+<p class="indent"><b>Directed energy weapons</b> – increasing the energy of the jamming signal to be a Radio Frequency (RF) Directed Energy Weapon (RFDEW) temporarily disrupts or even can burn out the electronics in the drone causing it to crash. If the drone is weaponised, there is the still the risk of the drone exploding where it was not aimed and still causing harm unless the RFDEW can destroy the detonator also. The RFDEW will need to be directed much more accurately than a jamming signal which will require the drone to be tracked and very likely a linking of the pointing of the countermeasure to the sensor. Even then, there is still a risk of the RFDEW damaging other nearby electronic systems, which may be unacceptable. A high-power laser would produce a more directional beam which is less likely to cause collateral damage so long as there is nothing vulnerable immediately behind the drone. The narrower beam requires very accurate steering and therefore almost certainly high accuracy tracking coupled to the pointing of the laser.</p>
+<p class="indent"><b>‘Soft’ interception</b> – these countermeasures make physical contact with the drone to divert it or bring it down. Methods include throwing a net to catch it in or directing a high-pressure jet of water or air to know the drone off course. The sensor would be required to detect the drone in a high-risk area then track it with enough accuracy to allow an operator to direct the countermeasure at it. The same proviso of collateral damage from a weaponised drone holds here too. Another interception method demonstrated has been to train large birds of prey to catch the drone. Other than providing a warning as to when to release the raptor, it is difficult to see how a sensor would be used in this case.</p>
+<p class="indent"><b>‘Hard’ interception</b> – as the drones appeared over Gatwick, many asked ‘why can’t the police just shoot it down?’. The answer to that is that this has been tried with skilled marksmen who have found it very difficult to hit a small object which can go from moving to hovering almost instantly. A high-velocity rifle bullet would certainly shatter the drone while disintegrating itself; however, if it misses it can do a lot of damage as it comes back to the ground so risky to use in the urban environment. Spreading shot (like a clay pigeon shoot) has proven more effective in hitting a drone to bring it down but will not do the same level of damage to the drone and its payload. Using a sensor to aim the gun is generally considered to be necessary over relying on a human to find and shoot down the drone. Guided munitions have been shown to be able to intercept small drones [<a href="#c02_bib5">5</a>] but using a $3 million missile to shoot down a drone which costs £24.99 from Argos is not a widely feasible solution. Smaller, cheaper guided rockets may be developed specifically for the task. If this happens, then the guidance system of the weapon needs to be matched to the accuracy of the track the sensor used to cue it can achieve.</p>
+<p class="indent"><b>Drone on drone</b> – a system which has a guidance system and can match the speed and manoeuvrability of a drone is of course another drone. The best way to bring down a drone makes to guide another drone to the vicinity of the threat drone and then let it use a camera linked into its guidance system to either crash into the threat to destroy it (possibly with a small explosive charge), to divert it of course of possible even capture it in a net.</p>
+<p class="indent">From the previous survey, we can see that the performance the sensor must achieve varies from detecting the presence of a drone to being able to track it accurately enough to point a gun at it. In designing the C-UAS, we must also consider the following:</p>
+<ul>
+<li>The range at which the drone needs to be detected.</li>
+<li>The volume of airspace which needs to be searched to find where the threat may come from.</li>
+</ul>
+<p class="indent">The range is driven by two things as follows:</p>
+<ul>
+<li>The range at which the countermeasure is effective.</li>
+<li>The amount of warning time ahead of that the operator needs to make the decision to deploy the countermeasure or not.</li>
+</ul>
+<p class="indent">The volume to be surveyed depends on what is being protected from drones.</p>
+<ul>
+<li>Battlefield deployment: if there is a frontline, the direction from which drones will appear can be anticipated narrowing the search volume.</li>
+<li>Perimeter protection of a sensitive facility (e.g. prison or sports stadium): the direction in which a drone may appear is less easily anticipated, especially when surrounded by buildings or trees which can provide cover for the launch point.</li>
+<li>Approaches to an airport: in theory the volume to be protected is any direction an aircraft can take off and land from up to the height which small drones can reach – potentially a very large volume. Multiple sensors may be needed to protect such large volumes of airspace which could rapidly become expensive unless innovative low-cost solutions can be found.</li>
+</ul>
+<p class="indent">Electronic Support Measures (ESM), which intercept RF transmissions and can find the direction from which they come (and estimate range if triangulation by multiple intercepts is possible), can reduce the volume to be searched or at least the direction in which the search should be started. This is only possible for drones which are remote piloted via a data-link and rather than following a pre-programmed flightpath. Even if the search volume can be narrowed by ESM, it is still likely that the drone will need to be located and tracked more precisely and identified as a threat before a countermeasure can be deployed.</p>
+<p class="indent">The range at which the sensors need to be effective and the volume of airspace to be surveyed are not the only challenges in developing sensors for a C-UAS. A small drone is a ‘difficult target’ hard to spot optically and with a low Radar Cross Section (RCS). Conventional detection methods developed for larger, more reflective targets are unlikely to work against drones, not at least until they are already close enough to pose a threat. Trying to process into noise and clutter to find small objects further away using established methods would likely result in a False Alarm Rate (FAR) which would be so high as to render the system unusable to the operator without novel detection methods to determine what is the true object of interest in a scene.</p>
+<p class="indent">Potentially as much of a problem of as false alarms are false positives – genuine objects which will be detected but which are not of interest to the end user. Birds are the most obvious entities in the environment which can be confused with drones. Trees blowing in the wind can also cause false alarms. As drones can approach a low altitude, moving vehicles and even people could also produce confusing returns. The ability to determine not only where a target is and predict where is going, but also to be able to classify what that object is and thus if it is of interest to the end user. Even the broadest classification of drone/not drone is useful in informing the end user on where most attention should be paid. The finer the categorisation of drone types can be made, then the better informed the end user will be to make decisions with confidence.</p>
+<p class="indent">Sensor fusion can significantly increase the confidence in identifying the drone as a threat and in eliminating false positives. If a drone is communicating to a remote operator via a data-link, it will have an RF signature which can be found using ESM, while birds should not be emitting at RFs. Similarly, a drone may have a similar RCS to a bird, but a different thermal signature. The application of sensor fusion requires an accurate estimation of direction and/or position of the possible threat from each sensor so the data produced by each can be associated with the same object in a scene.</p>
+<p class="indent">Having confidence in the information provided is as important as the other attributes of the sensor performance such as range and volume coverage – detecting more objects at longer range without knowing what they may be only adds to the workload of the operator and reduces their ability to make quick decisions. In developing classification algorithms, it is vitally important to assess how well they work in theory and in a practical environment. Robust classification can aid the decision-making process by the end user significantly. As well as having confidence that what has been detected is very likely to be a drone, having an indication what the type of drone is and hence its size and potential payload allows the end user to assess what threat the drone may pose. If it can also be determined if the drone is carrying a payload and even what that payload may be, then this would make the possible threat clearer to the end user at an earlier stage of the operation.</p>
+<p class="indent">The combination of detection, tracking and classification of the drone allows the end user to determine the intent of the drone. Intent is what the end user needs to work out to decide what action, if any, it is appropriate to take. A small drone with no payload flying where it should not be but not approaching a sensitive area is more likely down to nuisance or ignorance than posing a threat in which case trying to find the drone user to have a word with them is more appropriate than risking collateral damage with a more extreme countermeasure. For a larger drone, with a payload approaching a football stadium immediate action with some risk is more likely to be acceptable. If multiple or even swarms of drones are deployed then intent becomes even more important in determining which of the drones pose the greatest and most immediate threat and therefore need to be countered first.</p>
+<p class="indent">Protecting facilities and airspace around airports will require continuous monitoring of the volume of airspace where a threat could appear. Having human operators doing this becomes expensive in terms of man hours and training and it is also difficult for an operator to monitor a system for hours on end without becoming fatigued and potentially finding false threats and missing real ones. An autonomous C-UAS becomes attractive in these scenarios. It would be more likely to be semi-autonomous where the system would alert an operator to potential threats for them to make the final decision on the appropriate response. Introducing autonomy in a system requires a low false alarm/false-positive rate; otherwise, the operator ends up being as busy as if the system were manually operated. For such systems, classification and determination of intent become essential in only alerting the operator as needed.</p>
+</div>
+<div id="c02_sec3">
+<h3 class="h3" id="ST22">2.3 The role of radar</h3>
+<p class="noindent">The usual benefits of using radar systems for wide area surveillance – high volume and long-range coverage, day/night operation and penetration of atmosphere, weather and obscurants – hold to some extent for drone detection but with some additional challenges also. The RCS of the drone can be very small so the ranges at which they can be detected will be shorter than conventional air surveillance radars typically operate – a few hundreds of metres to a few kilometres as opposed to tens or hundreds of kilometres. While this reduces the effects of the atmosphere, a relatively high peak power will still be needed to detect a small drone at a distance which gives enough time for a countermeasure to be decided upon and deployed. As wind and heavy rain can prevent drones from being able to fly, weather penetration is also less of a concern. Drones can be operated in the dark, or through mist or smoke especially if they are following a pre-programmed flightpaths so the operator does not need visual guidance.</p>
+<p class="indent">It is possible to adapt a conventional pulse-Doppler radar to detect drones. In 2014, a Leonardo PicoSAR compact e-scan radar [<a href="#c02_bib6">6</a>] designed for ground surveillance from medium sized unmanned aerial vehicles, helicopters and light aircraft was used in a ground-based experiment to determine if a small hobbyist drone (a DJI Inspire I quadcopter) could be detected at a useful range (<a href="#c02_fig1">Figure 2.1</a>). The PicoSAR operated in Moving Target Indicator (MTI) mode with a waveform modified to have a shorter pulse to reduce the minimum range for detection. An example of the data collected from the experiment is shown in <a href="#c02_fig2">Figure 2.2</a>.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-02-f01.jpg" loading="lazy" decoding="async" width="685" height="264"></p>
+<p class="fcaption" id="c02_fig1">Figure 2.1 The PicoSAR radar and van mounting for counter-drone experiment against DJI quadcopter</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-02-f02.jpg" loading="lazy" decoding="async" width="683" height="382"></p>
+<p class="fcaption" id="c02_fig2">Figure 2.2 Example range-Doppler map from PicoSAR counter-drone experiment</p>
+<p class="indent">This range-Doppler map is typical of what can be expected as a drone measurement from a stationary ground-based pulse-Doppler radar. The ground clutter is confined to a strong line at DC. The return from the body of a moving drone is separated from this line by the Doppler shift in frequency related to the speed of the drone and whether it is moving towards or away from the radar. The rotating blades also return energy to the radar which can be seen as a spectrum in Doppler related to the number of blades and their rotation rate known as micro-Doppler. During the experiment, the drone spent some time hovering at which time the return from the body became coincident with the ground clutter; however, the micro-Doppler spread out of the line at DC so the presence of the drone could still be detected.</p>
+<p class="indent">While radars can clearly detect small drones, knowing that they are drones rather than birds or trees and what type of drone it is and what intent it has is another problem to be solved. While radars cannot produce the high-resolution images of a camera, other characteristics which cannot be seen can be measured, specifically the micro-Doppler which is a signature characteristic of particular drone types. The exploitation of this measurement for the classification of drones and the interpretation of their intent form a large part of what will be discussed in this book.</p>
+<p class="indent">While conventional pulse-Doppler radars have been shown to be able to detect drones and measure their characteristics, they are generally optimised for long-range detection and tracking of larger objects in a sparse environment, that is relatively few targets in the volume scanned with a low FARs. Adapting such radars to provide short-range hemispherical coverage is not necessarily the most efficient, effective or economic solution. This has led to a number of concepts for novel solutions to RF surveillance systems for drones (which can still be broadly called radars). The Aveillant holographic radar (<a href="#c02_fig3">Figure 2.3</a>) forms multiple simultaneous beams to achieve the hemispherical coverage needed to protect a large volume of airspace from incursions by drones in any direction.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-02-f03.jpg" loading="lazy" decoding="async" width="625" height="991"></p>
+<p class="fcaption" id="c02_fig3">Figure 2.3 Aveillant holographic radar</p>
+<p class="indent">In addition to design constraints, active radar systems may also be constrained by what frequency and bandwidth they can be licenced to operate at in the area they are positioned. The ‘crowded spectrum’ issue – the competing demand for access to the RF bands driven largely by the huge growth in mobile communications in recent years – has led to an increased interest in passive radar systems which can exploit persistent pervasive signals from other systems. This not only gets round the problem of claiming a section of the RF spectrum to operate in but can also lower the cost of owning and operating the system as it does not need to transmit reducing the complexity of the technology and the power required to operate it. The down side to this is that the power of illumination and selection of the waveform are no longer under the control of the system designer.</p>
+<p class="indent">So what is the optimum system for countering drones? When there are so many diverse scenarios in which drones pose varying levels of threat, the idea that there is a single solution to the problem should probably be dismissed from the outset. What we can be certain of is that radar, or more broadly exploitation of the RF spectrum for detecting and identifying drones, can and will be a significant part of dealing with a growing problem. The following chapters will set out in detail concepts for how radar can be used as part of a counter-drone system. The system designer should consider each in detail and determine how they can be used to meet the requirements of their end user.</p>
+</div>
+<div id="c02_sec4">
+<h3 class="h3" id="ST23">2.4 System design examples</h3>
+<div id="c02_sec4-1">
+<h4 class="h4" id="ST24">2.4.1 Compact electronically scanned pulse-Doppler radar</h4>
+<p class="noindent">Let us first consider a radar of the class of the PicoSAR radar which formed the range-Doppler maps in <a href="#c02_fig2">Figure 2.2</a> – a compact, electronically scanned rectangular array. The system parameters assumed for the radar we will analyse are given in <a href="#c02_tbl1">Table 2.1</a>.</p>
+<p class="tcaption" id="c02_tbl1">Table 2.1 Typical parameters for a compact pulse-Doppler radar system</p><div class="table-scroll" tabindex="0" role="region" aria-label="Data table"><table>
+<thead>
+<tr><th>Parameter (symbol)</th><th>Value(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operating band</td>
+<td>X-band (9–10 GHz)</td>
+</tr>
+<tr>
+<td>Wavelength (<i>λ</i>)</td>
+<td>0.03 m (nominal)</td>
+</tr>
+<tr>
+<td>Peak antenna gain (<i>G</i><sub><i>p</i></sub>)</td>
+<td>25 dB</td>
+</tr>
+<tr>
+<td>3 dB beamwidth in azimuth (unsteered)</td>
+<td>5°</td>
+</tr>
+<tr>
+<td>3 dB beamwidth in azimuth (unsteered)</td>
+<td>12°</td>
+</tr>
+<tr>
+<td>Electronic steering limits</td>
+<td>±70°</td>
+</tr>
+<tr>
+<td>Peak power (<i>P</i><sub><i>p</i></sub>)</td>
+<td>200 W</td>
+</tr>
+<tr>
+<td>Duty ratio (DR)</td>
+<td>20% (maximum)</td>
+</tr>
+<tr>
+<td>PRF</td>
+<td>100 Hz to 100 kHz</td>
+</tr>
+<tr>
+<td>Coherent processing interval (<i>N</i><sub><i>CPI</i></sub>)</td>
+<td>Up to 10,000 pulses</td>
+</tr>
+<tr>
+<td>Receiver noise figure (<i>F</i><sub><i>N</i></sub>)</td>
+<td>3 dB</td>
+</tr>
+<tr>
+<td>System operating temperature (<i>T</i>)</td>
+<td>290 K (nominal)</td>
+</tr>
+<tr>
+<td>Losses (<i>L</i>)</td>
+<td>3 dB (nominal)</td>
+</tr>
+</tbody>
+</table></div>
+<p class="indent1">These will allow us to design a waveform (or waveforms) for drone detection and classification using standard radar theory. Before doing that, we need to make some assumptions on the drone we are trying to detect. Let us assume that it is an openly available drone for the better off hobbyist or low-cost commercial use that can carry a camera size/weight payload and that it has a mean radar cross-section (<i>σ</i>) of 0.001 m<sup>2</sup>. The DJI website [<a href="#c02_bib7">7</a>] gives the maximum speed of this class of drone as 72 kph which is 20 m s<sup>−1</sup>. If we assume that the drone could be carried by a strong wind of up to 10 m s<sup>−1</sup>, then the range of speeds we need to be able to detect at is ±30 m s<sup>−1</sup> (with the drone opening or closing on the radar).</p>
+<p class="indent">The starting point for waveform design is to consider adapting an existing waveform, as this has obvious benefits in both the amount of work required to develop it and the level of testing and verification which has to be applied. In turn, the cost of adapting the system could be significantly reduced making it more affordable to multiple agencies. Detecting drones is most similar to the MTI waveforms used in radar to detect ground vehicles, helicopters and increasingly people. The conventional approach in designing an MTI waveform is to assume that the pulse repetition frequency (PRF) is selected such that range rate measurement can be made unambiguously. In this case, we need the range rate ambiguity (<i>v</i><sub><i>a</i></sub>) to be 60 m s<sup>−1</sup>, so</p>
+<p class="image"><img alt="image" src="../images/CH002-Eqn-disp-1.gif" loading="lazy" decoding="async" width="585" height="34"></p>
+<p class="indent">Radar systems were originally designed to detect objects as far beyond human sight as possible. It is thus conventional to operate the radar with the highest mean power it can output which means operating at the highest duty ratio than can be achieved. For this system that is 20% and the cycle time is defined by the PRF for a pulsed radar so the length of the pulse transmitted, <i>τ</i>, would be</p>
+<p class="image"><img alt="image" src="../images/CH002-Eqn-disp-2.gif" loading="lazy" decoding="async" width="584" height="37"></p>
+<p class="indent">In a monostatic pulsed radar, the radar cannot receive while it is transmitting, which imposes a minimum detectable range, <i>r</i><sub>min</sub>, given by</p>
+<p class="image"><img alt="image" src="../images/CH002-Eqn-disp-3.gif" loading="lazy" decoding="async" width="584" height="31"></p>
+<p class="indent">For a maximum duty ratio, this is 7,500 m. Where a drone with such a small RCS can be detected this far away is one consideration which must now be examined. The other is what minimum range is actually required for detecting and tracking the target. This will be driven by the minimum or optimum range at which the selected countermeasure to the drone can be deployed. There is a trade-off in a duty ratio that we need to assess.</p>
+<p class="indent">An appropriate version of the range equation for this analysis is</p>
+<p class="image"><img alt="image" src="../images/CH002-Eqn-disp-4.gif" loading="lazy" decoding="async" width="584" height="44"></p>
+<p class="noindent">where SNR is the signal-to-noise ratio at the receiver for a drone at range <i>r</i> and <i>k</i><sub><i>B</i></sub> is the Boltzmann constant. If we assume that an SNR of 10 dB is needed to detect the target, then this equation can be used to determine the maximum range at which the drone is detectable.</p>
+<p class="indent">The selection of the length of the Coherent Processing Interval (CPI) is another factor in the trade off. The longer the CPI, the greater the SNR. The resolution in measuring the Doppler spectrum that also improves at CPI is increased, and the Doppler bin width being defined as</p>
+<p class="image"><img alt="image" src="../images/CH002-Eqn-disp-5.gif" loading="lazy" decoding="async" width="587" height="36"></p>
+<p class="indent">This will become important in measuring the micro-Doppler spectrum of targets. Lengthening the CPI increases the time to measure a target which in turn increases the time needed to search a volume of space. We will examine that trade of later, but first of all we will assume <i>N</i><sub><i>CPI</i></sub>=128 which is typical for an MTI mode.</p>
+<p class="indent">The minimum and maximum ranges for different transmitted pulse lengths are shown in <a href="#c02_tbl2">Table 2.2</a>. As expected, if the maximum duty ratio is selected, the drone can be detected furthest away; however, there is only an interval of 1,200 m before the minimum range is reached. For the shortest pulse considered, the maximum range is reduced to 3,300 m. Is this far enough away to be useful? If we consider this from the operator’s point of view, an object, the size of a drone over 3 km away is well beyond what could be seen with the naked eye. At the maximum closing speed of the drone, it would still take around 2 min to reach where the system has been set up, which is a reasonable length of time for an experienced operator to decide whether the drone is a threat and what countermeasure should be deployed.</p>
+<p class="tcaption" id="c02_tbl2">Table 2.2 Variation of minimum and maximum detectable range for a drone with RCS of 0.001 m<sup>2</sup> for a pulse-Doppler MTI radar</p><div class="table-scroll" tabindex="0" role="region" aria-label="Data table"><table>
+<thead>
+<tr><th>Duty ratio (%)</th><th>Pulse width (<img alt="image" class="mid" src="../images/CH002-Eqn-in-1.gif" loading="lazy" decoding="async" width="17" height="12">)</th><th>Minimum range (m)</th><th>Maximum range (m)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20</td>
+<td>50</td>
+<td>7,500</td>
+<td>8,700</td>
+</tr>
+<tr>
+<td>10</td>
+<td>25</td>
+<td>3,750</td>
+<td>7,300</td>
+</tr>
+<tr>
+<td>5</td>
+<td>12.5</td>
+<td>1,875</td>
+<td>6,200</td>
+</tr>
+<tr>
+<td>2</td>
+<td>5</td>
+<td>750</td>
+<td>4,900</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2.5</td>
+<td>375</td>
+<td>4,100</td>
+</tr>
+<tr>
+<td>0.4</td>
+<td>1</td>
+<td>150</td>
+<td>3,300</td>
+</tr>
+</tbody>
+</table></div>
+<p class="indent1">In a modern digital electronically scanned radar system, the ability to generate waveforms and instantly reposition the beam creates a great deal of flexibility which can be exploited in waveform design. To increase the time the operator has to deal with a drone, the optimal strategy may be to search the volume of concern with a longer pulse waveform with the minimum range matched to the maximum range of the countermeasure, for example 750 m, so the 5-μs pulse, which would then extend the search range and increase the time available for decision-making (in this case to around 5 km giving at warning time of nearly 3 min at maximum closing speed). As the drone gets closer, the waveform which optimises the ability to detect and track is selected by the track estimate of position. This ‘track update’ waveform can be interspersed with the search waveform so that a check for further threats can be made.</p>
+<p class="indent">If hemi-spherical coverage is needed for the counter-drone system, then three of the radar antennas can be positioned in equilateral triangle configuration as shown in <a href="#c02_fig4">Figure 2.4</a>. Each would have its own receiver and signal processor (Rx/Px) controlled by a central processor which also includes a tracker taking inputs from each array and forming the interface to the operator display and control. As the bandwidth of the MTI waveform is around 1 MHz, each array can operate within the 1 GHz coverage of the system in X-band with suitable separation in frequency and isolation between the arrays in the construction of the system.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-02-f04.jpg" loading="lazy" decoding="async" width="618" height="212"></p>
+<p class="fcaption" id="c02_fig4">Figure 2.4 Pulse-Doppler radar based counter-drone system</p>
+<p class="indent">The duration of the CPI is</p>
+<p class="image"><img alt="image" src="../images/CH002-Eqn-disp-6.gif" loading="lazy" decoding="async" width="585" height="37"></p>
+<p class="indent">For an electronically scanned array, the beamwidth broadens as the cosine of the electronic steering applied. For this system, the maximum electronic steering angle needed is 60° so at the end of the scan, the beamwidth is 5°/cos(60°) = 10°. If we take an average beamwidth of 7.5°, then to cover the 120° sector, each array needs 120°/7.5°=16, beam positions. In practice, to minimise beam-shape loss and reduce FAR, we would allow something like a 50% overlap of consecutive beams, so 32 positions would be needed. The time to perform a search is then</p>
+<p class="image"><img alt="image" src="../images/CH002-Eqn-disp-7.gif" loading="lazy" decoding="async" width="584" height="16"></p>
+<p class="indent">A scan every second provides a sequence of opportunities to detect and measure the drone, which should be sufficient to form and maintain a track.</p>
+<p class="indent">The final task before deciding on if and how to counter the drone threat is to identify the drone and assess its intent. Using the micro-Doppler spectrum of the drone to do this is the basis of most identification methods. To be able to achieve the measurement of the spectrum, a longer CPI is needed to enhance the SNR of the individual components, have high resolution in frequency to be able to separate these components and allow time to measure the periodicity of the returns. A measurement period of around a second is generally needed to achieve this, for which there should be sufficient time after the track has been established.</p>
+<p class="indent">This quick analysis tells us that adapting an MTI mode in a compact electronically scanned radar can provide a counter-drone capability. We are not yet in a position to go off and start marketing the radar for that purpose, the only conclusion we can make is that the radar is not unsuitable for the task. Whether it is optimum in terms of performance and cost for customer requirements now needs more detailed thought. Some points for further analysis would be as follows:</p>
+<ol>
+<li>Beam-broadening: when the antenna is scanned to 60° the broadening of the beam also causes a loss in peak gain on transmit and receive. The normal method of compensating for this loss is to extend the CPI as the electronic steering angle increases, which in turn makes the time to search the volume longer. There are trade-offs in beam overlap, beam-shape loss, CPI, etc. which need to be considered here to find the optimum waveform and control set-up to counter the classes of drones the customer has asked for.</li>
+<li>Angular measurement accuracy: given the wide beam-width, it is likely that monopulse measurement in azimuth would be needed to give the required angular accuracy in tracking the target. To achieve this, two channels are needed, which increases hardware and processing costs.</li>
+<li>Height coverage and measurement: similarly, if there is a need to determine the height of the drone to deploy the countermeasure, then elevation monopulse is also required. Two more channels separated in elevation are needed to include this. If we consider the lower part of the main beam positioned on the horizon, then the boresight will be pointing up by 6°. At a 1-km slant range, the 3-dB beamwidth in elevation covers 200 m in height. Given that the legal limit for flying a drone is 400 ft, this would seem to be adequate. Drones of the type we are considering here can fly much higher [<a href="#c02_bib8">8</a>], which is likely for malicious use. Scanning to higher altitudes is feasible but extends the time to search the required volume if the height at which a drone approaches cannot be covered in a single scan.</li>
+<li>Size, weight, power and cost: the solution proposed before requires three simultaneously transmitting radar antennas with receiver–processor units. While this achieves more rapid coverage of the volume of space being protected, it will require more power, be heavier and considerably more expensive than an arrangement of three antennas which switch on and off in sequence to provide the coverage (at the expense of increasing search time by a factor of 3). Whether the lower cost system would have the capability to counter the threats, the customer is most concerned with is a matter to discuss with those purchasing the system.</li>
+</ol>
+<p class="indent">Performance improvement and/or cost reduction can be achieved through innovative system designs and processing techniques. Some of these may be enhancements to a pulse-Doppler radar of the type discussed here, while others may be entirely novel concepts. The aim of this book is to show how novel approaches to the counter-drone problem can be exploited in a system. Let us first look at a different system concept.</p>
+</div>
+<div id="c02_sec4-2">
+<h4 class="h4" id="ST25">2.4.2 Holographic radar</h4>
+<p class="noindent">Now let us consider the design parameters for a holographic (staring) radar such as the Aveillant Gamekeeper 16U radar [<a href="#c02_bib9">9</a>], which was designed primarily for use as a drone detection radar.</p>
+<p class="indent">Ground-based surveillance radars such as Gamekeeper are required to provide high coverage extending from short to long range with high dynamic range. High dynamic range is needed for a drone surveillance radar for the following reasons:</p>
+<ol>
+<li>The low RCS return of a drone’s body and even lower micro-Doppler components from rotor blades must be sensed in the presence of high stationary clutter and both ground and air targets with high RCS, which are often present where drones fly. For a typical installation, stationary clutter from buildings can be as high as 50 dBm<sup>2</sup> (at L band), with drone micro-Doppler components being 90 dB smaller.</li>
+<li>The surveillance objective is to persistently sense drones over the whole of the radar’s instrumented range, which for ground-based drone surveillance radar can represent a significant span. The radar range equation tells us that received power varies as <img alt="image" class="mid" src="../images/CH002-Eqn-in-2.gif" loading="lazy" decoding="async" width="32" height="18">, so the power received from a target at 200 m is 80 dB greater than the same target at 20 km.</li>
+</ol>
+<p class="indent">Therefore, low duty, low PRF waveforms (where only targets with a range delay of less than one PRI are considered) must be used owing to such a high radar system dynamic range requirement, which is up to 90 + 80 = 170 dB for sensing drones.</p>
+<p class="indent">The Aveillant Gamekeeper radar operates at a lower frequency radar than the PicoSAR radar, in which such operation benefits from a waveform response with greater combined unambiguous range and velocity space, since Doppler frequency shift is proportional to the illumination frequency. Therefore, at L band, a low PRF waveform that can cover a long-range swath can also unambiguously sense the entire range of likely Doppler frequencies returned from drones.</p>
+<p class="indent">For example, a PRF of 8,000 Hz provides a maximum unambiguous range of</p>
+<p class="image"><img alt="image" src="../images/CH002-Eqn-disp-8.gif" loading="lazy" decoding="async" width="584" height="39"></p>
+<p class="noindent">which consequentially provides unambiguous Doppler frequency coverage (noting complex sampling in radar) of</p>
+<p class="image"><img alt="image" src="../images/CH002-Eqn-disp-9.gif" loading="lazy" decoding="async" width="587" height="33"></p>
+<p class="noindent">and which relates to maximum unambiguous velocity of</p>
+<p class="image"><img alt="image" src="../images/CH002-Eqn-disp-10.gif" loading="lazy" decoding="async" width="584" height="35"></p>
+<p class="noindent">where ±480 m s<sup>−1</sup> is a more than adequate radial velocity range covering all types of targets encountered by a ground-based surveillance radar. Given this information, choosing a lower PRF may sound attractive to provide greater maximum unambiguous range for protection against the risk ambiguous returns from large targets (e.g. airliners) that could alias into and appear to be smaller targets within the closer unambiguous coverage range. However, a greater maximum unambiguous range comes at the cost of either increased minimum range or a reduced duty ratio, for example given a 200-m minimum range requirement the maximum duty ratio achievable drops from 1% to 0.5% when the PRF is reduced from 8,000 to 4,000 Hz, since the maximum achievable duty ratio relates to the minimum range:</p>
+<p class="image"><img alt="image" src="../images/CH002-Eqn-disp-11.gif" loading="lazy" decoding="async" width="585" height="37"></p>
+<p class="indent">Therefore, since duty ratio affects the sensitivity of a radar, it is more advantageous to use signal processing, tracking and target classification techniques for the mitigation of ambiguous target returns.</p>
+<p class="indent">Holographic radars differ to other surveillance radars in that they do not scan, their transmitters illuminate their entire 3D coverage sector persistently and multiple simultaneous receive beams are formed to cover the entire 3D coverage sector, see <a href="#c02_fig5">Figure 2.5</a>. This affords three key advantages for drone detection, tracking and recognition:</p>
+<ol>
+<li>Persistent coverage provides very low minimum detectable velocity, enabling slow moving target detection. This is achieved because long coherent dwell times in all 3D sectors simultaneously provides very high velocity resolution, which in turn allows moving targets to be detected against a background of high levels of stationary ground clutter encountered by all ‘near-to-ground’ surveillance radar.</li>
+<li>The high-resolution Doppler frequency provided by long coherent dwells allows for high-resolution sensing of the micro-Doppler signature returned by a drone’s rotor blades, thereby enabling effective recognition.</li>
+<li>Persistent coverage provides high detection rates on all targets, which is essential for effective tracking of drones given their ability to follow agile trajectories. Scanning radars are fundamentally limited in this aspect by their scan rate: such that when scanning radars switch to modes using long coherent dwells to provide the preceding two properties, the scan rates of such radars can be very slow, so detections from any one target will be infrequent.</li>
+</ol>
+<p class="image"><img alt="image" src="../images/SBRA5430-02-f05.jpg" loading="lazy" decoding="async" width="587" height="622"></p>
+<p class="fcaption" id="c02_fig5">Figure 2.5 Transmit beam pattern (red) and multiple simultaneous receiver beam patterns used by a holographic radar</p>
+<p class="indent">The disadvantage that holographic (staring) radars have with respect to scanning radars is that transmitter antenna gain is considerably less than a scanning equivalent, given that the transmitter beam is required to persistently illuminate the entire 3D coverage space, whereas a scanning radar can focus its beam on the narrow angular sector which is being sampled any one point in time. In theory, this disadvantage is counteracted by holographic radars being able to coherently integrate over a time period equivalent to the comparative scanning radar scan time; therefore both radars receive the same energy over a defined period. This does, however, lead to the processing loads of holographic radars being greater, since long coherent dwells require long Fourier transforms which need to operate on multiple receiver beams simultaneously.</p>
+<p class="indent">Holographic radars necessarily have array receiver antennas so that multiple receive beams can be formed, allowing angular direction to be measured. A greater number of receiver antennas provide greater sensitivity owing to the greater total antenna area and greater angular accuracy; however, the greater the number of receivers, the greater the size, the number of receiver channels and hence cost of a radar. Holographic radars are all built from similar modular components allowing flexibility in configuration of a radar to meet the required application. For the drone detection problem, the most important requirement of the antenna array, in addition to sensitivity, is that it provides good elevation accuracy. Good elevation accuracy provides the capability to determine whether a target of interest is airborne or not, particularly given the low altitudes at which drones fly. Therefore, the Gamekeeper radar has four times greater elements vertically that it does horizontally, prioritising elevation accuracy over azimuth accuracy. The Gamekeeper 16U radar has 16-receiver antenna elements vertically by 4-receiver antenna elements horizontally, in which the ‘16’ refers to the number of receiver modules, each of which consists of two-times-two receiver antenna elements and all associated independent receiver chains and digitisers.</p>
+<p class="indent">To review the sensitivity of the Gamekeeper 16U holographic radar, we use a similar version of the range equation as used in Section 2.4.1 but adapting it for holographic radar in which the receiver and transmitter gains differ and by adding an Array factor to account for beamformer gain when summing across the Array of receiver antenna elements:</p>
+<p class="image"><img alt="image" src="../images/CH002-Eqn-disp-12.gif" loading="lazy" decoding="async" width="584" height="44"></p>
+<p class="indent">The approximate system parameters assumed for the holographic radar for this analysis are given in <a href="#c02_tbl3">Table 2.3</a>.</p>
+<p class="tcaption" id="c02_tbl3">Table 2.3 Approximate system parameters for the Gamekeeper 16U radar</p><div class="table-scroll" tabindex="0" role="region" aria-label="Data table"><table>
+<thead>
+<tr><th>Parameter (symbol)</th><th>Value(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operating band</td>
+<td>L band (1,215–1,350 MHz)</td>
+</tr>
+<tr>
+<td>Wavelength (<i>λ</i>)</td>
+<td>0.24 m (nominal)</td>
+</tr>
+<tr>
+<td>Peak transmitter antenna gain (<i>Gt</i><sub><i>p</i></sub>)</td>
+<td>13 dB</td>
+</tr>
+<tr>
+<td>Transmit antenna 3 dB azimuth beamwidth</td>
+<td>&gt;90°</td>
+</tr>
+<tr>
+<td>Effective<sup>*</sup> transmit antenna elevation beamwidth</td>
+<td>±30°</td>
+</tr>
+<tr>
+<td>Peak receiver element antenna gain (<i>Gr</i><sub><i>p</i></sub>)</td>
+<td>6 dB</td>
+</tr>
+<tr>
+<td>Receiver antenna element 3 dB azimuth beamwidth</td>
+<td>&gt;90°</td>
+</tr>
+<tr>
+<td>Receiver antenna element 3 dB elevation beamwidth</td>
+<td>&gt;90°</td>
+</tr>
+<tr>
+<td>Number of receiver elements</td>
+<td>64 (16×4)</td>
+</tr>
+<tr>
+<td>Peak power (<i>P</i><sub><i>p</i></sub>)</td>
+<td>2 kW</td>
+</tr>
+<tr>
+<td>Typical duty ratio (DR)</td>
+<td>1%</td>
+</tr>
+<tr>
+<td>Typical PRF</td>
+<td>8 kHz</td>
+</tr>
+<tr>
+<td>Typical coherent processing interval (<i>N</i><sub><i>CPI</i></sub>)</td>
+<td>4,096 pulses</td>
+</tr>
+<tr>
+<td>Receiver noise figure (<i>F</i><sub><i>N</i></sub>)</td>
+<td>4 dB</td>
+</tr>
+<tr>
+<td>System operating temperature (<i>T</i>)</td>
+<td>290 K (nominal)</td>
+</tr>
+<tr>
+<td>Losses (<i>L</i>)</td>
+<td>8 dB (nominal)</td>
+</tr>
+</tbody>
+</table></div>
+<p class="tfoot"><sup>*</sup>Note the transmit antenna is shaped in elevation to provide greater sensitivity at elevations closer to horizontal.</p>
+<p class="indent1">For a surveillance radar, we assume that a threshold SNR of at least 16 dB is required to detect a target, which provides an acceptable FAR given many simultaneous detection decisions are made independently over multiple ranges, azimuth, elevation and Doppler frequency cells. This threshold though atypically high also provides some margin for the inhomogeneity in background noise encountered when detecting against a complex background containing high clutter and potential EMC sources, which can be encountered in environments in which drones fly.</p>
+<p class="indent">Comparatively high losses for the Gamekeeper radar (with respect to other radars) are quoted in <a href="#c02_tbl3">Table 2.3</a>. This loss covers a number of worst case losses that may be encountered over the entire surveillance coverage volume, which is as follows:</p>
+<ol>
+<li>Beam loss with respect to the peak gains achieved at the boresight of both the transmitter and receiver arrays; this is common to all non-mechanically scanned radars.</li>
+<li>Signal-processing losses, such as those caused by windows applied to time series and antenna aperture and losses in the necessary constant false-alarm rate detector, which is common to all array antenna pulse Doppler radars.</li>
+</ol>
+<p class="indent">In addition to the 16 dB surveillance operation threshold, here, we also consider a lower SNR detection threshold of 10 dB, which is more appropriate for the detection of the micro-Doppler components in the return of a drone. This lower threshold is appropriate due to the following reasons:</p>
+<ol>
+<li>Further discrimination processes are applied to recognise multiple micro-Doppler components in the Doppler frequency spectrum, which reduces the risk of false alarms.</li>
+<li>Micro-Doppler recognition is often only used a following detection and hence such processes only operate on focussed 3D resolution cells of interest, so a surveillance assumption is not appropriate.</li>
+</ol>
+<p class="indent">The parameters in <a href="#c02_tbl3">Table 2.3</a> and the equation for SNR quoted in this section determine the maximum range at which a drone’s radar return is detectable given different SNR threshold levels. <a href="#c02_tbl4">Table 2.4</a> provides these ranges for common RCSs. For context, at L band the RCSs of readily available quadcopters are typically 0.01 m<sup>2</sup>, whilst micro-Doppler components can be up to 20 dB below a drone’s dominant return, whilst larger drones do offer higher returns.</p>
+<p class="tcaption" id="c02_tbl4">Table 2.4 Derived range performance from the Gamekeeper 16U radar parameters</p><div class="table-scroll" tabindex="0" role="region" aria-label="Data table"><table>
+<thead>
+<tr><th>RCS (m<sup>2</sup>)</th><th>Range (<i>SNR</i> = 16 dB) (m)</th><th>Range (<i>SNR</i> = 10 dB) (m)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>13,900</td>
+<td>19,700</td>
+</tr>
+<tr>
+<td>0.01</td>
+<td>7,800</td>
+<td>11,100</td>
+</tr>
+<tr>
+<td>0.001</td>
+<td>4,400</td>
+<td>6,200</td>
+</tr>
+<tr>
+<td>0.0001</td>
+<td>2,500</td>
+<td>3,500</td>
+</tr>
+</tbody>
+</table></div>
+<p class="indent1">The ranges calculated in this exercise show that Gamekeeper can provide long-range surveillance despite the small size of drones and the environments in which they are encountered. In addition, L band radar operation provides a consistency of performance, in particular being little affected by attenuation and backscatter from rain and other weather-related affects, which lends its use to applications that require higher levels of assurance.</p>
+</div>
+</div>
+<div>
+<h3 class="h3" id="ST26">References</h3>
+<p class="ref" id="c02_bib1">[1] <a href="https://www.bbc.co.uk/news/uk-england-sussex-49846450" rel="noreferrer noopener">https://www.bbc.co.uk/news/uk-england-sussex-49846450</a>, accessed March 2021.</p>
+<p class="ref" id="c02_bib2">[2] <a href="https://www.bbc.co.uk/news/uk-england-45980560" rel="noreferrer noopener">https://www.bbc.co.uk/news/uk-england-45980560</a>, accessed March 2021.</p>
+<p class="ref" id="c02_bib3">[3] <a href="https://www.bbc.co.uk/news/world-latin-america-45073385" rel="noreferrer noopener">https://www.bbc.co.uk/news/world-latin-america-45073385</a>, accessed March 2021.</p>
+<p class="ref" id="c02_bib4">[4] <a href="https://www.caa.co.uk/Consumers/Unmanned-aircraft/Our-role/Drone-and-model-aircraft-registration/" rel="noreferrer noopener">https://www.caa.co.uk/Consumers/Unmanned-aircraft/Our-role/Drone-and-model-aircraft-registration/</a>, accessed March 2021.</p>
+<p class="ref" id="c02_bib5">[5] <a href="https://www.bbc.co.uk/news/technology-39277940" rel="noreferrer noopener">https://www.bbc.co.uk/news/technology-39277940</a>, accessed March 2021.</p>
+<p class="ref" id="c02_bib6">[6] <a href="https://www.leonardocompany.com/en/products/picosar-1" rel="noreferrer noopener">https://www.leonardocompany.com/en/products/picosar-1</a>, accessed March 2021.</p>
+<p class="ref" id="c02_bib7">[7] <a href="https://www.dji.com/uk/products/compare-consumer-drones" rel="noreferrer noopener">https://www.dji.com/uk/products/compare-consumer-drones</a>, accessed March 2021.</p>
+<p class="ref" id="c02_bib8">[8] <a href="https://www.technik-consulting.eu/en/analysis/drone.html" rel="noreferrer noopener">https://www.technik-consulting.eu/en/analysis/drone.html</a>, accessed March 2021.</p>
+<p class="ref" id="c02_bib9">[9] <a href="https://www.aveillant.com/products/gamekeeper/" rel="noreferrer noopener">https://www.aveillant.com/products/gamekeeper/</a>, accessed March 2021.</p>
+</div>
+<p class="aff1" id="c02_aff1"><sup>1</sup>Leonardo UK Ltd, London, United Kingdom</p>
+<p class="aff" id="c02_aff2"><sup>2</sup>Aveillant Ltd, Cambridge, United Kingdom</p>
+</article><nav class="pager" aria-label="Reading order"><a class="pager-previous" href="Chapter1.html"><small>Previous ←</small><span>1 Counter UAS systems overview</span></a><a class="pager-next" href="Chapter3.html"><small>Next →</small><span>3 Applications of millimetre wave radar for UAV detection and classification</span></a></nav>
+<footer class="page-footer"><span>Radar &amp; sensing</span><a href="../../content/xhtml/copyright.html">Publication details</a><a href="#main">Back to top ↑</a></footer>
+</main>
+<aside class="on-this-page" aria-label="On this page"><span class="eyebrow">ON THIS PAGE</span><a href="#ST20">2.1 Introduction</a><a href="#ST21">2.2 The systems design challenge</a><a href="#ST22">2.3 The role of radar</a><a href="#ST23">2.4 System design examples</a><a href="#ST26">References</a></aside>
+<dialog class="search-dialog" aria-labelledby="search-title">
+<div class="search-heading"><h2 id="search-title">Search the book</h2><button type="button" class="close-search" aria-label="Close search">×</button></div>
+<label for="book-query" class="sr-only">Search terms</label><input id="book-query" type="search" placeholder="A topic, phrase, or equation reference…" autocomplete="off">
+<p class="search-status" role="status">Search across all chapters and sections.</p><div class="search-results"></div>
+</dialog>
+</body></html>

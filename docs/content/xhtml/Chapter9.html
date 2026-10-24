@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Read Radar Countermeasures for Unmanned Aerial Vehicles with searchable chapters, original figures, and saved reading progress.">
+<meta name="color-scheme" content="light dark">
+<title>9 Radar UAV and bird signature comparisons with micro-Doppler · Reading room</title>
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/reader.css">
+<script src="../../assets/reader.js" defer></script>
+</head>
+<body data-root="../../" data-page="xhtml/Chapter9.html" data-title="9 Radar UAV and bird signature comparisons with micro-Doppler">
+<a class="skip-link" href="#main">Skip to reading</a>
+<header class="topbar">
+<a class="brand" href="../../index.html"><span class="brand-mark" aria-hidden="true">r.</span><span>Reading room</span></a>
+<span class="topbar-label">RADAR &amp; SENSING / 01</span>
+<div class="toolbar">
+<button class="search-trigger" type="button" data-search>Search book <kbd>⌘ K</kbd></button>
+<button class="theme-toggle" type="button" aria-label="Use dark theme" title="Switch theme">◐</button>
+<button class="menu-toggle" type="button" aria-controls="sidebar" aria-expanded="false">Contents</button>
+</div></header>
+<aside id="sidebar" class="sidebar" aria-label="Book navigation">
+<div class="sidebar-heading"><span class="eyebrow">THE BOOK</span><h2>Radar Countermeasures<br><span>for Unmanned Aerial Vehicles</span></h2></div>
+<a class="overview-link" href="../../index.html">Overview <span aria-hidden="true">↗</span></a>
+<p class="nav-label">CONTENTS</p><nav aria-label="Chapters"><ul class="chapter-list"><li><a class="chapter-link"  href="../../content/xhtml/preface.html#ST2"><span class="chapter-number">·</span><span>About the editors</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/preface_1.html#ST3"><span class="chapter-number">·</span><span>List of reviewers</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter.html#c00"><span class="chapter-number">·</span><span>Introduction</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter1.html#c01"><span class="chapter-number">01</span><span>Counter UAS systems overview</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter2.html#c02"><span class="chapter-number">02</span><span>Systems design considerations</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter3.html#c03"><span class="chapter-number">03</span><span>Applications of millimetre wave radar for UAV detection and classification</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter4.html#c04"><span class="chapter-number">04</span><span>Detection and tracking of UAVs using an interferometric radar</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter5.html#c05"><span class="chapter-number">05</span><span>Passive radar detection of drones with staring illuminators of opportunity</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter6.html#c06"><span class="chapter-number">06</span><span>DVB-T-based passive radar for silent surveillance of drones</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter7.html#c07"><span class="chapter-number">07</span><span>Multiband passive radar for drones detection and localization</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter8.html#c08"><span class="chapter-number">08</span><span>GNSS-based UAV detection</span></a></li><li><a class="chapter-link current" aria-current="page" href="../../content/xhtml/Chapter9.html#c09"><span class="chapter-number">09</span><span>Radar UAV and bird signature comparisons with micro-Doppler</span></a><ul class="subnav"><li><a href="../../content/xhtml/Chapter9.html#ST135">9.1 Introduction</a></li><li><a href="../../content/xhtml/Chapter9.html#ST136">9.2 Review of UAV and bird radar signatures research</a></li><li><a href="../../content/xhtml/Chapter9.html#ST137">9.3 Target motion models</a></li><li><a href="../../content/xhtml/Chapter9.html#ST138">9.4 Fully polarimetric, multiple observation angle laboratory measurements of UAV target</a></li><li><a href="../../content/xhtml/Chapter9.html#ST139">9.5 Bistatic and multistatic radars used to gather bird and drone data</a></li><li><a href="../../content/xhtml/Chapter9.html#ST142">9.6 NetRAD bird and drone S-band measurements</a></li><li><a href="../../content/xhtml/Chapter9.html#ST143">9.7 NetRAD drone payload experiments</a></li><li><a href="../../content/xhtml/Chapter9.html#ST144">9.8 NeXtRAD L- and X-band drone and birds measurements</a></li><li><a href="../../content/xhtml/Chapter9.html#ST146">9.9 Concluding remarks</a></li><li><a href="../../content/xhtml/Chapter9.html#ST147">Acknowledgements</a></li><li><a href="../../content/xhtml/Chapter9.html#ST148">References</a></li></ul></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter10.html#c10"><span class="chapter-number">10</span><span>Radar recognition of multiple UAVs</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter11.html#c11"><span class="chapter-number">11</span><span>Advanced classification techniques for drone payloads</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Chapter12.html#c12"><span class="chapter-number">12</span><span>Good practices and approaches for counter UAV system developments – an industrial perspective</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/Conclusion.html"><span class="chapter-number">·</span><span>Conclusion</span></a></li><li><a class="chapter-link"  href="../../content/xhtml/index.html#ST192"><span class="chapter-number">·</span><span>Index</span></a></li></ul></nav>
+<div class="sidebar-footer"><a href="../../downloads/radar-countermeasures.epub" download>Download EPUB <span aria-hidden="true">↓</span></a><span>Original edition · 2021</span></div>
+</aside>
+<main id="main" class="main reading" tabindex="-1">
+<div class="reading-progress" aria-hidden="true"><span></span></div><div class="reading-meta"><a href="../../index.html">The book</a><span>/</span><span>88 min read</span><div class="font-controls" aria-label="Text size"><button type="button" data-font="-1" aria-label="Decrease text size">A−</button><button type="button" data-font="1" aria-label="Increase text size">A+</button></div></div><article class="book-text"><h1 class="h2a" id="c09"><em>Chapter 9</em><br><strong>Radar UAV and bird signature comparisons with micro-Doppler</strong></h1>
+<p class="authorc">Matthew Ritchie<sup><a href="#c09_aff1"><sup>1</sup></a></sup>, Colin Horne<sup><a href="#c09_aff1"><sup>1</sup></a></sup> and Nial Peters<sup><a href="#c09_aff1"><sup>1</sup></a></sup></p>
+<div id="c09_sec1">
+<h3 class="h3" id="ST135">9.1 Introduction</h3>
+<p class="noindent">This chapter reviews the similarities and differences between micro-Unmanned Aerial Vehicles (UAVs), also referred to as drones, and bird targets from the signals they present to radar sensors. The proliferation of small UAV platforms for commercial and personal use has increased significantly in recent years. All projections show a rapid increase in the utilisation of commercial civilian micro-UAV platforms across a number of use cases. In the United States alone, the consumer drone market was valued at $355M in 2015 and projected to be worth approximately $4BN by the year 2024 [<a href="#c09_bib1">1</a>]. This broad range of applications includes capture of high-quality video imagery, remote surveying capabilities, delivery, agriculture and racing. The trend of increasing use has been highlighted in many journal articles and news reports, it seems that drones are here to stay in society and will only increase in their integration in everyday life.</p>
+<p class="indent">With the significant increase in quantity of available platforms comes the increase in potential threat posed by them. Illegal activity that has been associated with the usage of drone platforms includes drug trafficking, use of surveillance by insurgents, attempted assassination, flying in the restrictive airspace of protected sites and disruptive political statements (e.g. displaying of controversial flag at a football game). This diverse set of illegal/unwanted activity has increased the demand for solutions that can first provide the ability to sense the presence of a drone and then also provide effectors to remove the drone from the situation. The first challenge of sensing a drone has generated solutions that provide a range of capabilities that include the basic ability to detect a drone, identify the intention of a UAV platform and even identify unusual payloads on a commercial drone which may prioritise it as a target. Both solutions do need to work in conjunction with each other in order to have a complete Counter UAV (C-UAV) system. The range of effectors that have been proposed include not only traditional military kinetic effectors but also falcons that can snatch a UAV from the air, other drones with nets to capture a UAV and kamikaze drone systems that purposely fly into the target UAV platform to destroy it.</p>
+<p class="indent">The term UAV is generically used for all types of unmanned flying vehicles and that can cover a very broad range of targets. UAVs vary significantly in their size, range of flight, weight and cost. This range includes platforms such as the US Global Hawk system which is 45 m in length with a 35-m wingspan all the way down to tiny insect like platforms such as the Black Hornet nano-UAV, which is less than 20 g and only 10×25 cm in size. The majority of this chapter will focus on smaller platforms that are in the mini-, micro- and nano-taxonomy areas as defined by <a href="#c09_tbl1">Table 9.1</a>.</p>
+<p class="tcaption" id="c09_tbl1">Table 9.1 Drone classifications</p><div class="table-scroll" tabindex="0" role="region" aria-label="Data table"><table>
+<thead>
+<tr><th>NATO UAS class</th><th>Maximum take off weight</th><th>Common taxonomy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I(a)</td>
+<td>&lt;200 g</td>
+<td>Nano</td>
+</tr>
+<tr>
+<td>I(b)</td>
+<td>200 g to 2 kg</td>
+<td>Micro</td>
+</tr>
+<tr>
+<td>I(c)</td>
+<td>2–20 kg</td>
+<td>Mini</td>
+</tr>
+<tr>
+<td>I(d)</td>
+<td>20–150 kg</td>
+<td>Small</td>
+</tr>
+<tr>
+<td>II</td>
+<td>150–600 kg</td>
+<td>Tactical</td>
+</tr>
+<tr>
+<td>III</td>
+<td>&gt;600 kg</td>
+<td>MALE or HALE</td>
+</tr>
+</tbody>
+</table></div>
+<p class="indent1">The detection and discrimination of drone targets are currently a high-priority area in the field of RF sensing. Alternative sensing options to RF do also exist and these include acoustic sensors that are able to detect and distinguish the motor sounds created by the UAV platforms [<a href="#c09_bib2">2</a>,<a href="#c09_bib3">3</a>]. The limitations of the distance these acoustic signals travel mean that typically the detection ranges for this category of sensor are reduced compared to an RF equivalent and they are very susceptible to background noises disturbing their probability of detection. Optical sensing solutions have also been extensively applied to this challenge and are effective in a broad range of scenarios. The advantage of a radar sensor over optical will be in situations of low visibility (smoke, fog, precipitation) and at night, when even with night vision sensors the capabilities of optical systems are reduced. It has also been proposed to use RF SIGINT or Electronic Surveillance (ES) devices to identify the control signals that are being sent between a base station and the UAV itself. This has been demonstrated to be successful and is a useful tool in the C-UAV challenge, but it is not feasible in all scenarios. In some situations, the UAV platform is autonomous and does not require control from a base station in order to perform its tasks or arrive at its planned destination. With the growing advent of autonomy being realised through examples such as swarm intelligence, it is easy to imagine that in the near future UAV platforms are capable of making their own decisions and therefore require far fewer communications signals.</p>
+<p class="indent">The following report provides a list of C-UAV products that are categorised by sensing class (radar, Electro-Optical (EO), IR, acoustic, RF signals) [<a href="#c09_bib4">4</a>]. This shows that &gt;500 commercial products exist internationally that all look to address this growing and ever-changing challenge. This is a significant increase compared to the market survey completed by Sandia Labs years earlier [<a href="#c09_bib5">5</a>]. The diversity in solutions demonstrates both the complex challenge that C-UAV systems have in detecting and mitigating these emerging threats and the variety of sensing modalities that can be employed individually or collectively in an attempt to solve the problem. It states that at least 95 countries now have drone capabilities which can at the very least provide much higher fidelity battlespace video feed intel than had been previously possible. Increasingly non-state actors are also using UAVs for both surveillance and actual attacks [<a href="#c09_bib6">6</a>], this prioritises the ability to provide effective UAV surveillance systems to within the role of force protection.</p>
+<p class="indent">The C-UAV systems broadly attempt to follow the following three key steps:</p>
+<ol>
+<li><b>Detection</b> – This is through the use of a variety of sensing modes aiming at identifying if a target is present or not. This step does not include the verification that the detected target is in fact a UAV platform or hostile.</li>
+<li><b>Classification</b> – Once detected, additional information gathered from sensors can be used to classify what the target is. This analysis may use image neural network recognition algorithms, acoustic pattern matching, or in the case of radar micro-Doppler, signature recognition.</li>
+<li><b>Action</b> – This may be the decision to take kinetic strike action, use electronic warfare methods to disable the drone or simply avoid it.</li>
+</ol>
+<p class="indent">A key challenge to C-UAV systems is the discrimination between targets of interest and confuser targets that represent unwanted detections. Bird targets represent the most common type of confuser target. It is challenging to discriminate between them and UAV as they are a comparable target in size, speed and Radar Cross Section (RCS). They are present almost everywhere that radar systems have to operate and have been detected by radar since the early origin of radar engineering. Due to the similarity in radar signature, birds can cause common misclassification between them and the priority drone targets.</p>
+<p class="indent">Within this chapter, the focus will be on the first two components of this process. The detection of drones with radar systems is very much feasible and comes down to the ability to transmit sufficient RF energy in the right direction such that enough is backscattered to a receiver. Of course, the practicalities of doing this in a compact form that is power efficient and fits the specific design constraints is a complex challenge but obtainable. The more elaborate step is the classification stage, a system that has a 100% probability of detection of UAV platforms but is never able to discriminate between a bird and person walking, and a drone would never be accepted as a viable solution. This emphasises the need for detailed investigations into the best means of discrimination of drone platforms from confuser targets if real-world solutions are to succeed.</p>
+<p class="indent">Other areas of radar classification techniques such as High-Resolution Range Profiles (HRRPs), Synthetic Aperture (SAR) or Inverse Synthetic Aperture (ISAR) imaging can be used to classify moving targets. SAR is more suited for the imaging of static scenes and targets due to the way in which the image is formed using the phase information of a target. The issue with applying HRRP or ISAR processing techniques is that for small UAV platforms the bandwidths required to obtain sufficient detail would be very significant. This is not an impossible task, but due to the increasingly congested Electromagnetic Environment it is unlikely that a C-UAV RF sensor would be able to guarantee access to the required bandwidth to effectively classify these platform types. This is why micro-Doppler signatures are a well-suited feature for classification as it is possible to acquire the required temporal integration on a target using a steerable beam in order to generate Doppler with sufficient resolution and hence visualise a drone targets recognisable rotor blade signature.</p>
+<p class="indent">The remainder of this chapter includes a review of UAV and bird radar signature research, followed by a description of target motion modelling. Next follows sections describing laboratory measurements of a small UAV using a fully polarimetric sensor and descriptions of the radar sensors we have used for bistatic and multistatic measurements of UAVs and birds. Acquisition of controlled radar measurements of bird and UAV targets using the NetRAD radar system are then described, followed by drone payload measurements, also employing NetRAD. Simultaneous X-band and L-band measurements of drone and bird targets using the NeXtRAD sensor are described along with details of the drone filter tested against these data. The final section of this chapter contains concluding remarks.</p>
+</div>
+<div id="c09_sec2">
+<h3 class="h3" id="ST136">9.2 Review of UAV and bird radar signatures research</h3>
+<p class="noindent">The detection of bird signatures using radar has been observed since the very early developments of modern radars in the 1940s. A Nature article from 1945 [<a href="#c09_bib7">7</a>] describes how it was given permission for the first time by the Air Defence Research and Development Establishment to state that radar is capable of detecting birds. Experiments from 1941 detected gannets from a system based on Dover, which was initially published in a SECRET report and has since been declassified. These early observations of bird signatures were confirmed via simultaneous visual inspection. The phenomena that started the investigation into these detections were large flocks of starlings leaving their perches in the early morning creating propagating rings on a radar PPI display. These affects were dubbed as ‘angels’ by Lack and Varley [<a href="#c09_bib7">7</a>] and Buss [<a href="#c09_bib8">8</a>]. Ever since these early beginnings of radar systems, the detection of birds has been either a challenge or a focus of a wide range of research outputs and real-world systems.</p>
+<p class="indent">Since these early developments there has been a constant strand of research that has been focused on the detection and observation of birds using radar for many decades. This domain is now growing significantly due to the desire to discriminate between these naturally appearing targets and small drones as birds represent the dominate confuser target in most scenarios. The challenge is not easily solvable due to the similar characteristics of these two classes of target. Both can fly low to the terrain, alternate between hovering and forward motion, represent low RCS signatures due to their size and materials. This is at odds with the traditional targets that large ground-based radar systems typically would detect and track. These traditional targets would be at very long ranges 10s–100s km, have a much larger RCS (particularly commercial airliners) and move at much faster speeds with reduced flight pattern changes. For all these reasons, the detection and tracking of small drone targets has required a significant amount of effort to adapt previous techniques that are no longer suitable.</p>
+<p class="indent">The observation of birds only has been the sole focus of a number of publications in the area of biology and zoology journals. This includes analysis of bird migrations [<a href="#c09_bib9">9</a>,<a href="#c09_bib10">10</a>], monitoring of nesting seabirds [<a href="#c09_bib11">11</a>] or identifying bird species using radar [<a href="#c09_bib12">12</a>]. This zoology- and biology-focused research has mostly looked to leverage radar as a sensor able to detect, count biomass or migration numbers or detect areas birds travel to or through. An early review of radar use in detecting birds as well as insect targets can be found in [<a href="#c09_bib13">13</a>], which includes a summary plot of RCSs from a number of sources for these targets plotted as a function target weight against RCS which is a useful review. Clearly radar has been successful in supporting this category of research but there is little work on highly detailed discrimination of bird targets from other targets, mostly because the UAV discrimination challenge is a new paradigm that has not been present for sufficient time to investigate extensively.</p>
+<p class="indent">The radar signature from large sea birds was analysed within [<a href="#c09_bib14">14</a>]. This work used a radar, a system in conjunction with a camera to gather data on sea birds and evaluate how the radar signature changed with the physical movement of the bird. Micro-Doppler signatures of the flying gannets showed that flapping movements were detectable within a micro-Doppler spectrogram. From these signatures, it was found that the ratio of the body to wing signature varied significantly from −30 to 5 dB across a range of azimuth angles of the target with respect to the radar. A challenge with this work is accurate estimation of the azimuth angle of the bird from the available video footage.</p>
+<p class="indent">An excellent modern comparison of drone and bird signatures was reported within [<a href="#c09_bib15">15</a>]. A total of 11 targets were included in the capture data set of which 10 were drones of different configurations (including helicopter, quadcopter and fixed wing classes). The micro-Doppler signatures of these platforms were then evaluated, and features extracted from them were based on eigenvalue decomposition. The data originated from an X-band Frequency-Modulated Continuous Wave (FMCW) 9.5 -GHz monostatic radar. The work did not look to fix aspect angle, distance or velocity within each recording; therefore, these variables change within each captured file analysed. The classification success achieved was high at 95% using a non-linear SVM classifier, which is impressive for an 11-class problem. These were measured in relatively controlled environments and with high SNR signatures but show promising signal processing methodologies to help support the challenge of drone and bird classification.</p>
+<p class="indent">The use of polarimetric radar as a sensing method for discrimination between UAVs and birds was extensively reviewed by Torvik in his doctoral thesis [<a href="#c09_bib16">16</a>]. Polarisation is widely used in radar remote sensing to provide additional information on the target or scattering phenomena that is occurring. In meteorological radar systems, polarisation can be used to differentiate between the type of precipitation and level of precipitation that is occurring by observing the ratio of HH/VV signatures and therefore calculating the ‘roundness’ of the raindrops and hence how heavily it is raining. In the context of UAV or bird platforms, polarisation can be used to evaluate the overall scattering ratio from a fixed target in order to help characterise it or differentiate it from another type of target. Even more effective is the analysis of how this polarisation ratio changes over a period of time. In the case of a bird, one can imagine how the superstructure of the bird’s body and wings alter significantly as they move through a flapping motion. This change in shape provides a significant difference in how the EM wave interacts and therefore changes the resultant polarisation scattering [<a href="#c09_bib17">17</a>]. In comparison, a drone does not undergo the same superstructure change over time and therefore would not be expected to present the same change in polarisation scattering as a bird. Analysis was performed to extract polarisation-based parameters which included values such as the Linear Depolarisation Ratio (LDR). This is defined as</p>
+<p class="imagec" id="c09_eqn1"><img alt="image" src="../images/CH009-c09_eqn1.gif" loading="lazy" decoding="async" width="584" height="44"></p>
+<p class="noindent">where <i>δ</i> is the LDR, <i>S</i><sub><i>HV</i></sub> and <i>S</i><sub><i>HH</i></sub> are the scattering cross and co-polar components of the target scattering matrix <i><b>S</b></i>, respectively. It is assumed that components <i>S</i><sub><i>HV</i></sub> and <i>S</i><sub><i>VH</i></sub> are equal in this case, so they are interchangeable. By evaluating this change of this LDR over time, it is possible to discriminate between drone and non-drone (bird) targets using a fully polarimetric radar system.</p>
+<p class="indent">This thesis used both modelling and empirical captured data to evaluate the difference in scattered returns from a variety of UAV and bird classes. The conclusions showed that the use of polarimetric method can enable improved discrimination between UAV and bird platforms. In terms of scattering signatures, it was found that the use of simple spheroid component parts in EM scattering modelling broadly represented the signature of bird targets in L and S frequency bands. The variation in RCS from broadside to front/end was found to be between 15 and 30 dB. At end/front of geometries the addition of the wings was found to be sufficient to require these to be incorporated into a model as they provided approximate equal scattering signatures as the body of the bird. At S- and L-band frequencies, the scattering from the wings of the bird is in the Rayleigh region. Therefore, the scattering from them is highly dependent on the polarisation of the illuminating signal.</p>
+<p class="indent">The additional information that polarimetry provided for the classification of targets was found to be beneficial at both L and S bands. Without polarisation parameters being extracted, in general from the empirical data study, it has been shown that the classification success was found to be higher in horizontal polarisation compared to vertical. When polarisation is taken into account via the use of specially extracted polarisation features, it was found to increase classification success rates by 25% and 21% for L and S bands, respectively, which is certainly a significant benefit that would justify the required additional hardware capability [<a href="#c09_bib16">16</a>]. This additional benefit is contradictory to previous comments from Skolnik on the benefits of polarimetry for target classification [<a href="#c09_bib18">18</a>]. Here it was stated that the perceived lack of benefit for classification purposes was down to a few reasons which include interleaved pulses of different polarisation illuminating the target at a slightly different time step, lack of isolation between polarisations, multipath contributions and how the net polarisation of N scatters making up a target differs from the individual polarisation of each of these separately.</p>
+<p class="indent">Recent measurements at the higher frequency bands of 24 and 94 GHz were performed by researchers at the University of St. Andrews [<a href="#c09_bib19">19</a>]. These higher frequencies allow for wider bandwidths and greater sensitivity of measurement of the two target classes. This work compared the signatures of three small UAVs (two quadcopter platforms and one hexacopter) to the signature of four birds (Northern Hawk Owl, Harris Hawk, Indian Eagle Owl and Tawny Eagle). The average modal RCS values for the drone targets varied from −20 to −8 dBsm, while the bird signatures ranged from −30 to −19 dBsm at 24 GHz. The measurements at 94 GHz reconfirmed these modal RCS values to within ~1 dBsm. This does show that radar engineers should expect larger reflections from drone platforms in comparison to bird signatures on average. Although in comparison the maximum RCS values from the bird signatures were found to range from −5 to 5 dBsm at 24 GHz which was much more comparable to the −6.2–8 dBsm values the drone exhibited. Perhaps this is linked to the bird signatures creating a larger flash in reflectivity when their wing structure is oriented such that a greater amount of RF energy is reflected back to the radar system.</p>
+</div>
+<div id="c09_sec3">
+<h3 class="h3" id="ST137">9.3 Target motion models</h3>
+<p class="noindent">This section provides details on the modelling of UAV rotor blades micro-Doppler signatures. A model was adapted from a simple helicopter-based micro-Doppler signature model which used a single-point scatterer to represent the body of the helicopter and four-point scatterers to represent the tips of the rotor blades. The adaptions made were used to create a model for UAV micro-Doppler signatures which has flexibility in the selection of the parameters given next. The model imposes no restrictions on the values of these parameters, leading to the possibility of practically unrealisable models:</p>
+<ol>
+<li>number of rotors,</li>
+<li>number of blades,</li>
+<li>blade length,</li>
+<li>body to rotor arm length,</li>
+<li>UAV radial motion,</li>
+<li>counter rotation of alternate rotors,</li>
+<li>body/rotor orientation,</li>
+<li>aligned or random initial blade angles,</li>
+<li>multiple scatterers per blade,</li>
+<li>body and blade tip RCS and</li>
+<li>additional blade scatterers RCS scale factor.</li>
+</ol>
+<p class="indent">This degree of flexibility was introduced to allow for modelling a wide variety of scenarios and to isolate what are the fundamental components creating the observed micro-Doppler signatures. By tailoring these values, it is possible to model a specific UAV of interest, or to observe how any changes made to them induce changes in the observed micro-Doppler signatures. With the current model, all the parameters remain constant for the duration of a model run, no variation in RCS or number of scatterers occurs. The RCS of the UAV body and the RCS of the blade scatterers are set to constant values for each model run. As such there is no dependence in the model for these values on the body or rotor materials, or on the wavelength of the illuminating signal.</p>
+<p class="indent">The geometry of the UAV platform and its rotor blades is initially setup in one of the configurations illustrated in <a href="#c09_fig1">Figure 9.1</a>. This allows for the changing of the orientation and location of the rotors with respect to the sensor as well as the alignment of each of the rotor blades. The sensor and UAV are assumed to reside in the same horizontal plane.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f1.jpg" loading="lazy" decoding="async" width="650" height="435"></p>
+<p class="fcaption" id="c09_fig1">Figure 9.1 UAV and sensor configurations (a) aligned start with diamond orientation, (b) aligned start with square orientation, (c) random start with square orientation</p>
+<p class="indent">Typical parameters used for the modelling of the micro-Doppler signatures are shown in <a href="#c09_tbl2">Table 9.2</a>. The simplest case which can be modelled is a single blade with a single-point scatterer at the blade tip, along with the UAV body, the signature of which is shown in <a href="#c09_fig2">Figure 9.2</a>(a). The rotation rate in this example is slowed to only 5 rps to visualise the individual blade flash returns. The sinusoidal structure seen in <a href="#c09_fig2">Figure 9.2</a>(a) is a direct result of the changing Doppler frequency induced by the blade tip scatterer on the radar return as the blade tip traverses its circular path. This scenario is then extended to include two and three scatterers per rotor blade, see <a href="#c09_fig2">Figure 9.2</a>(b) and (c). It can be seen that as more scatterers are added, the area under the sinusoidal blade flash outline becomes more occupied due to the range of Doppler frequencies created by the various scatterers. The results shown from the model used parameters that match either the NeXtRAD X-band system (8.5 GHz) or a Volcano monitoring FMCW radar system (10.25 GHz) developed by Dr Nial Peters at University College London (UCL) to allow validation of the modelling result with real experimental captures.</p>
+<p class="tcaption" id="c09_tbl2">Table 9.2 UAV micro-Doppler model parameters</p><div class="table-scroll" tabindex="0" role="region" aria-label="Data table"><table>
+<thead>
+<tr><th>Parameters</th><th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Number of rotors</td>
+<td>1–4</td>
+</tr>
+<tr>
+<td>Rotor rotation</td>
+<td>5–150 rps</td>
+</tr>
+<tr>
+<td>Blades/rotor</td>
+<td>2 blades per rotor</td>
+</tr>
+<tr>
+<td>Blade length</td>
+<td>0.13 m (typical – small UAV)</td>
+</tr>
+<tr>
+<td>Scatterers/blade</td>
+<td>Multiple</td>
+</tr>
+<tr>
+<td>Radial velocity</td>
+<td>20 m/s</td>
+</tr>
+<tr>
+<td>Radar frequency</td>
+<td>8.5 GHz</td>
+</tr>
+<tr>
+<td>Body RCS</td>
+<td>&gt;1 m<sup>2</sup></td>
+</tr>
+<tr>
+<td>Blade RCS</td>
+<td>0.1 m<sup>2</sup></td>
+</tr>
+</tbody>
+</table></div>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f2.jpg" loading="lazy" decoding="async" width="691" height="507"></p>
+<p class="fcaption" id="c09_fig2">Figure 9.2 Micro-Doppler of UAV body and single blade with (a) a single scatterer per blade, (b) two scatterers per blade, (c) three scatterers per blade (carrier frequency is 8.5 GHz, PRF is 1 kHz, rotor rotation rate is 5 rps, spectrogram window is 50 ms, spectrogram overlap is 90%)</p>
+<p class="indent">When moving from one blade per rotor to two and then three, the changes observed can be seen within <a href="#c09_fig3">Figure 9.3</a>. This shows how the increase in blade numbers increases the observed frequency that blade flashes occur and eventually results in a smoothing of the signature such that overlapping blade flash signals are almost continuously present.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f3.jpg" loading="lazy" decoding="async" width="685" height="501"></p>
+<p class="fcaption" id="c09_fig3">Figure 9.3 Micro-Doppler of UAV body and single scatter per blade with (a) a single blade, (b) two blades, (c) three blades (carrier frequency is 8.5 GHz, PRF is 1 kHz, rotor rotation rate is 5 rps, spectrogram window is 50 ms, spectrogram overlap is 90%)</p>
+<p class="indent">Model outputs were compared with controlled laboratory-based measurements carried out using an X-band FMCW radar with 400 MHz of bandwidth, for validation purposes. Measurements representing single scatters at the blade tips were undertaken by simulating each scatterer by a small metal ball, of approximately 12 mm radius, mounted on a cork disc driven by a low-speed motor. Additional balls are added between the tip and the disc hub to represent more scatterers on each blade.</p>
+<p class="indent">The single scatterer per blade result is shown in <a href="#c09_fig4">Figure 9.4</a> for the balls being placed at a distance of 8 cm from the disc centre and a rotation rate of approximately 0.8 Hz. The deviation from a pure sine wave shape is likely due to inaccuracies in the experimental setup, for example the disc not being perfectly flat with respect to the motor shaft and positional errors for the balls.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f4.jpg" loading="lazy" decoding="async" width="645" height="244"></p>
+<p class="fcaption" id="c09_fig4">Figure 9.4 Laboratory measurement of two ball bearings placed at 8 cm from motor centre representing point scatterers at rotor tips (carrier frequency is 10.25 GHz, PRF is 1 kHz, rotor rotation rate is approximately 0.82 rps, spectrogram window is 250 ms, spectrogram overlap is 90%)</p>
+<p class="indent">The equivalent output from the UAV radar model is shown in <a href="#c09_fig5">Figure 9.5</a> and confirms the same basic structure. The model output shows a cleaner, more symmetric structure as none of the experimental inaccuracies are included. The area under the sine wave structure in the experimental result is smeared, not seen in the model output, due to the spread of Doppler components caused by the experimental setup.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f5.jpg" loading="lazy" decoding="async" width="642" height="238"></p>
+<p class="fcaption" id="c09_fig5">Figure 9.5 UAV radar model output for a single scatterer placed at each blade tip for a two-bladed rotor of radius 8 cm (carrier frequency is 10.25 GHz, PRF is 1 kHz, rotor rotation rate is 0.82 rps, spectrogram window is 250 ms, spectrogram overlap is 90%)</p>
+<p class="indent">Replacing the disc and ball bearing with a 26-cm diameter plastic rotor from a UAV provides the result shown in <a href="#c09_fig6">Figure 9.6</a>. The use of a real rotor results in the sine wave structure becoming less pronounced and instead a vertical structure becoming the dominant feature, caused by the interaction of multiple scatterers along the blade.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f6.jpg" loading="lazy" decoding="async" width="645" height="242"></p>
+<p class="fcaption" id="c09_fig6">Figure 9.6 Laboratory measurement of 13-cm radius UAV plastic rotor (carrier frequency is 10.25 GHz, PRF is 1 kHz, rotor rotation rate is approximately 0.82 rps, spectrogram window is 250 ms, spectrogram overlap is 90%)</p>
+<p class="indent">This experimental result in <a href="#c09_fig6">Figure 9.6</a> was replicated using the UAV radar model and showed good degree of similarity when employing nine, equally spaced, scatterers per blade, see <a href="#c09_fig7">Figure 9.7</a>. It was found that when employing less than nine scatterers, additional vertical line segments appeared in the structure.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f7.jpg" loading="lazy" decoding="async" width="641" height="239"></p>
+<p class="fcaption" id="c09_fig7">Figure 9.7 UAV radar model output for nine scatterers per blade (carrier frequency is 10.25 GHz, PRF is 1 kHz, rotor rotation rate is 0.82 rps, spectrogram window is 250 ms, spectrogram overlap is 90%)</p>
+<p class="indent">In comparison to the previous figures where the predominate signal that is observed is based on a blade flash, as the rotation rate of the rotor is increased to more realistic speeds and the Short-Time Fourier Transform (STFT) applied to the signals is long compared with the rotation time, the micro-Doppler phenomena change to become HElicopter Rotor Modulation (HERM) lines. This affect presents itself as horizontal lines in the micro-Doppler spectrograms compared to the vertical blade flash lines previously shown, see <a href="#c09_fig8">Figure 9.8</a>.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f8.jpg" loading="lazy" decoding="async" width="642" height="483"></p>
+<p class="fcaption" id="c09_fig8">Figure 9.8 Micro-Doppler of modelled UAV with a single, two-bladed rotor, rotating at 150 rps with a single scatterer per blade (carrier frequency is 8.5 GHz, PRF is 1 kHz, rotor rotation rate is 150 rps, spectrogram window is 200 ms, spectrogram overlap is 90%)</p>
+<p class="indent">The HERM line separation is defined as being</p>
+<p class="imagec" id="c09_eqn2"><img alt="image" src="../images/CH009-c09_eqn2.gif" loading="lazy" decoding="async" width="584" height="16"></p>
+<p class="noindent">where the Δ<i>H</i> is a product of propeller rotational rate <img alt="image" class="mid" src="../images/CH009-Eqn-in-1.gif" loading="lazy" decoding="async" width="19" height="15"> and number of blades <i>N</i>, per propeller. These parameters are independent of the radar RF in comparison to the maximum blade flash value which is directly related to RF via</p>
+<p class="imagec" id="c09_eqn3"><img alt="image" src="../images/CH009-c09_eqn3.gif" loading="lazy" decoding="async" width="583" height="40"></p>
+<p class="noindent">where <img alt="image" class="mid" src="../images/CH009-Eqn-in-2.gif" loading="lazy" decoding="async" width="12" height="11"> is the blade length, <img alt="image" class="mid" src="../images/CH009-Eqn-in-3.gif" loading="lazy" decoding="async" width="10" height="13"> the wavelength, and <img alt="image" class="mid" src="../images/CH009-Eqn-in-4.gif" loading="lazy" decoding="async" width="11" height="12"> is the angle between the sensor and the plane of the UAV rotor. The sample rate of the radar signal (the pulse repetition frequency (PRF)) and the STFT applied to the range profile data are jointly responsible for which phenomena are observed in the Doppler-time domain. If the PRF is too low and the integration time of the STFT is too long, the observed phenomena will be the HERM lines (as shown in <a href="#c09_fig8">Figure 9.8</a>). On the other hand, if the PRF of the radar is sufficiently high along with short STFT window periods, the rotor blade signature is represented by the actual blade flash contributions (see <a href="#c09_fig3">Figure 9.3</a>). Considerations should be taken when evaluating what phenomena are expected within a radar signal processing chain when evaluating the best means for both detecting and exploiting the signals that are present.</p>
+<p class="indent">The HERM line presentation of the micro-Doppler signatures may also be compared with laboratory measurements. This comparison is shown in <a href="#c09_fig9">Figure 9.9</a> for the measured rotor (left) and the model (right), where the HERM lines are seen at approximately 1.6-Hz spacing, in agreement with (9.2) for a two-bladed rotor with a rotation rate of approximately 0.8 Hz. The measured results from the rotor and the model again show good agreement.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f9.jpg" loading="lazy" decoding="async" width="673" height="269"></p>
+<p class="fcaption" id="c09_fig9">Figure 9.9 Laboratory measurement of 13 cm radius UAV plastic rotor (left) and UAV radar model output (right) (carrier frequency is 10.25 GHz, PRF is 1 kHz, rotor rotation rate is 0.82 rps, spectrogram window is 4 s, spectrogram overlap is 90%)</p>
+<p class="indent">The other key target class of interest to this research is birds. It is an over-simplification to label all birds under one target class as there is a great deal of variation between species of bird in terms of their physical characteristics (size/weight/wingspan) as well as how they fly. Their flight movements are complex and can include many different types of movement. The general classes for their movements can be thought of as two key modes, flapping and gliding. The frequency and duration of each mode are very dependent on species, where they are flying, duration of flight and if they are flying in a fixed course or frequently changing direction. The biomechanics of bird flight has been studied in great detail for a broad range of birds and a useful recent summary example can be found in [<a href="#c09_bib20">20</a>]. In addition to this, previous studies on bird RCS have been conducted to evaluate the expected average reflected energy at a given frequency [<a href="#c09_bib21">21</a>]. The mean RCS for a pigeon target were quoted as being 15 cm<sup>2</sup> at X-Band and 80 cm<sup>2</sup> at S-band, whereas a smaller sparrow was found to have a mean RCS of only 1.3 cm<sup>2</sup> at X-band and 12 cm<sup>2</sup> at S-band.</p>
+<p class="indent">Although flight movements have been studied from a biomechanics perspective, very little prior work exists on the linking of micro-Doppler signatures and bird flight dynamics from a modelling perspective. Prior applied literature in the area focuses more on the application of avoiding ‘bird strikes’ to aircraft [<a href="#c09_bib22">22</a>,<a href="#c09_bib23">23</a>]. This is where a single bird or a flock would hit an aircraft and cause severe damage. This work focuses on the modelling of the detectability of a bird based on RCS calculation and radar parameters and not the modelling of micro-Doppler for classification. Torvik also presented some evaluation of RCS modelling of bird targets within [<a href="#c09_bib16">16</a>], but again this did not replicate any micro-Doppler signature that a bird may produce. Therefore, a research gap clearly exists in high fidelity micro-Doppler motion models for bird targets to allow for the test and evaluation of both detection and classification algorithms.</p>
+</div>
+<div id="c09_sec4">
+<h3 class="h3" id="ST138">9.4 Fully polarimetric, multiple observation angle laboratory measurements of UAV target</h3>
+<p class="noindent">In this section, we describe the physical arrangement and measurements taken in an anechoic chamber environment of a small UAV (DJI Spark). Measurements were taken at various sensor-target observation angles for each polarimetric configuration, HH, HV, VH and VV. The data were captured using an X-band FMCW radar, further information can be found here on the system [<a href="#c09_bib24">24</a>]. The operating parameters used in this measurement campaign are shown in <a href="#c09_tbl3">Table 9.3</a>.</p>
+<p class="tcaption" id="c09_tbl3">Table 9.3 Summary of radar parameters used for laboratory-based polarimetric measurements of UAV</p><div class="table-scroll" tabindex="0" role="region" aria-label="Data table"><table>
+<thead>
+<tr><th>Radar type</th><th>FMCW</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Centre frequency</td>
+<td>10.25 GHz</td>
+</tr>
+<tr>
+<td>Bandwidth</td>
+<td>400 MHz</td>
+</tr>
+<tr>
+<td>PRF</td>
+<td>2 kHz</td>
+</tr>
+<tr>
+<td>ADC sample rate</td>
+<td>1.4 MHz</td>
+</tr>
+<tr>
+<td>Chirp period</td>
+<td>0.4 ms</td>
+</tr>
+<tr>
+<td>Data collection period</td>
+<td>20 s</td>
+</tr>
+</tbody>
+</table></div>
+<p class="indent1">The physical arrangement of the experimental measurements is based on a boom which is initially placed horizontally (0°) and can be raised such that it forms an angle with the horizontal plane up to a maximum angle of 90°. The radar antennas were mounted on a fixed platform at the lower end of the boom such that their pointing direction follows the angle of the boom and were directed towards the upper end of the boom. The target UAV is mounted on a small platform which pivots at the upper end of the boom such that the UAV can be operated in as close as possible to a normal horizontal hovering position, while allowing the observation angle between the sensor and the target to vary. Along the boom, a small metal ball was attached in order to act as a calibration target. The setup is illustrated in <a href="#c09_fig10">Figure 9.10</a>.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f10.jpg" loading="lazy" decoding="async" width="649" height="525"></p>
+<p class="fcaption" id="c09_fig10">Figure 9.10 Illustration of polarimetric measurement setup</p>
+<p class="indent">Each data collection involves raising the boom to the required angle, ensuring that the UAV is horizontal on the pivot platform. The UAV motors are started and allowed to run at the default idle rate. In order to capture the polarimetric variation, the antennas were physically rotated to the desired configuration at each elevation angle.</p>
+<p class="indent">Measurements were taken at HH, HV, VH and VV polarisations and with observation angles at 20° steps between 0° and 80° and an additional measurement at 90°. The 0° angle observation represents the in-plane measurement where the radar sensor measures the UAV side-on. The 90° angle case is where the UAV is vertically above the radar sensor. The 90° observation might also be interpreted as a fixed wing, multi-propeller aircraft receding from the radar sensor.</p>
+<p class="indent">For each polarisation, a calibration measurement was taken. This was taken at 0° inclination angle and without the drone rotors spinning. The mean intensity of the zero-Doppler frequency for the range cell containing the calibration target was taken as the calibration value for all the measurements taken for that polarisation. This is a preferable strategy to using the zero-Doppler intensity of the drone body as a calibration, since the RCS of the drone body will change with inclination angle. The mean HERM line intensities presented in this section are then computed as follows: for each radar time sample, the maximum intensity over a small window (typically around 100 Hz) of Doppler frequencies encompassing the HERM line of interest is computed. These values are then averaged over the full measurement time span (20 s) and converted to dB using the previously recorded calibration value as the 0-dB point. This calculation can be expressed as follows:</p>
+<p class="imagec" id="c09_eqn4"><img alt="image" src="../images/CH009-c09_eqn4.gif" loading="lazy" decoding="async" width="585" height="62"></p>
+<p class="imagec" id="c09_eqn5"><img alt="image" src="../images/CH009-c09_eqn5.gif" loading="lazy" decoding="async" width="585" height="41"></p>
+<p class="noindent">where <img alt="image" class="mid" src="../images/CH009-Eqn-in-5.gif" loading="lazy" decoding="async" width="17" height="14"> is mean HERM line intensity in dB, <img alt="image" class="mid" src="../images/CH009-Eqn-in-6.gif" loading="lazy" decoding="async" width="9" height="9"> is calibration value, <img alt="image" class="mid" src="../images/CH009-Eqn-in-7.gif" loading="lazy" decoding="async" width="24" height="13"> is the time index of the final measurement, <img alt="image" class="mid" src="../images/CH009-Eqn-in-8.gif" loading="lazy" decoding="async" width="15" height="11"> is Doppler–time–intensity array, <img alt="image" class="mid" src="../images/CH009-Eqn-in-9.gif" loading="lazy" decoding="async" width="16" height="17"> is the HERM line frequency of interest, and <img alt="image" class="mid" src="../images/CH009-Eqn-in-10.gif" loading="lazy" decoding="async" width="24" height="14"> represents the range of frequencies considered.</p>
+<p class="indent">The strongest SNR HERM line at ~175 Hz and its negative frequency counterpart were selected to allow a clear comparison between aspect angles to be evaluated.</p>
+<p class="indent">Figures <a href="#c09_fig11">9.11</a>–<a href="#c09_fig14">9.14</a> show spectrograms of the range cells containing the drone at 0°, 40° and 90° inclination angles for HH, HV, VH and VV polarisations, respectively. These spectrograms were produced using time windows of 400 samples (corresponding to 0.2 s) with an overlap of 90%. The results shown in Figures <a href="#c09_fig15">9.15</a> and <a href="#c09_fig16">9.16</a> were derived from these spectrograms (and similar ones at different inclinations which are not shown here for brevity).</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f11.jpg" loading="lazy" decoding="async" width="672" height="251"></p>
+<p class="fcaption" id="c09_fig11">Figure 9.11 Spectrogram for HH polarisation at 0°, 40°, 90° inclination angles. Intensities are not calibrated to the calibration target</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f12.jpg" loading="lazy" decoding="async" width="672" height="251"></p>
+<p class="fcaption" id="c09_fig12">Figure 9.12 Spectrogram for HV polarisation at 0°, 40°, 90° inclination angles. Intensities are not calibrated to the calibration target</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f13.jpg" loading="lazy" decoding="async" width="672" height="251"></p>
+<p class="fcaption" id="c09_fig13">Figure 9.13 Spectrogram for VH polarisation at 0°, 40°, 90° inclination angles. Intensities are not calibrated to the calibration target</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f14.jpg" loading="lazy" decoding="async" width="672" height="251"></p>
+<p class="fcaption" id="c09_fig14">Figure 9.14 Spectrogram for VV polarisation at 0°, 40°, 90° inclination angles. Intensities are not calibrated to the calibration target</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f15.jpg" loading="lazy" decoding="async" width="673" height="533"></p>
+<p class="fcaption" id="c09_fig15">Figure 9.15 Mean HERM line intensity against drone elevation angle plots for each of the polarisation configurations. Results for both the positive Doppler HERM line and its negative Doppler counterpart are shown</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f16.jpg" loading="lazy" decoding="async" width="646" height="475"></p>
+<p class="fcaption" id="c09_fig16">Figure 9.16 Mean HERM line intensity at 0° drone elevation angle for the different polarisation configurations. Results for both the positive Doppler HERM line and its negative Doppler counterpart are shown</p>
+<p class="indent"><a href="#c09_fig15">Figure 9.15</a> shows the variation of mean HERM line intensity (as defined earlier) with inclination angle of the boom (drone elevation angle) for each of the four polarisation configurations. Where we refer to a polarisation by a two-letter abbreviation, we list transmit polarisation first, e.g. HV refers to horizontal polarisation on transmit and vertical on receive. <a href="#c09_fig16">Figure 9.16</a> shows how the mean HERM line intensity at 0° inclination angle changes with polarisation configuration.</p>
+<p class="indent">Figures <a href="#c09_fig15">9.15</a> and <a href="#c09_fig16">9.16</a> show that an HH polarisation configuration gives the highest intensity HERM lines across all viewing angles and is therefore the most suitable configuration for C-UAV systems. In general, HERM line intensity drops towards mid-range elevation angles then recovers somewhat towards high elevation angles (although VH is an exception to this).</p>
+<p class="indent">Somewhat surprisingly, HV and VH configurations show markedly different behaviours to each other, with HERM lines in VH showing a consistent decrease in intensity with elevation angle, whereas HV shows some recovery of intensity towards high angles (similar in behaviour to HH and VV). Above 20° elevation angle, VH consistently provides the poorest HERM line intensity making it the least suitable configuration for C-UAV applications.</p>
+<p class="indent"><a href="#c09_fig15">Figure 9.15</a> shows that both HH and HV polarisations show a peak in HERM line intensity at 40° elevation angle. We believe that this is caused by the rear (furthest from the radar) rotors of the drone being obscured from the radar’s line of sight by the body of the drone when it is at 20° elevation angle. This drastically reduces the HERM line intensity at 20° elevation angle, resulting in a peak in intensity at 40° when the rotors are no longer obscured. Such an effect is not visible in the VH and VV data; this may be due to the blades being less obscured when they are parallel to boresight and more visible in the vertical polarisation.</p>
+<p class="indent">HERM lines are clearly visible at 90° elevation angle for all polarisations. This is unexpected since there should be very little motion along boresight in this configuration. However, the results show not only that HERM lines are visible but also that they are of higher intensity than for mid-range elevation angles (with the exception of VH). A detailed explanation of this phenomenon is beyond the scope of this study; however, we hypothesise that there may be multiple contributing factors to HERM line creation. Although classical blade flash, as previously described in this chapter, is clearly one of them, by itself it does not explain the visibility of HERM lines at 90° elevation angle. Other possible factors could be obstruction of the blades by the drone body at a particular rotation angle leading to a periodic variation in target RCS, or a periodic modulation of target return caused by blades moving in and out of alignment with the system polarisation.</p>
+<p class="indent">The 90° elevation angle measurements are approximately equivalent to the fixed-wing UAV case, where the rotor is mounted in the vertical plane, although to be entirely analogous the radar would have to be mounted above the drone. However, the fact that HERM lines can still be observed in this orientation suggests that the techniques developed in this study for distinguishing drones from non-drone targets may also be applicable to fixed-wing drones.</p>
+<p class="indent">As in the NeXtRAD data, see <a href="#c09_sec8">Section 9.8</a>, there is a distinct asymmetry between the positive and negative Doppler frequency HERM lines. As shown in <a href="#c09_fig1">Figure 9.15</a>, the level of asymmetry appears to be dependent on the elevation angle of the drone, and for the case of the HV polarisation positive and negative even show significantly different trends with angle. Specifically, the negative Doppler frequency line shows no peak in intensity at 40° elevation angle in sharp contrast to the positive Doppler frequency line. Positive Doppler frequency lines are caused by the leading edges of the blades, whereas their negative frequency counterparts are caused by the trailing edges of the blades. Since the two edges of the blades are physically different in shape, it seems likely that their RCSs will not only be different but will also have different responses with respect to viewing angle. This may explain the asymmetries in HERM line intensities that we observe.</p>
+</div>
+<div id="c09_sec5">
+<h3 class="h3" id="ST139">9.5 Bistatic and multistatic radars used to gather bird and drone data</h3>
+<p class="noindent">Two multistatic radar systems have been developed by both UCL and University of Cape Town (UCT) to gather data on both drones and bird signatures. These two radar systems are NetRAD and NeXtRAD which are both three-node pulsed Doppler radars. The first system developed was NetRAD, which started development in the early 2000s and supported a number of PhD projects over a period of almost 15 years.</p>
+<div id="c09_sec5-1">
+<h4 class="h4" id="ST140">9.5.1 NetRAD</h4>
+<p class="noindent">NetRAD is a multistatic radar sensor system developed by UCL and UCT [<a href="#c09_bib25">25</a>–<a href="#c09_bib27">27</a>]. This radar system was developed initially as a three-node pulsed Doppler multistatic sensor network. Each node is identical and is capable of operating as a transceiver unit to both send and receive radar waveforms, see <a href="#c09_fig17">Figure 9.17</a>. The sensor system was designed to operate in the S-band frequency range (2.4 GHz), this was because commercial components are readily available in this frequency band, as well as the fact that ISM band allows for low power transmissions without requiring a spectrum licence. The programmable parameters this system is capable of varying include its bandwidth, pulse length and PRF. Initially the system was capable of operating synchronously through the use of wired connections between the nodes. In collaboration with UCT, it was adapted so that synchronisation was provided via a GPS Disciplined Oscillator (GPSDO) solution [<a href="#c09_bib28">28</a>]. This enabled wireless synchronisation across the multi-node network where baselines of up to 5 km were proven feasible. The specification for the system can be seen in <a href="#c09_tbl4">Table 9.4</a>.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f17.jpg" loading="lazy" decoding="async" width="440" height="239"></p>
+<p class="fcaption" id="c09_fig17">Figure 9.17 Image showing single node of a NetRAD radar system deployed in a van and on a bench top with GPSDO device injecting the required synchronisation signals</p>
+<p class="tcaption" id="c09_tbl4">Table 9.4 NetRAD radar parameters list</p><div class="table-scroll" tabindex="0" role="region" aria-label="Data table"><table>
+<thead>
+<tr><th>Parameters</th><th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Central frequency</td>
+<td>2.4–2.5 GHz – S-band</td>
+</tr>
+<tr>
+<td>Bandwidth</td>
+<td>45 MHz</td>
+</tr>
+<tr>
+<td>Output power without high power amplifier</td>
+<td>+23 dBm</td>
+</tr>
+<tr>
+<td>Output power with high power amplifier</td>
+<td>+57.7 dBm</td>
+</tr>
+<tr>
+<td>Radar waveform</td>
+<td>Pulsed</td>
+</tr>
+<tr>
+<td>PRF</td>
+<td>1 Hz–10 kHz</td>
+</tr>
+<tr>
+<td>Pulse length (typical)</td>
+<td>0.1–20 μs</td>
+</tr>
+<tr>
+<td>Antenna gain</td>
+<td>27 dBi</td>
+</tr>
+<tr>
+<td>E-plane/H-plane 3 dB beamwidth</td>
+<td>11°/8°</td>
+</tr>
+</tbody>
+</table></div>
+<p class="indent1">The system has now been retired, but previous experimental campaigns using this system include measurements of individuals walking, carrying simulated rifle objects, as well as drone (i.e. UAV) and bird targets. Through capturing the movements of these targets in a variety of multistatic geometries, the advantages of a radar-sensing network have been quantified through the classification of the micro-Doppler signatures observed.</p>
+<p class="indent">This system was used in a number of multistatic drone micro-Doppler radar measurements, some of which will be reviewed next. The key areas of investigation of interest to this chapter are distinguishing if a drone is carrying a payload and the analysis of bird and drone micro-Doppler using a multistatic system.</p>
+</div>
+<div id="c09_sec5-2">
+<h4 class="h4" id="ST141">9.5.2 NeXtRAD</h4>
+<p class="noindent">The NeXtRAD radar system is also a multistatic radar system developed jointly by UCL and UCT. This system is the successor to NetRAD and has a significant number of improvements over that system. It is also a coherent pulsed Doppler radar which is made up of three radar nodes. The key differences are that it is a multichannel system which enables polarimetric experimental captures; it is capable of dual frequency operation as well as having a much improved digital backend and Command and Control architecture. One node operates as the transceiver and the other two as identical receivers. The system can operate at L-band with one receiving channel and with two at X-band. This allows for simultaneous co- and cross-polarised measurements at X-band to be performed. To provide the synchronous local oscillator signals, GPSDOs are used to input a common 100-MHz reference as well as a phase synchronous one pulse per second. The transmitted waveforms that have been used for all the data shown here are Linear Frequency-Modulated (LFM) signals which have a 50-MHz bandwidth. The system does have arbitrary waveform control and therefore is flexible in this design, but only LFM signals, with varying duration, have been utilised in the UAV measurement campaigns. Full specifications for the system can be seen in <a href="#c09_tbl5">Table 9.5</a>.</p>
+<p class="tcaption" id="c09_tbl5">Table 9.5 NeXtRAD specifications</p><div class="table-scroll" tabindex="0" role="region" aria-label="Data table"><table>
+<thead>
+<tr><th>Parameters</th><th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X-band peak output power</td>
+<td>400 W</td>
+</tr>
+<tr>
+<td>L-band peak output power</td>
+<td>1.4 kW</td>
+</tr>
+<tr>
+<td>No of Rx channels (X/L band)</td>
+<td>2/1</td>
+</tr>
+<tr>
+<td>PRF</td>
+<td>1 Hz–10 kHz</td>
+</tr>
+<tr>
+<td>Antenna gain</td>
+<td>27 dBi</td>
+</tr>
+<tr>
+<td>L-band antennas beamwidth</td>
+<td>13.9° azimuth/12.4° elevation</td>
+</tr>
+<tr>
+<td>X-band antenna beamwidth</td>
+<td>9.1° azimuth/10.4° elevation</td>
+</tr>
+</tbody>
+</table></div>
+<p class="indent1">This system has been used to capture the measurement of sea clutter, drones and small boat targets while based in Simon’s Town region in South Africa [<a href="#c09_bib29">29</a>–<a href="#c09_bib34">34</a>].</p>
+<p class="indent">These two radar systems are almost unique in their position as coherent multistatic radars that are capable of networked sensing of targets using GPSDO synchronisation [<a href="#c09_bib28">28</a>]. Very few comparable systems exist in open academic environments and therefore the data from these systems represent a rare opportunity for investigation of multistatic target signatures as well as clutter returns.</p>
+</div>
+</div>
+<div id="c09_sec6">
+<h3 class="h3" id="ST142">9.6 NetRAD bird and drone S-band measurements</h3>
+<p class="noindent">The NetRAD sensor was deployed in 2016 for trials specifically focused on capturing both bird and drone signatures. This measurement campaign used ‘cooperative’ bird targets which were arranged via a falconry centre. This enabled the pre-planning of way point positions such that known ranges, orientations and flight paths could be configured to maximise the utility of the data and to arrange clear meta-data on the position of the bird which is typically impossible with ‘non-cooperative’ natural bird targets. The radar parameters used for the capture were a PRF of 5 kHz, transmit power of 23 dBm, LFM chirp with a bandwidth of 45 MHz and each capture was for 30 s, but only the sections which had the target in flight were selected for analysis. The measurements shown in this section were first published within [<a href="#c09_bib35">35</a>]; readers are referred to this paper for further details.</p>
+<p class="indent">The bird targets that were captured included a Hooded Vulture, Eurasian Eagle Owl and a Barn Owl. These varied significantly in their size, wingspan and weight, with the Vulture being the largest with a wingspan of approx. 1.7 m and weight of 1.8 kg, compared to the barn owl which had only an 80-cm wingspan and weighed 280 g, while the eagle owl represented a medium value between these two extremes. These three bird targets were then compared to a quadcopter drone target which was flown over the same waypoint positions once the birds were safely put away. This type of measurement is useful as it allows direct comparison of bird and drone signatures from a prearranged geometry which is rarely available.</p>
+<p class="indent">The micro-Doppler signatures from the three bird targets can be seen in <a href="#c09_fig18">Figure 9.18</a>. The images have been normalised to a peak of 0 dB in each case but are not calibrated; therefore, you cannot compare a given SNR from one figure to another. The spectrogram window used to create the data shown was 0.3-s long, with an overlap of 95%. Clearly a significant difference can be observed between the captures shown for the drone target and all three bird targets. The drone target produced HERM line responses in the outer Doppler bins which were not present in any of the bird captures. The origin of these HERM lines was described in detail within <a href="#c09_sec3">Section 9.3</a>. In comparison, the bird targets show two clear different motion types: the flapping of the wings and gliding movements. When the bird is taking off, landing or changing its direction, a flapping movement is required; this can be seen at different times within all three bird signatures in <a href="#c09_fig18">Figure 9.18</a>. At other points within the capture, the birds are gliding which does not require any additional movement of their wings and hence does not create a micro-Doppler signature. When comparing the bird signatures, it was found that the smaller bird (the barn owl) produced a much more rapid flapping action which was clearly observable across multiple different micro-Doppler signatures. On the other hand, for the larger birds (the Vulture and Eagle Owl) the flapping that did occur was less frequent but produced higher micro-Doppler excursions from the main body, which must be due to the wingspan difference. These different movement mechanics are the key differentiator between the drone and the bird targets when evaluating the micro-Doppler. Otherwise, the birds are shown to be just as agile as the drone platform with the exception that they do not hover at any point. Some bird species do hover (particularly birds of prey surveying an area for prey) but this was not captured in the trials performed.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f18.jpg" loading="lazy" decoding="async" width="672" height="527"></p>
+<p class="fcaption" id="c09_fig18">Figure 9.18 Drone and bird monostatic micro-Doppler signatures from HH polarisation NetRAD node: (a) DJI Phantom 2 Quadcopter, (b) Eurasian Eagle Owl, (c) Barn Owl, (d) Hooded Vulture</p>
+<p class="indent">From this data, it was possible to extract features which could then be used to classify which target was present. The data were broken up into subsections to allow for <i>N</i> samples to be produced from the repeated flights that the birds took between their perch locations. The features extracted from these sections were taken from three different domains: the spectrogram domain (denoted as Time–Frequency (TF) and shown in <a href="#c09_fig18">Figure 9.18</a>), the Singular Value Decomposition (SVD) domain and the Cadence Velocity Diagram (CVD) domain. The TF domain is the traditional space where micro-Doppler signals are analysed and hence makes it a first choice for creating features. The SVD domain looks to compress the information within the micro-Doppler signals into ordered eigenvalue contributions and therefore is well suited when trying to select features that represent the key contributors to the overall signal. Finally, the CVD domain represents the rate with which each frequency contained in the TF spectrogram repeats, hence is suitable for creating features for periodic movements. Features from all three of these domains have been successfully used previously for micro-Doppler classification challenges and it was felt that they would also be applicable to this situation [<a href="#c09_bib36">36</a>–<a href="#c09_bib39">39</a>].</p>
+<p class="indent">From within each domain, the selected features were the mean, variance and entropy of the complex samples. In the SVD domain, the diagonal S output matrix was selected and the mean, variance and entropy of this were used as features. These same features were extracted from the full CVD domain matrix to make a total of nine features used to classify the targets. The classification problem was setup as a four-class problem with the aim to identify exactly which target it was from the three different birds and one drone possibilities. The classifier used was a simple linear discriminant analysis machine learning model in all cases and the results from this can be seen in <a href="#c09_tbl6">Table 9.6</a>. The classifier was either fed data using features from a single domain (TF, SVD or CVD) or the total set of nine features that represents all three domains. The individual domain features were able to achieve a classification success ranging from 42% to 69% with the TF domain getting the best results and the SVD the lowest. Using features from all three domains, it was possible to increase this success rate to 87% for the four-class problem presented. Further improvements will likely be possible through a careful selection of features used and increasing the quantity of empirical data available to both train and test classifiers.</p>
+<p class="tcaption" id="c09_tbl6">Table 9.6 Classification results for bird vs. drone data set</p><div class="table-scroll" tabindex="0" role="region" aria-label="Data table"><table>
+<thead>
+<tr><th>Classification challenge</th><th>Classifier success rate (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bird vs. drone (4 classes) – only TD domain features</td>
+<td>69.75</td>
+</tr>
+<tr>
+<td>Bird vs. drone (4 classes) – only SVD domain features</td>
+<td>42.5</td>
+</tr>
+<tr>
+<td>Bird vs. drone (4 classes) – only CVD domain features</td>
+<td>50.75</td>
+</tr>
+<tr>
+<td>Bird vs. drone (4 classes) – all 3 domains features</td>
+<td>87</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="c09_sec7">
+<h3 class="h3" id="ST143">9.7 NetRAD drone payload experiments</h3>
+<p class="noindent">The second key challenge that was addressed using the NetRAD radar system was discriminating whether a drone has been modified to carry a payload or not. This was perceived to be an important challenge that represents a sensing capability that is over and above the mere detection phase. If a payload can be inferred using information from the returned radar signal, it will be possible to prioritise this target over other platforms that do not have an additional payload. The research that is summarised in this section was published in [<a href="#c09_bib40">40</a>–<a href="#c09_bib42">42</a>]; review those articles for full information on the experiments and their results as well as within Chapter 11 within this book.</p>
+<p class="indent">The measurements were taken in HH polarisation which maximises the returns from the quadcopter rotor blades. For the moving captures, the drone proceeded approximately 15 m forwards and backwards in a radial direction relative the central radar node. Measurements were repeated with the drone carrying a payload of 0, 200, 300, 400 and 500 g. For these measurements, the drone that was used was a DJI Phantom 2 quadcopter. At the maximum payload of 500 g, the UAV was visibly more restricted in terms of speed and manoeuvrability.</p>
+<p class="indent">The radar signals from the drone captured by each radar node were processed in order to extract the micro-Doppler information. The full capture of 30 s for each payload weight was then divided into subsets each with 5,000 pulses representing 1 s of data at the 5-kHz PRF used. An example of the micro-Doppler signatures detected for no payload and for 500 g can be seen in <a href="#c09_fig19">Figure 9.19</a>. Key features were then extracted in order to classify the payload the drone was carrying. The features used were extracted from both the Range–Time–Intensity (RTI) domain and the TF domain in order to compare the success of payload classification using only range domain data compared to when the micro-Doppler information is also available. For the time domain data only, the mean reflected energy as well as the standard deviation from the range bin the drone was present within were used as features. For comparison, the features extracted from the micro-Doppler data were either derived from the SVD domain generated directly from the micro-Doppler signatures or were created by evaluating the ‘centroid’ of the spectrogram signatures.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f19.jpg" loading="lazy" decoding="async" width="671" height="272"></p>
+<p class="fcaption" id="c09_fig19">Figure 9.19 Drone micro-Doppler signature for (a) no payload monostatic and (b) 500-g payload monostatic</p>
+<p class="indent">The SVD features selected for classification were the mean and standard deviation of the <i><b>U</b></i> output matrix. It was decided that only two features were to be used to make a fair comparison with the range domain classifier features and upon inspection the <i><b>U</b></i> matrix was found to be the most effective in differentiating different payload classes. It was noted that the largest separation within the feature space was achieved within the monostatic node data, compared to the two bistatic nodes.</p>
+<p class="indent"><a href="#c09_tbl7">Table 9.7</a> shows the results of payload classification produced for centroid and SVD features. This was an average value over 100 repeats after selecting 50% of data for training and 50% for use randomly as 1-s sections of data from which to produce the features. Overall, it was found that the highest successful classification results were achieved at a level of 96%–97% for this five-class problem using the centroid features. This high level of classification was achieved through a fused classification process using the data from all three radar nodes using a classifier per radar node and fusing the decision, including a confidence threshold within the decision (the bottom row of <a href="#c09_tbl7">Table 9.7</a>). When data from only the monostatic node was used, the classification rate was limited to a maximum of 85% and 93% for SVD and centroid features, respectively. It is important to note that simply using all three-radar nodes data in a single classifier produced a worse result than the monostatic only case. It was found that using independent classifier for each radar nodes data was key in order to obtain an improvement over the monostatic success rates.</p>
+<p class="tcaption" id="c09_tbl7">Table 9.7 Table of classification success rate using centroid and SVD features</p><div class="table-scroll" tabindex="0" role="region" aria-label="Data table"><table>
+<thead>
+<tr><th>Classifier data used</th><th>Classification success rate (%) centroid features</th><th>Classification success rate (%) SVD features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monostatic only</td>
+<td>93.60</td>
+<td>85.20</td>
+</tr>
+<tr>
+<td>3 nodes single classifier</td>
+<td>81.70</td>
+<td>71.00</td>
+</tr>
+<tr>
+<td>3 nodes voting</td>
+<td>96.90</td>
+<td>94.20</td>
+</tr>
+<tr>
+<td>3 nodes vote+confidence threshold</td>
+<td>96.90</td>
+<td>94.70</td>
+</tr>
+</tbody>
+</table></div>
+<p class="indent1">The multistatic network classification level demonstrates the potential for such a system to identify drones with varying payloads attached, but it must be noted that the empirical data captured were in ideal conditions with a hovering drone of the same type and as short ranges to maximise SNR. In real world challenges with unknown drone model that is erratically flying to evade detection, this same problem will likely have a much reduced classification success rate. A comprehensive review of the payload classification research is provided within Chapter 11 of this book.</p>
+</div>
+<div id="c09_sec8">
+<h3 class="h3" id="ST144">9.8 NeXtRAD L- and X-band drone and birds measurements</h3>
+<p class="noindent">The NeXtRAD radar system is currently housed in the South African Institute of Maritime Technology (IMT) on the coast of Simons Town, South Africa. In December 2018 and December 2019, NeXtRAD trials focused on bird and drone measurements were conducted, predominantly stationed from the IMT building. The NeXtRAD system consists of three nodes, one Transceiver (Node 0), which is typically based on the IMT building roof, and two portable receivers (Node 1 and Node 2) which were located at different places along the coast of Simons Town Bay area to enable the desired multistatic geometry required. Node 2 suffered technical problems during the trials; therefore, data from this node are not presented here. However, the different positions used for Node 1 during the trials provide data at bistatic angles of ~10° and ~88° with baselines of ~150 m and ~2 km, respectively. During both trials, measurements were taken in a marine environment containing a variety of non-cooperative targets, including birds, flocks of birds, a marine buoy, a lighthouse and in some cases passing boats. A DJI Matrice hexacopter UAV was used as a cooperative target for both trials. The field setup is summarised in <a href="#c09_fig20">Figure 9.20</a>. Ground truth data of the UAV’s flightpath is provided by its onboard GPS. These ground-truth GPS data have been aligned with the radar data, allowing us to automatically extract range cells that contain a drone target (e.g. for micro-Doppler analysis).</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f20.jpg" loading="lazy" decoding="async" width="649" height="531"></p>
+<p class="fcaption" id="c09_fig20">Figure 9.20 Google Earth image (top) of the NeXtRAD trial site and corresponding L-band monostatic RTI plot recorded on 13 December 2018 (bottom). Key features of the data which appear throughout the data set used in this study are labelled</p>
+<p class="indent"><a href="#c09_fig21">Figure 9.21</a> shows a spectrogram created across range cells containing a drone target in a NeXtRAD L-band data set. A time window of 200 samples was used to create the spectrogram, which, given NeXtRAD’s PRF of 1 kHz, corresponds to 0.2 s. The bulk-Doppler signal can be seen varying around 0 Hz as the drone’s flight path takes it towards and away from the radar node. Either side of the bulk-Doppler signature, HERM line structures (characteristic of a UAV’s micro-Doppler signature), can be observed approximately 20 dB below the level of the bulk-Doppler. In contrast to the model data shown in <a href="#c09_sec3">Section 9.3</a>, the combination of HERM line contributions from each of the six rotors and wrapping of HERM lines due to the low PRF of the NeXtRAD system has led to a rather confused pattern of HERM lines. In such a case, reliable measurements of HERM line spacing to determine drone characteristics (such as rotor rotation rate) are challenging. Despite this, the distinctive HERM line structure is still a powerful tool in distinguishing UAVs from non-UAV targets as will be demonstrated in the following section.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f21.jpg" loading="lazy" decoding="async" width="645" height="219"></p>
+<p class="fcaption" id="c09_fig21">Figure 9.21 Spectrogram of UAV target at L-band using a time window of 0.2 s</p>
+<p class="indent">NeXtRAD’s dual-polarisation receive capability allows HH and HV data to be acquired simultaneously at X-band. <a href="#c09_fig22">Figure 9.22</a> shows spectrograms of range cells containing a drone target from one such acquisition. It should be noted that NeXtRAD’s X-band transmit channel is significantly lower power than the L-band one, resulting in much lower target SNR and subsequently less definition in micro-Doppler signatures at X-band. Despite this, HERM line structures are still evident in both co- and cross-polarised measurements. Due to the higher frequency, bulk-Doppler variations are far more pronounced than at L-band. In both the co- and cross-pol cases, the HERM lines again appear at an intensity of ~20 dB below that of the bulk-Doppler. The noteworthy feature of <a href="#c09_fig22">Figure 9.22</a> is that neither co- nor cross-pol data consistently provide the best clarity of HERM lines. For example, at around 20–30 s, the co-pol data provide the most distinct HERM lines at positive Doppler frequencies; however, at negative Doppler frequencies the cross-pol data have greater clarity. This observation is typical across the full NeXtRAD data set and strongly suggests that UAV detection approaches may benefit from making the use of polarimetric data.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f22.jpg" loading="lazy" decoding="async" width="643" height="521"></p>
+<p class="fcaption" id="c09_fig22">Figure 9.22 Spectrograms of a drone target at X-band using both co-polarised (upper) and cross-polarised (lower) transmit and receive. A time window of 0.2 s was used to produce the spectrogram</p>
+<p class="indent"><a href="#c09_fig23">Figure 9.23</a> shows a spectrogram of single range cell containing several bird targets in an L-band data set. As these are non-cooperative targets, their specific behaviour during the radar acquisition is not known (e.g. it is not known if they were gliding or flapping their wings). However, it seems reasonable to assume that over the full 60 s acquisition some mixture of behaviours will have been captured. The spectrogram was created using a time window of 0.2 s. The contrast of the bird micro-Doppler with the UAV micro-Doppler signatures shown in <a href="#c09_fig23">Figure 9.23</a> and <a href="#c09_fig21">Figure 9.21</a> is clear, and we show in the next section how this may be used to classify UAV targets.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f23.jpg" loading="lazy" decoding="async" width="650" height="219"></p>
+<p class="fcaption" id="c09_fig23">Figure 9.23 Spectrogram of several bird targets at L-band. The micro-Doppler signature is clearly distinct from that of a drone</p>
+<div id="c09_sec8-1">
+<h4 class="h4" id="ST145">9.8.1 Drone filtering</h4>
+<p class="noindent">The stark contrast between the micro-Doppler signature of a UAV and a non-UAV target can be used as a simple means to discriminate between the two. As a demonstration, we present an algorithm which takes RTI data as its input and returns a likelihood map (in range and time) of a drone target being present. We refer to this as ‘drone filtering’. The drone filter algorithm exploits the symmetry of the HERM lines about the bulk-Doppler for a UAV target compared to the asymmetry of the micro-Doppler signatures from other targets (especially birds). For a typical scene, outputs from the filter span many orders of magnitude and are best presented on a logarithmic (dB) scale. Our preferred normalisation for this scale is to normalise against a static non-drone target in the scene (hence drone targets will be indicated by high, positive dB values). For this purpose, we are using the Roman Rock lighthouse which is ~1.9 km from the monostatic node (see <a href="#c09_fig20">Figure 9.20</a>).</p>
+<p class="indent"><a href="#c09_fig9">Figure 9.24</a> shows results of applying the algorithm to L-band monostatic data. As is clear from the figure, the algorithm is extremely effective at removing the buoy target and multiple bird targets from the scene. There are occasional false positives, which typically occur when there are multiple bird targets appearing at the same range. However, these are transient and easily distinguishable from the drone track.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f24.jpg" loading="lazy" decoding="async" width="652" height="272"></p>
+<p class="fcaption" id="c09_fig24">Figure 9.24 RTI plot (left) of L-band monostatic acquisition containing a drone target, birds and the marine buoy. RTI plot after applying the drone filter algorithm to the data (right). The filter is shown to effectively remove bird targets and the buoy target</p>
+<p class="indent">A more challenging scene than that shown in <a href="#c09_fig9">Figure 9.24</a> is one containing a flock of birds. The 2018 NeXtRAD data set contains one such acquisition (recorded at L-band). <a href="#c09_fig9">Figure 9.25</a> shows this data set and the results of applying the drone filter algorithm to it. Within the recording, a static target can be observed at range bin 60 which is thought to be caused by reflections from a small buoy on the sea surface. The vast majority of returns otherwise within the data were generated by a significant flock of bird targets.</p>
+<p class="image"><img alt="image" src="../images/SBRA5430-09-f25.jpg" loading="lazy" decoding="async" width="652" height="404"></p>
+<p class="fcaption" id="c09_fig25">Figure 9.25 RTI plot (left) of L-band monostatic acquisition containing both a drone target and a flock of birds. RTI plot after applying the drone filter algorithm to the data (right)</p>
+<p class="indent">The results shown in <a href="#c09_fig9">Figure 9.25</a> illustrate that the drone filter algorithm is still very effective at picking out the drone within the flock of birds while suppressing non-drone targets. However, it is also worth noting that multiple birds coinciding in the same range cells give rise to some ‘speckle’ in the algorithm output (seen in particular in the lower right region of the drone filter data in <a href="#c09_fig9">Figure 9.25</a>). The speckle is ~20 dB below the amplitude of the drone target and therefore easily distinguished as non-drone. It may be further suppressed by median filtering the output from the drone filter.</p>
+</div>
+</div>
+<div id="c09_sec9">
+<h3 class="h3" id="ST146">9.9 Concluding remarks</h3>
+<p class="noindent">This chapter has reviewed both modelled and real empirical data sets of bird and drone signals as perceived by monostatic and multistatic radar systems with a strong focus on the micro-Doppler signature of these targets. Analysis of the data has been presented, and key points have been summarised within each section. This area of research is in its relatively infancy due to the ever-changing problem that drone detection represents, but the research shown is some of the current cutting-edge outputs. The use of drones in both military and civilian applications has continued to show strong growth for a number of years. With this current trend, they are clearly going to be part of current and future military sensing challenges. Research is required to best understand how to sense this paradigm shift from large fast moving expensive airborne platforms to significant numbers of low cost, slow and small RCS platforms.</p>
+<p class="indent">It is clear from the material presented that radar micro-Doppler has been proven to be a vital method in differentiating between these two target categories. If only time domain signatures are used to differentiate bird and drone targets, it is a very challenging problem. Techniques based on extracting information from the micro-Doppler signatures will no doubt be leveraged in any real-world system tasked with this objective. It is important to note that the micro-Doppler contributions from rotor blades of a drone and the flapping wings of a bird can be significantly below the main body return, but if they are detectable, exploiting them should be a priority for any radar system tasked with differentiating these two classes of target.</p>
+<p class="indent">Assistance may be found when using fully polarimetric systems in order to differentiate a drone and bird target but without processing other signal characteristics, this high-priority challenge will remain unsolved. The use of micro-Doppler comparisons between target classes has been found to be very effective in both differentiating drone and bird targets, using the explained filtering techniques, as well as even differentiating different drone payloads. The authors believe that if Automatic Target Recognition techniques are going to be applied to identify threat drone systems compared to benign birds, micro-Doppler has to be one of the sensing methodologies. Overall a total solution will require data fusion from a number of sensing domains in order to maximise its potential, including EO, ES and potentially even acoustic sensing methods.</p>
+<p class="indent">Future currently unaddressed challenges in the area of drone micro-Doppler include the fully quantitative characterisation of how bistatic angle affects the perceived drone micro-Doppler signatures and hence how best can a multistatic system be deployed to protect a given know high-value area, e.g. a port, airport or military base. As well as this research into flight dynamics of drone and birds from a tracking perspective should be connected with the micro-Doppler research outputs such that one can inform the other. In that, if a target is found to have given micro-Doppler signature this could help subcategorise its potential class and therefore inform the flight dynamics model used to improve the track fidelity achieved. Of course, it is also of great interest to validate the detection and discrimination concepts developed in real-world scenarios and at ranges which allow for effective responses to situations to be made. If some very effective techniques are limited only to short ranges, then their utility in the real world may be restricted compared to other methods that have lower detection or classification rates but can achieve much greater ranges.</p>
+</div>
+<div id="c09_sec10">
+<h3 class="h3" id="ST147">Acknowledgements</h3>
+<p class="noindent">The authors are very grateful to the many exceptional researchers who have contributed to the development of the NetRAD system Chris Baker, Karl Woodbridge, Shaun Doughty, Tom Derham, Waddah Al-Ashwal and Stephan Sandenbergh. As well as those who helped to develop the NeXtRAD system, particularly Hugh Griffiths, Francesco Fioranelli, Riccardo Palama, Simon Lewis and Brad Kahn.</p>
+<p class="indent">The authors would like to acknowledge the support of the many supporters and funding agencies that have enabled the research conducted at UCL and UCT, including the EPSRC, IET for the A. F. Harvey Award, FFI Norway, Royal Academy of Engineering, the US ONR(G) and the IMT. In particular, the authors would like to thank both Dstl and the Defence and Security Accelerator (DASA) which funded some of the most recent analysis of UAV signatures presented within this chapter.</p>
+</div>
+<div>
+<h3 class="h3" id="ST148">References</h3>
+<p class="ref" id="c09_bib1">[1] “Consumer Drone Market Analysis By Product (Multi-Rotor, Nano) By Application And Segment Forecasts To 2024,” Report ID: 978-1-68038-831-2, Grand View Research; 2016. <a href="https://www.grandviewresearch.com/industry-analysis/consumer-drone-market" rel="noreferrer noopener">https://www.grandviewresearch.com/industry-analysis/consumer-drone-market</a></p>
+<p class="ref" id="c09_bib2">[2] M. Z. Anwar, Z. Kaleem, and A. Jamalipour, “Machine learning inspired sound-based amateur drone detection for public safety applications,” <i>IEEE Trans. Veh. Technol.</i>, vol. 68, no. 3, pp. 2526–2534, 2019.</p>
+<p class="ref" id="c09_bib3">[3] Z. Shi, X. Chang, C. Yang, Z. Wu, and J. Wu, “An acoustic-based surveillance system for amateur drones detection and localization,” <i>IEEE Trans. Veh. Technol.</i>, vol. 69, no. 3, pp. 2731–2739, 2020.</p>
+<p class="ref" id="c09_bib4">[4] A. H. Michel, Counter-Drone Systems, 2nd Edition. Center for the Study of the Drone at Bard College; 2019.</p>
+<p class="ref" id="c09_bib5">[5] G. C. Birch, J. C. Griffin, and M. K. Erdman, “UAS detection classification and neutralization: Market survey 2015,” <i>Sandia Rep</i>., 2015, p. 74.</p>
+<p class="ref" id="c09_bib6">[6] S. Balkan, Daesh’s Drone Strategy Technology and the Rise of Innovative Terrorism. SETA Foundation for Political, Economic and Social Research, 2017.</p>
+<p class="ref" id="c09_bib7">[7] D. Lack and G. C. Varley, “Detection of birds by radar,” <i>Nature</i>, vol. 156, no. 3969, p. 629, 1945.</p>
+<p class="ref" id="c09_bib8">[8] I. O. Buss, “Bird detection by radar,” <i>Auk</i>, vol. 63, no. 3, pp. 315–318, 1946.</p>
+<p class="ref" id="c09_bib9">[9] B. Bruderer, “The radar window to bird migration BT,” <i>Avian Migration</i>, Berlin, Heidelberg: Springer; 2003, pp. 347–358.</p>
+<p class="ref1" id="c09_bib10">[10] H. Alfiya, “Surveillance radar data on nocturnal bird migration over Israel, 1989–1993,” <i>Isr. J. Ecol. Evol.</i>, vol. 41, no. 3, pp. 517–522.</p>
+<p class="ref1" id="c09_bib11">[11] D. F. Bertram, “Use of radar for monitoring colonial burrow-nesting seabirds,” <i>J. Field Ornithol.</i>, 1999.</p>
+<p class="ref1" id="c09_bib12">[12] G. W. Schaeffer, “Bird recognition by radar: A study in quantitative radar ornithology,” in <i>The Problems of Birds as Pests</i>, R. K. Murton and E. N. Wright, Eds. Academic Press, London, 1968, pp. 53–86.</p>
+<p class="ref1" id="c09_bib13">[13] C. R. Vaughn, “Birds and insects as radar targets: A review,” <i>Proc. IEEE</i>, vol. 73, no. 2, pp. 205–227, 1985.</p>
+<p class="ref1" id="c09_bib14">[14] B. Torvik, K. E. Olsen, and H. D. Griffiths, “X-band measurements of radar signatures of large sea birds,” in 2014 Int. Radar Conf. Radar 2014, 2014, pp. 1–6.</p>
+<p class="ref1" id="c09_bib15">[15] P. Molchanov, R. I. A. Harmanny, J. J. M. De Wit, K. Egiazarian, and J. Astola, “Classification of small UAVs and birds by micro-Doppler signatures,” <i>Int. J. Microwave Wireless Technol.</i>, vol. 6, no. 3–4, pp. 435–444, 2014.</p>
+<p class="ref1" id="c09_bib16">[16] B. Torvik, <i>Investigation of Non-cooperative Target Recognition of Small and Slow Moving Air Targets in Modern Air Defence Surveillance Radar</i>, University College London, London, 2016.</p>
+<p class="ref1" id="c09_bib17">[17] B. Torvik, K. E. Olsen, and H. Griffiths, “Classification of birds and UAVs based on radar polarimetry,” <i>IEEE Geosci. Remote Sens. Lett.</i>, vol. 13, no. 9, pp. 1305–1309, 2016.</p>
+<p class="ref1" id="c09_bib18">[18] M. Skolnik, <i>Introduction to Radar Systems.</i> New York, NY: McGraw Hill, 2001.</p>
+<p class="ref1" id="c09_bib19">[19] S. Rahman and D. A. Robertson, “In-flight RCS measurements of drones and birds at K-band and W-band,” <i>IET Radar Sonar Navig.</i>, vol. 13, no. 2, pp. 300–309, 2019.</p>
+<p class="ref1" id="c09_bib20">[20] B. W. Tobalske, “Biomechanics of bird flight,” <i>J. Exp. Biol.</i>, vol. 210, no. 18, pp. 3135–3146, 2007.</p>
+<p class="ref1" id="c09_bib21">[21] G. Pollon, “Distributions of radar angels,” <i>IEEE Trans. AESS</i>, <b>vol. AES-8</b>, no. 6, pp. 721–726, 1972.</p>
+<p class="ref1" id="c09_bib22">[22] N. Huansheng, C. Weishi, M. Xia, and L. Jing, “Bird-aircraft strike avoidance radar,” <i>IEEE Aerosp. Electron. Syst. Mag.</i>, vol. 25, no. 1, pp. 19–28, 2010.</p>
+<p class="ref1" id="c09_bib23">[23] J. Gong, J. Yan, D. Li, and R. Chen, “Comparison of radar signatures based on flight morphology for large birds and small birds,” <i>IET Radar Sonar Navig.</i>, vol. 14, no. 9, pp. 1365–1369, 2020.</p>
+<p class="ref1" id="c09_bib24">[24] N. J. Peters, C. Oppenheimer, P. Brennan, L. B. Lok, M. Ash, and P. Kyle, “Radar altimetry as a robust tool for monitoring the active lava lake at Erebus Volcano, Antarctica,” <i>Geophys. Res. Lett.</i>, vol. 45, no. 17, pp. 8897–8904, 2018.</p>
+<p class="ref1" id="c09_bib25">[25] S. Doughty, K. Woodbridge, and C. J. Baker, “Characterisation of a multistatic radar system,” in Proc. 3rd Eur. Radar Conf. EuRAD 2006, 2006, pp. 5–8.</p>
+<p class="ref1" id="c09_bib26">[26] T. Derham, S. Doughty, K. Woodbridge, and C. J. Baker, “Realisation and evaluation of a low cost netted radar system,” in CIE International Conference of Radar Proceedings, 2006.</p>
+<p class="ref1" id="c09_bib27">[27] M. Ritchie, A. Stove, K. Woodbridge, and H. Griffiths, “NetRAD: Monostatic and bistatic sea clutter texture and Doppler spectra characterization at S-band,” <i>IEEE Trans. Geosci. Remote Sens.</i>, vol. 54, no. 9, pp. 5533–5543, 2016.</p>
+<p class="ref1" id="c09_bib28">[28] J. S. Sandenbergh and M. R. Inggs, “A common view GPSDO to synchronize netted radar,” in IET Int. Conf. Radar Syst. 2007, 2007, pp. 24–24.</p>
+<p class="ref1" id="c09_bib29">[29] P. Beasley, M. Ritchie, H. Griffiths, <i>et al.</i>, “Multistatic radar measurements of UAVs at X-band and L-band,” in IEEE Radar Conference, Florence, Italy, 2020.</p>
+<p class="ref1" id="c09_bib30">[30] R. Palama, F. Fioranelli, M. Ritchie, M. R. Inggs, S. Lewis, and H. Griffiths, “Measurements of multistatic XL band radar signatures of UAVS,” in 2019 Int. Radar Conf. RADAR 2019, 2019, pp. 15–19.</p>
+<p class="ref1" id="c09_bib31">[31] M. R. Inggs, S. Lewis, R. Palama, M. Ritchie, and H. Griffiths, “Report on the 2018 trials of the multistatic NeXtRAD dual band polarimetric radar,” in 2019 IEEE Radar Conf., 2019, pp. 1–6.</p>
+<p class="ref1" id="c09_bib32">[32] M. Inggs, S. Coetzee, H. Griffiths, F. Fioranelli, M. Ritchie, and K. Woodbridge, “Database design for an experimental, dual band, polarimetric radar,” in 2015 IEEE Radar Conference – Proceedings, 2015.</p>
+<p class="ref1" id="c09_bib33">[33] S. Alhuwaimel, S. Coetzee, P. Cheng, <i>et al.</i>, “First measurements with NeXtRAD, a polarimetric X/L Band radar network,” in 2017 IEEE Radar Conference, RadarConf 2017, 2017.</p>
+<p class="ref1" id="c09_bib34">[34] M. Inggs, H. Griffiths, F. Fioranelli, M. Ritchie, and K. Woodbridge, “Multistatic radar: System requirements and experimental validation,” in 2014 International Radar Conference, Radar 2014, 2014.</p>
+<p class="ref1" id="c09_bib35">[35] M. Ritchie, F. Fioranelli, H. Griffiths, and B. Torvik, “Monostatic and bistatic radar measurements of birds and micro-drone,” in 2016 IEEE Radar Conference, RadarConf 2016, 2016.</p>
+<p class="ref1" id="c09_bib36">[36] B. K. Kim, H.-S. Kang, S. Lee, and S.-O. Park, “Improved drone classification using polarimetric merged-Doppler images,” <i>IEEE Geosci. Remote Sens. Lett.</i>, pp. 1–5, 2020.</p>
+<p class="ref1" id="c09_bib37">[37] S. Zhang, G. Li, M. Ritchie, F. Fioranelli, and H. Griffiths, “Dynamic hand gesture classification based on radar micro-Doppler signatures,” in 2016 CIE International Conference on Radar, RADAR 2016, 2017.</p>
+<p class="ref1" id="c09_bib38">[38] G. Li, R. Zhang, M. Ritchie, and H. Griffiths, “Sparsity-based dynamic hand gesture recognition using micro-Doppler signatures,” in 2017 IEEE Radar Conference, RadarConf 2017, 2017, pp. 0928–0931.</p>
+<p class="ref1" id="c09_bib39">[39] M. Ritchie and A. M. Jones, “Micro-Doppler gesture recognition using Doppler, time and range based features,” in IEEE Radar Conference, Boston, 2019.</p>
+<p class="ref1" id="c09_bib40">[40] M. Ritchie, F. Fioranelli, and H. Borrion, “Micro UAV crime prevention: Can we help Princess Leia?” in Crime Prevention in the 21st Century: Insightful Approaches for Crime Prevention Initiatives, 2017, pp. 359–376.</p>
+<p class="ref1" id="c09_bib41">[41] F. Fioranelli, M. Ritchie, H. Griffiths, and H. Borrion, “Classification of loaded/unloaded microdrones using multistatic radar,” <i>Electron. Lett.</i>, vol. 51, no. 22, pp. 1813–1815, 2015.</p>
+<p class="ref1" id="c09_bib42">[42] M. Ritchie, F. Fioranelli, H. Borrion, and H. Griffiths, “Multistatic micro-Doppler radar feature extraction for classification of unloaded/loaded micro-drones,” <i>IET Radar Sonar Navig.</i>, vol. 11, no. 1, pp. 116–124, 2017.</p>
+</div>
+<p class="aff1" id="c09_aff1"><sup>1</sup>Department of Electronic and Electrical Engineering, University College London, London, UK</p>
+</article><nav class="pager" aria-label="Reading order"><a class="pager-previous" href="Chapter8.html"><small>Previous ←</small><span>8 GNSS-based UAV detection</span></a><a class="pager-next" href="Chapter10.html"><small>Next →</small><span>10 Radar recognition of multiple UAVs</span></a></nav>
+<footer class="page-footer"><span>Radar &amp; sensing</span><a href="../../content/xhtml/copyright.html">Publication details</a><a href="#main">Back to top ↑</a></footer>
+</main>
+<aside class="on-this-page" aria-label="On this page"><span class="eyebrow">ON THIS PAGE</span><a href="#ST135">9.1 Introduction</a><a href="#ST136">9.2 Review of UAV and bird radar signatures research</a><a href="#ST137">9.3 Target motion models</a><a href="#ST138">9.4 Fully polarimetric, multiple observation angle laboratory measurements of UAV target</a><a href="#ST139">9.5 Bistatic and multistatic radars used to gather bird and drone data</a><a href="#ST142">9.6 NetRAD bird and drone S-band measurements</a><a href="#ST143">9.7 NetRAD drone payload experiments</a><a href="#ST144">9.8 NeXtRAD L- and X-band drone and birds measurements</a><a href="#ST146">9.9 Concluding remarks</a><a href="#ST147">Acknowledgements</a><a href="#ST148">References</a></aside>
+<dialog class="search-dialog" aria-labelledby="search-title">
+<div class="search-heading"><h2 id="search-title">Search the book</h2><button type="button" class="close-search" aria-label="Close search">×</button></div>
+<label for="book-query" class="sr-only">Search terms</label><input id="book-query" type="search" placeholder="A topic, phrase, or equation reference…" autocomplete="off">
+<p class="search-status" role="status">Search across all chapters and sections.</p><div class="search-results"></div>
+</dialog>
+</body></html>
