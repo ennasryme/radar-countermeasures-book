@@ -1,5 +1,7 @@
 # Radar Countermeasures — reading room
 
+[Read the book online](https://ennasryme.github.io/radar-countermeasures-book/).
+
 A static browser reader built from the supplied EPUB. It includes the original chapters and illustrations, section search, adjustable text, light and dark themes, and a reading position saved in the browser.
 
 Build with the standard Python library:
